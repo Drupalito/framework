@@ -10,8 +10,7 @@ category: Module - Webform
 
 Default Style CSS
 
-```html_example
-
+```html
   <div class="webform-progressbar">
     <ul class="list-none mvn">
       <li class="webform-progressbar__item current completed" style="width: 25%"><span class="webform-progressbar__label">Start</span></li>
@@ -23,8 +22,8 @@ Default Style CSS
       <p class="bold">Page 2 of 4 <small class="webform-progressbar-percent">(33%)</small></p>
     </div>
   </div>
-
 ```
+
 */
 
 .form-item.webform-container-inline {

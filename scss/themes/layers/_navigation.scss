@@ -5,14 +5,12 @@ title: Navigation
 category: Layout - Layer
 ---
 
-```html_example
-
+```html
   <div class="navigation">
     <nav id="navigation" role="navigation" class="container clearfix">
       ...
     </nav>
   </div>
-
 ```
 
 */
@@ -23,8 +21,7 @@ title: Primary menu
 category: Layout - Menu
 ---
 
-```html_example
-
+```html
   <div od="block-system-main-menu">
     <ul class="menu">
       <li class="menu__item menu__item--hasmenu"><a class="menu__link" href="#">About</a></li><li class="menu__item"><a class="menu__link" href="#">Works</a><ul class="menu">
@@ -32,7 +29,6 @@ category: Layout - Menu
     </ul></li><li class="menu__item"><a class="menu__link" href="#">Services</a></li><li class="menu__item"><a class="menu__link" href="#">Portfolio</a></li><li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
     </ul>
   </div>
-
 ```
 
 */

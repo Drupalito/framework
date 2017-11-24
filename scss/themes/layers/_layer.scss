@@ -5,8 +5,7 @@ title: Page
 category: Layout - Layer
 ---
 
-```html_example
-
+```html
   <div id="page" class="page">
     ... header
     ... navigation
@@ -21,7 +20,6 @@ category: Layout - Layer
     </div>
     ... footer
   </div>
-
 ```
 
 */
@@ -48,7 +46,7 @@ title: Main header
 category: Layout - Layer
 ---
 
-```html_example
+```html
 
   <main id="main" class="main" role="main">
     <div class="main__header">
