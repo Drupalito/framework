@@ -1,0 +1,245 @@
+
+/*doc
+---
+title: Menu base
+category: Components - Menu base
+---
+
+```html
+  <ul>
+    <li><a href="#">Link</a></li>
+    <li class="collapsed">
+      <a href="#">Link collapsed</a>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Link</a></li>
+    <li class="expanded">
+      <a href="#">Link expanded</a>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+  </ul>
+```
+
+*/
+
+ul li.expanded > a:before,
+ul li.collapsed > a:before {
+  font-family: "icomoon";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -12px;
+}
+
+ul li.expanded > a:before {
+  content: "\edc9";
+}
+
+ul li.collapsed > a:before {
+  content: "\edc8";
+}
+
+ul li.collapsed > ul {
+  display: none;
+}
+
+li a.active,
+li.active-trail > a {
+  color: #{map-get($colorz, "primary")};
+}
+
+/*doc
+---
+title: Menu primaire
+category: Components - Menu primaire
+---
+
+```html
+  <ul class="primary">
+    <li class="active"><a href="#">Link</a></li>
+    <li class="collapsed">
+      <a href="#">Link collapsed</a>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Link</a></li>
+    <li class="expanded">
+      <a href="#">Link expanded</a>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+  </ul>
+```
+
+*/
+
+ul.primary,
+ul.primary ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+ul.primary li {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+ul.primary a {
+  text-transform: capitalize;
+  line-height: 2.75em;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 0;
+  border-bottom: 2px solid transparent;
+  color: #67747c;
+}
+ul.primary a:hover,
+ul.primary a:focus,
+ul.primary li:hover > a {
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom-color: #222;
+  color: #222;
+}
+
+ul.primary li.active a,
+ul.primary a.active {
+  font-weight: bold;
+  border-bottom-color: #E11B27;
+  color: #E11B27;
+}
+
+/* Sub menu */
+ul.primary ul {
+  display: none;
+  position: absolute;
+  left: -9999px;
+  z-index: 30;
+}
+ul.primary li:hover > ul,
+ul.primary li > a:hover + ul,
+ul.primary li > a:focus + ul {
+  display: block;
+  left: 0;
+  width: 280px;
+}
+ul.primary ul {
+  left: .5em;
+}
+ul.primary ul > li {
+  display: block;
+}
+ul.primary ul > li > a {
+  padding-left: .5em;
+  padding-right: .5em;
+  border-bottom: 0;
+  background: #222;
+  color: #fff;
+}
+ul.primary ul > li > a:hover,
+ul.primary ul > li > a:focus,
+ul.primary ul > li:hover > a {
+  text-decoration: none;
+  background: #E11B27;
+  color: #fff;
+}
+
+/*doc
+---
+title: Menu secondaire
+category: Components - Menu secondaire
+---
+
+```html
+  <ul class="secondary">
+    <li><a href="#">Link</a></li>
+    <li class="collapsed">
+      <a href="#">Link collapsed</a>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+    <li class="active"><a href="#">Link active</a></li>
+    <li class="expanded">
+      <a href="#">Link expanded</a>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </li>
+  </ul>
+```
+
+*/
+
+ul.secondary {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+ul.secondary li {
+  border-left: 1px solid #ccc; /* LTR */
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: .5em;
+  padding-right: .3em;
+}
+ul.secondary li:first-child {
+  border-left: 0; /* LTR */
+}
+ul.secondary a {
+  padding: 0;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: #67747c;
+}
+ul.secondary a:hover,
+ul.secondary a:focus,
+ul.secondary li:hover > a {
+  text-decoration: none;
+  border-bottom-color: #222;
+  color: #222;
+}
+ul.secondary li.active a,
+ul.secondary a.active {
+  font-weight: bold;
+  border-bottom-color: #E11B27;
+  color: #E11B27;
+}
+ul.secondary li.expanded > a:before,
+ul.secondary li.collapsed > a:before {
+  content: "";
+  display: none;
+}
+ul.secondary ul {
+  display: none;
+}

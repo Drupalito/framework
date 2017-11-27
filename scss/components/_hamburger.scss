@@ -1,4 +1,20 @@
 
+/*doc
+---
+title: Hamburger
+category: Components - Hamburger
+---
+
+```html
+  <button class="hamburger hamburger--collapse" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+```
+
+*/
+
 .hamburger {
   padding: 15px 15px;
   display: inline-block;

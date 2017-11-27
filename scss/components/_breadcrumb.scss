@@ -5,7 +5,7 @@ title: Breadcrumb
 category: Components - Breadcrumb
 ---
 
-* Mandatory
+* Obligatoire
 
 ```html
 
@@ -32,16 +32,14 @@ title: Skiplinks
 category: Components - Breadcrumb
 ---
 
-* Mandatory
-* Display on focus
+* Obligatoire
+* Affiché au `:focus`
 
 ```html
-
   <p class="skiplinks" id="skiplinks">
     <a href="#navigation">Menu</a>
     <a href="#main">Contenu principal</a>
   </p>
-
 ```
 
 */

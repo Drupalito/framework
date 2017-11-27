@@ -47,18 +47,16 @@ category: Layout - Layer
 ---
 
 ```html
-
   <main id="main" class="main" role="main">
     <div class="main__header">
       <h1 class="main__title">Lorem ipsum dolor sit</h1>
-      <ul class="tabs tabs--user">
-        <li class="active"><a href="#" class="active">View<span class="element-invisible">(active tab)</span></a></li>
+      <ul class="primary">
+        <li class="active"><a href="#">View<span class="a11y">(active tab)</span></a></li>
         <li><a href="#">Profil</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
   </main>
-
 ```
 
 */

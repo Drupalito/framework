@@ -47,11 +47,11 @@ Default markup. (`title` = `alt`)
 ```html
   <div class="logo">
     <p class="logo__inner">
-      <a href="/" title="starterProjectName, Lorem ipsum dolor sit (Home)" rel="home" class="logo__link nounderline">
-        <img class="logo__image" src="http://placehold.it/250x72" alt="starterProjectName, Lorem ipsum dolor sit (Home)">
+      <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link nounderline">
+        <img class="logo__image" src="http://placehold.it/250x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
         <span class="logo__content inbl amiddle pls">
-          <span class="logo__name h4 caps show mvn">starterProjectName</span>
-          <span class="logo__slogan show">Lorem ipsum dolor sit</span>
+          <span class="logo__name h4 caps show mvn">{{ site.SITE_NAME }}</span>
+          <span class="logo__slogan show">{{ site.SITE_SLOGAN }}</span>
         </span>
       </a>
     </p>
