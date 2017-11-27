@@ -14,23 +14,12 @@
 
 // scss-lint:disable Indentation
 
-// Base
-@import
-  "themes/theme";
-
 // Layers
 @import
-  "themes/layers/layer",
-  "themes/layers/header",
-  "themes/layers/footer",
-  "themes/layers/navigation",
-  "themes/layers/aside";
-
-// Overrides Druapl module
-@import
-  "themes/overrides/block",
-  "themes/overrides/field",
-  "themes/overrides/node",
-  "themes/overrides/search";
+  "themes/layer",
+  "themes/header",
+  "themes/footer",
+  "themes/navigation",
+  "themes/aside";
 
 // scss-lint:enable Indentation

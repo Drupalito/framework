@@ -302,7 +302,7 @@ Add class `form-item--inline` on parent `div.form-item`
 */
 
 .form-item--inline {
-  @include form-item-inline;
+  @include form-item-inline($input-height);
 }
 
 /*doc

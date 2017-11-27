@@ -1,0 +1,24 @@
+
+/*doc
+---
+title: Aside
+category: Layout - Layer
+---
+
+Combine `.aside` with the modifier `.aside--right`
+
+```html
+  <div class="complementary aside">
+    <aside id="complementary" role="complementary">
+      ...
+    </aside>
+  </div>
+```
+
+*/
+
+.aside {
+  @include mq("smaller") {
+    margin-bottom: 1.5em;
+  }
+}

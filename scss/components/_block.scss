@@ -1,0 +1,135 @@
+
+// @file: _block.scss
+// Blocks par défault.
+
+/*doc
+---
+title: Block
+category: Component
+---
+
+```html
+  <div class="block">
+    <div class="block__inner">
+      <div class="block__header">
+        <h2 class="block__title">Lorem Ipsum</h2>
+      </div>
+      <div class="block__content">
+        ...
+      </div>
+    </div>
+  </div>
+```
+
+*/
+
+.block {
+  padding: 0;
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  .aside & {
+    background: #fff;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+  }
+
+  &__title {
+    padding-bottom: rhythm(0.5);
+    border-bottom: pem(1px) solid #ccc;
+    margin-bottom: 0;
+    padding: 13px 15px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #E11B27;
+    text-transform: uppercase;
+
+  }
+
+  &--first {
+    margin-top: 0 !important;
+  }
+
+  &--last {
+    margin-bottom: 0 !important;
+  }
+}
+
+
+/*doc
+---
+title: Block menu
+category: Component
+---
+
+```html
+  <div class="block block--menu">
+    <div class="block__inner">
+      <div class="block__header">
+        <h2 class="block__title">Lorem Ipsum</h2>
+      </div>
+      <div class="block__content">
+        <ul class="primary">
+          <li><a href="#">Link</a></li>
+          <li class="collapsed">
+            <a href="#">Link collapsed</a>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Link</a></li>
+          <li class="expanded">
+            <a href="#">Link expanded</a>
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+```
+
+*/
+
+.block__content ul.primary {
+  display: block;
+  position: relative;
+}
+.block__content ul.primary li {
+  display: block;
+  padding: 0;
+  border-bottom: 1px solid #ddd;
+}
+.block__content ul.primary a,
+.block__content ul.primary li > span {
+  color: #3b444f;
+  display: block;
+  line-height: 1.2em;
+  padding: 12px 25px 12px 15px;
+  position: relative;
+  border-bottom: 0;
+}
+.block__content ul.primary a:hover {
+  // border-left: 1px solid #ddd;
+  background: #fefafb;
+}
+.block__content ul.primary a:focus {
+  outline: 0;
+  border-left: 1px dotted #E11B27;
+  background: #fce8e9;
+}
+.block__content ul.primary a.active,
+.block__content ul.primary a.active:hover {
+  border-left: 2px solid #E11B27;
+  background: #fefafb;
+  color: #3b444f;
+}

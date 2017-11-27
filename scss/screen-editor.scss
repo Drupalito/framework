@@ -17,17 +17,18 @@
 
 // Base
 @import
-  "base/fonts",
   "base/reset",
-  "base/typo",
+  "base/text",
+  "base/media",
   "base/grid",
   "base/helper",
+  "base/general",
+  "base/table",
   "base/form";
 
 // Components
 @import
-  "components/button",
-  "components/icons";
+  "components/button";
 
 // Layers
 @import

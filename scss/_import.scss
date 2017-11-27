@@ -8,11 +8,11 @@
  */
 
 // scss-lint:disable Indentation
-// Custom settings
+// Custom config
 @import
-  "helpers/settings.global",
-  "helpers/settings.grid",
-  "helpers/settings.form";
+  "helpers/config.global",
+  "helpers/config.grid",
+  "helpers/config.form";
 
 // Custom functions
 @import
