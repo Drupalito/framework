@@ -4,11 +4,18 @@
 
 /*doc
 ---
-title: Field
+title: Field label inline
 category: Module - Field
 ---
 
 Default Style CSS
+
+```html
+  <div class="field field--label-inline">
+    <div class="field-label">Lorem Ipsum</div>
+    <div class="field-items">In faucibus feugiat urna sit amet elementum. Integer consequat rhoncus libero, in molestie augue posuere et. Phasellus ac eleifend magna. Proin vulputate dui ac justo pharetra consequat. In vel iaculis ligula.</div>
+  </div>
+```
 
 */
 
@@ -41,3 +48,20 @@ Default Style CSS
     margin-bottom: rhythm(.5);
   }
 }
+
+/*doc
+---
+title: Field label above
+category: Module - Field
+---
+
+Default Style CSS
+
+```html
+  <div class="field field--label-above">
+    <div class="field-label">Lorem Ipsum</div>
+    <div class="field-items">In faucibus feugiat urna sit amet elementum. Integer consequat rhoncus libero, in molestie augue posuere et. Phasellus ac eleifend magna. Proin vulputate dui ac justo pharetra consequat. In vel iaculis ligula.</div>
+  </div>
+```
+
+*/
