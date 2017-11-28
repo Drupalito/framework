@@ -26,11 +26,11 @@ Default Style CSS
           </div>
         </div>
         <div class="container-inline locality-block country-FR">
-          <div class="form-item prl">
+          <div class="form-item mbn prl">
             <label for="field-address-postal-code">Postal code <abbr class="field-required" title="Ce champ est requis.">*</abbr></label>
             <input class="postal-code form-text required" autocomplete="postal-code" type="text" id="field-address-postal-code" name="field_address[postal_code]" value="" size="10" maxlength="255">
           </div>
-          <div class="form-item">
+          <div class="form-item mbn">
             <label for="field-address-locality">Ville <abbr class="field-required" title="Ce champ est requis.">*</abbr></label>
             <input class="locality form-text required" autocomplete="address-level2" type="text" id="field-address-locality" name="field_address[locality]" value="" size="30" maxlength="255">
           </div>

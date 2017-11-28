@@ -12,45 +12,46 @@ category: Components - Pagination
 * `.text-right` : align right
 
 Simple pagination. The large block is hard to miss, easily scalable, and provides large click areas.
-Le titre peut être caché avec `.hide`
+
+Le titre peut être caché avec `.a11y`
 
 ```html
   <div class="pagination clearfix">
     <h2 class="pagination__title h5 mvn">Page 2 of 5</h2>
     <ul class="pagination__list list-inline mvn">
-      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span class="i i-arrow-left"></span> Prev</a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span aria-hidden="true" class="fa fa-chevron-left"></span> Prev</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 1 of 5">1</a></li>
       <li class="pagination__item pagination--current"><strong>2</strong></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 3 of 5">3</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 4 of 5">4</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 5 of 5">5</a></li>
-      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span class="i i-arrow-right"></span></a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span aria-hidden="true" class="fa fa-chevron-right"></span></a></li>
     </ul>
   </div>
 
   <div class="pagination text-center mtl clearfix">
     <h2 class="pagination__title h5 mvn">Page 2 of 5</h2>
     <ul class="pagination__list list-inline mvn">
-      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span class="i i-arrow-left"></span> Prev</a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span aria-hidden="true" class="fa fa-chevron-left"></span> Prev</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 1 of 5">1</a></li>
       <li class="pagination__item pagination--current"><strong>2</strong></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 3 of 5">3</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 4 of 5">4</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 5 of 5">5</a></li>
-      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span class="i i-arrow-right"></span></a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span aria-hidden="true" class="fa fa-chevron-right"></span></a></li>
     </ul>
   </div>
 
   <div class="pagination text-right mtl clearfix">
     <h2 class="pagination__title h5 mvn">Page 2 of 5</h2>
     <ul class="pagination__list list-inline mvn">
-      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span class="i i-arrow-left"></span> Prev</a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span aria-hidden="true" class="fa fa-chevron-left"></span> Prev</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 1 of 5">1</a></li>
       <li class="pagination__item pagination--current"><strong>2</strong></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 3 of 5">3</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 4 of 5">4</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 5 of 5">5</a></li>
-      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span class="i i-arrow-right"></span></a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span aria-hidden="true" class="fa fa-chevron-right"></span></a></li>
     </ul>
   </div>
 ```
@@ -66,7 +67,8 @@ Le titre peut être caché avec `.hide`
     text-transform: uppercase;
     display: inline-block;
     text-align: center;
-    padding: 0.5rem 0.9rem;
+    padding: .25em .5em;
+    font-size: 90%;
     color: #333;
   }
 

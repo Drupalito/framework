@@ -124,6 +124,9 @@ ul.primary li {
   padding-left: .5em;
   padding-right: .5em;
 }
+ul.primary > li:first-child {
+  padding-left: 0;
+}
 ul.primary a {
   text-transform: capitalize;
   line-height: 2.75em;
@@ -231,6 +234,13 @@ ul.secondary li {
   vertical-align: middle;
   padding-left: .5em;
   padding-right: .3em;
+}
+ul.secondary > li:first-child {
+  padding-left: 0;
+}
+ul.secondary li.collapsed > a,
+ul.secondary li.expanded > a {
+  padding-right: 0;
 }
 ul.secondary li:first-child {
   border-left: 0; /* LTR */
