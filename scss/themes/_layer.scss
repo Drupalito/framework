@@ -73,9 +73,8 @@ category: Layout - Layer
 
   &__header {
     margin-bottom: rhythm(1);
-    padding-top: rhythm(0.5);
     padding-bottom: rhythm(0.5);
-    border-top: pem(1px) solid #ccc;
     border-bottom: pem(1px) solid #ccc;
   }
 }
+p.main__description{ margin-top:.25em; }

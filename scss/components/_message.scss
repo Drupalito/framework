@@ -389,7 +389,7 @@ Combine `.text` with `.text--icon` and icon `.i-info`
   }
 
   &--muted {
-    color: #999;
+    color: #ccc;
   }
 
   @each $name, $values in $message {

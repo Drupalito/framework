@@ -35,21 +35,37 @@ category: Components - Menu base
 
 */
 
+ul li.expanded > a,
+ul li.collapsed > a {
+  position: relative;
+  padding-right: 1em;
+}
+
 ul li.expanded > a:before,
 ul li.collapsed > a:before {
-  font-family: "icomoon";
+
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   position: absolute;
   top: 50%;
-  right: 5px;
-  margin-top: -12px;
+  right: 0;
+  margin-top: -8px;
 }
 
 ul li.expanded > a:before {
-  content: "\edc9";
+  content: "\f0d7";
 }
 
 ul li.collapsed > a:before {
-  content: "\edc8";
+  content: "\f0da";
 }
 
 ul li.collapsed > ul {
@@ -116,15 +132,15 @@ ul.primary a {
   padding-right: 0;
   border-bottom: 0;
   border-bottom: 2px solid transparent;
-  color: #67747c;
+  color: #333;
 }
 ul.primary a:hover,
 ul.primary a:focus,
 ul.primary li:hover > a {
   text-decoration: none;
   background-color: transparent;
-  border-bottom-color: #222;
-  color: #222;
+  border-bottom-color: #333;
+  color: #333;
 }
 
 ul.primary li.active a,
@@ -158,7 +174,7 @@ ul.primary ul > li > a {
   padding-left: .5em;
   padding-right: .5em;
   border-bottom: 0;
-  background: #222;
+  background: #333;
   color: #fff;
 }
 ul.primary ul > li > a:hover,
@@ -223,14 +239,14 @@ ul.secondary a {
   padding: 0;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  color: #67747c;
+  color: #333;
 }
 ul.secondary a:hover,
 ul.secondary a:focus,
 ul.secondary li:hover > a {
   text-decoration: none;
-  border-bottom-color: #222;
-  color: #222;
+  border-bottom-color: #333;
+  color: #333;
 }
 ul.secondary li.active a,
 ul.secondary a.active {

@@ -9,7 +9,7 @@ category: Component
 ---
 
 ```html
-  <div class="block">
+  <div class="block block--views">
     <div class="block__inner">
       <div class="block__header">
         <h2 class="block__title">Lorem Ipsum</h2>
@@ -29,23 +29,23 @@ category: Component
   margin-top: 1em;
   margin-bottom: 1em;
 
-  .aside & {
+  &--views {
     background: #fff;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-top: 1px solid #ddd;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 
   &__title {
     padding-bottom: rhythm(0.5);
-    border-bottom: pem(1px) solid #ccc;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 0;
     padding: 13px 15px;
     line-height: 1.5;
     font-weight: bold;
     color: #E11B27;
     text-transform: uppercase;
-
   }
 
   &--first {
@@ -57,6 +57,28 @@ category: Component
   }
 }
 
+/*doc
+---
+title: Block texte
+category: Component
+---
+
+```html
+  <div class="block block--views">
+    <div class="block__inner">
+      <div class="block__header">
+        <h2 class="block__title">Lorem Ipsum</h2>
+      </div>
+      <div class="block__content">
+      <div class="pam">
+        <p>Vivamus pretium placerat lorem, in tempor massa convallis sit amet. Aliquam sed quam eget ligula luctus aliquam sed vitae nulla. Aliquam dui dolor./p>
+      </div>
+      </div>
+    </div>
+  </div>
+```
+
+*/
 
 /*doc
 ---
@@ -65,7 +87,7 @@ category: Component
 ---
 
 ```html
-  <div class="block block--menu">
+  <div class="block block--views block--menu">
     <div class="block__inner">
       <div class="block__header">
         <h2 class="block__title">Lorem Ipsum</h2>
@@ -82,7 +104,7 @@ category: Component
               <li><a href="#">Link</a></li>
             </ul>
           </li>
-          <li><a href="#">Link</a></li>
+          <li><a class="active" href="#">Link active</a></li>
           <li class="expanded">
             <a href="#">Link expanded</a>
             <ul>
@@ -100,6 +122,9 @@ category: Component
 
 */
 
+.block--menu {
+  border-bottom: 0;
+}
 .block__content ul.primary {
   display: block;
   position: relative;
@@ -107,11 +132,11 @@ category: Component
 .block__content ul.primary li {
   display: block;
   padding: 0;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
 }
 .block__content ul.primary a,
 .block__content ul.primary li > span {
-  color: #3b444f;
+  color: #333;
   display: block;
   line-height: 1.2em;
   padding: 12px 25px 12px 15px;
@@ -119,7 +144,7 @@ category: Component
   border-bottom: 0;
 }
 .block__content ul.primary a:hover {
-  // border-left: 1px solid #ddd;
+  // border-left: 1px solid #ccc;
   background: #fefafb;
 }
 .block__content ul.primary a:focus {
@@ -131,5 +156,5 @@ category: Component
 .block__content ul.primary a.active:hover {
   border-left: 2px solid #E11B27;
   background: #fefafb;
-  color: #3b444f;
+  color: #333;
 }

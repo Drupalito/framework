@@ -11,7 +11,7 @@ category: Module - Search
 ```html
   <div id="search" class="search">
     <form class="search__form" role="search" action="/" method="post" id="search-form">
-      <input title="Search by keywords" placeholder="Enter your keywords…" type="search" name="search_block_form" value="" size="30" class="search__input form-text" /><button class="search__submit" title="Search on website Starter" type="submit" name="op"><span class="i i-search" aria-hidden="true"></span> Search</button>
+      <input title="Search by keywords" placeholder="Enter your keywords…" type="search" name="search_block_form" value="" size="30" class="search__input form-text" /><button class="search__submit btn" title="Search on website Starter" type="submit" name="op"><span class="fa fa-search" aria-hidden="true"></span> Search</button>
     </form>
   </div>
 ```

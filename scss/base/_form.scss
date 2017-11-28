@@ -252,7 +252,7 @@ show: false
 .field-required {
   font-size: pem(12px);
   line-height: 1.2;
-  color: #666;
+  color: #333;
 }
 
 /*doc
@@ -476,7 +476,7 @@ div.password-confirm {
 
 .form-item .password-suggestions {
   padding: 10px 20px;
-  border: 1px solid #b4b4b4;
+  border: 1px solid #ccc;
 }
 // scss-lint:enable MergeableSelector
 
@@ -588,7 +588,7 @@ Couleurs de placeholder : ne pas fusionner les sélecteurs !
 */
 
 // scss-lint:disable VendorPrefix
-$field-placeholder: #999;
+$field-placeholder: #333;
 ::-webkit-input-placeholder { // WebKit browsers
   color: $field-placeholder; }
 :-moz-placeholder { // Mozilla Firefox 4 to 18

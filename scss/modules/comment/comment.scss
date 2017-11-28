@@ -16,7 +16,7 @@ Default Style CSS
       <div class="comment__header">
         <p class="mvn">
           <span class="mrm"><span class="user-picture"><a href="#"><img src="http://placehold.it/85" width="85" height="85" /></a></span></span>
-          <span class="inbl amiddle"><cite itemprop="creator name"><span class="bold"><a href="#" class="username">admin12</a></span></cite><br /><time class="small" datetime="2016-02-27T20:37:49+01:00" itemprop="commentTime">Sat, 02/27/2016 - 20:37</time></span>
+          <span class="inbl amiddle"><cite name"><span class="bold"><a href="#" class="username">admin12</a></span></cite><br /><time class="small" datetime="2016-02-27T20:37:49+01:00">Sat, 02/27/2016 - 20:37</time></span>
         </p>
       </div>
       <div class="comment__description">
@@ -40,7 +40,7 @@ Default Style CSS
 .comments-add {
   padding: rhythm(1);
   margin-top: rhythm(1);
-  background: #f5f5f5;
+  background: #f7f7f7;
 }
 
 .comments-submit {
@@ -71,13 +71,13 @@ Default Style CSS
   &--unpublished {
     $type: map-get($message, "warning");
     $background: map-get($type, "color");
-    background: #{lighten($background, 45%)};
+    background: #{$background};
   }
 
   &--preview {
     $type: map-get($message, "info");
     $background: map-get($type, "color");
-    background: #{lighten($background, 45%)};
+    background: #{$background};
     padding: 1.5em;
     margin-bottom: 1.5em;
   }

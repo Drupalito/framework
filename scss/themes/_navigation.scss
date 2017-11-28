@@ -256,67 +256,67 @@ category: Layout - Menu
 }
 
 // Toggle menu mobile first
-.menu-button {
-  position: relative;
-  display: block;
-  padding: 1em;
-  margin: 0;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: 700;
-  background: #f2f2f2;
-  color: #{map-get($colorz, "secondary")};
+// .menu-button {
+//   position: relative;
+//   display: block;
+//   padding: 1em;
+//   margin: 0;
+//   cursor: pointer;
+//   text-transform: uppercase;
+//   font-size: 1em;
+//   font-weight: 700;
+//   background: #f2f2f2;
+//   color: #{map-get($colorz, "secondary")};
 
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 1.75em;
-    right: 1em;
-    display: block;
-    width: 20px;
-  }
+//   &:before,
+//   &:after {
+//     content: "";
+//     position: absolute;
+//     top: 1.75em;
+//     right: 1em;
+//     display: block;
+//     width: 20px;
+//   }
 
-  &:after {
-    height: 9px;
-    border-top: 2px solid #{map-get($colorz, "secondary")};
-    border-bottom: 2px solid #{map-get($colorz, "secondary")};
-  }
+//   &:after {
+//     height: 9px;
+//     border-top: 2px solid #{map-get($colorz, "secondary")};
+//     border-bottom: 2px solid #{map-get($colorz, "secondary")};
+//   }
 
-  &:before {
-    top: 1.29em;
-    height: 2px;
-    background: #{map-get($colorz, "secondary")};
-  }
+//   &:before {
+//     top: 1.29em;
+//     height: 2px;
+//     background: #{map-get($colorz, "secondary")};
+//   }
 
-  &.is-actived {
-    background: #{map-get($colorz, "secondary")};
-    color: #fff;
+//   &.is-actived {
+//     background: #{map-get($colorz, "secondary")};
+//     color: #fff;
 
-    &:before,
-    &:after {
-      border: 0;
-      height: 2px;
-      width: 20px;
-      background: #fff;
-    }
+//     &:before,
+//     &:after {
+//       border: 0;
+//       height: 2px;
+//       width: 20px;
+//       background: #fff;
+//     }
 
-    &:after {
-      transform: rotate(45deg);
-    }
+//     &:after {
+//       transform: rotate(45deg);
+//     }
 
-    &:before {
-      top: 1.75em;
-      transform: rotate(-45deg);
-    }
-  }
+//     &:before {
+//       top: 1.75em;
+//       transform: rotate(-45deg);
+//     }
+//   }
 
-  @include mq("smaller") {
-    + .menu { display: none; }
-  }
+//   @include mq("smaller") {
+//     + .menu { display: none; }
+//   }
 
-  @include mq("small") {
-    display: none;
-  }
-}
+//   @include mq("small") {
+//     display: none;
+//   }
+// }

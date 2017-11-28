@@ -33,7 +33,7 @@ Content type : **Node**
   &--teaser {
     padding: rhythm(1);
     margin-bottom: rhythm(1);
-    background: #f5f5f5;
+    background: #f7f7f7;
 
     .page-search & {
       background: transparent;
@@ -43,7 +43,7 @@ Content type : **Node**
   &--unpublished {
     $type: map-get($message, "warning");
     $background: map-get($type, "color");
-    background: #{lighten($background, 45%)};
+    background: #{$background};
   }
 
   &--teaser {
