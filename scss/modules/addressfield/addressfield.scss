@@ -10,6 +10,36 @@ category: Module - Addressfield
 
 Default Style CSS
 
+```html
+  <div id="addressfield-wrapper">
+    <fieldset class="form-wrapper">
+      <legend><span class="fieldset-legend">Address</span></legend>
+      <div class="fieldset-wrapper">
+        <div class="street-block">
+          <div class="form-item">
+            <label for="field-address-thoroughfare">Address 1 <abbr class="field-required" title="Ce champ est requis.">*</abbr></label>
+            <input class="thoroughfare form-text required" autocomplete="address-line1" type="text" id="field-address-thoroughfare" name="field_address[thoroughfare]" value="" size="30" maxlength="255">
+          </div>
+          <div class="form-item form-type--textfield form-item--field-address-premise">
+            <label for="field-address-premise">Address 2 </label>
+            <input class="premise form-text" autocomplete="address-line2" type="text" id="field-address-premise" name="field_address[premise]" value="" size="30" maxlength="255">
+          </div>
+        </div>
+        <div class="container-inline locality-block country-FR">
+          <div class="form-item prl">
+            <label for="field-address-postal-code">Postal code <abbr class="field-required" title="Ce champ est requis.">*</abbr></label>
+            <input class="postal-code form-text required" autocomplete="postal-code" type="text" id="field-address-postal-code" name="field_address[postal_code]" value="" size="10" maxlength="255">
+          </div>
+          <div class="form-item">
+            <label for="field-address-locality">Ville <abbr class="field-required" title="Ce champ est requis.">*</abbr></label>
+            <input class="locality form-text required" autocomplete="address-level2" type="text" id="field-address-locality" name="field_address[locality]" value="" size="30" maxlength="255">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+```
+
 */
 
 .addressfield {

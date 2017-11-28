@@ -139,10 +139,28 @@ category: Components - Buttons
 * `.btn--active` - Bouton état actif
 
 ```html
-  <button class="btn active">Submit</button>
-  <input id="submit" name="submit" class="btn active" type="submit" value="Submit" />
-  <span class="btn active">Submit</span>
-  <a href="#" class="btn active">Submit</a>
+  <button class="btn active">btn</button>
+  <input id="submit" name="submit" class="btn active" type="submit" value="btn" />
+  <span class="btn active">btn</span>
+  <a href="#" class="btn active">btn</a>
+  <br />
+
+  <button class="btn btn--default active">btn--default</button>
+  <input id="submit" name="submit" class="btn btn--default active" type="submit" value="btn--default" />
+  <span class="btn btn--default active">btn--default</span>
+  <a href="#" class="btn btn--default active">btn--default</a>
+  <br />
+
+  <button class="btn btn--primary active">btn--primary</button>
+  <input id="submit" name="submit" class="btn btn--primary active" type="submit" value="btn--primary" />
+  <span class="btn btn--primary active">btn--primary</span>
+  <a href="#" class="btn btn--primary active">btn--primary</a>
+  <br />
+
+  <button class="btn btn--secondary active">btn--secondary</button>
+  <input id="submit" name="submit" class="btn btn--secondary active" type="submit" value="btn--secondary" />
+  <span class="btn btn--secondary active">btn--secondary</span>
+  <a href="#" class="btn btn--secondary active">btn--secondary</a>
 ```
 
 */
@@ -156,10 +174,28 @@ category: Components - Buttons
 * `.btn--disabled` - Bouton désactivé
 
 ```html
-  <button class="btn btn--disabled">Submit</button>
-  <input id="submit" name="submit" class="btn btn--disabled" type="submit" value="Submit" />
-  <span class="btn btn--disabled">Submit</span>
-  <a href="#" class="btn btn--disabled">Submit</a>
+  <button class="btn btn--disabled">btn</button>
+  <input id="submit" name="submit" class="btn btn--disabled" type="submit" value="btn" />
+  <span class="btn btn--disabled">btn</span>
+  <a href="#" class="btn btn--disabled">btn</a>
+  <br />
+
+  <button class="btn btn--default btn--disabled">btn--default</button>
+  <input id="submit" name="submit" class="btn btn--default btn--disabled" type="submit" value="btn--default" />
+  <span class="btn btn--default btn--disabled">btn--default</span>
+  <a href="#" class="btn btn--default btn--disabled">btn--default</a>
+  <br />
+
+  <button class="btn btn--primary btn--disabled">btn--primary</button>
+  <input id="submit" name="submit" class="btn btn--primary btn--disabled" type="submit" value="btn--primary" />
+  <span class="btn btn--primary btn--disabled">btn--primary</span>
+  <a href="#" class="btn btn--primary btn--disabled">btn--primary</a>
+  <br />
+
+  <button class="btn btn--secondary btn--disabled">btn--secondary</button>
+  <input id="submit" name="submit" class="btn btn--secondary btn--disabled" type="submit" value="btn--secondary" />
+  <span class="btn btn--secondary btn--disabled">btn--secondary</span>
+  <a href="#" class="btn btn--secondary btn--disabled">btn--secondary</a>
 ```
 
 */

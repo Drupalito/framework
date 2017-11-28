@@ -1,4 +1,3 @@
-@charset 'utf-8';
 
 // Import Variables / Helpers
 @import "import";
@@ -19,8 +18,9 @@
 @import
   "themes/layer",
   "themes/header",
-  "themes/footer",
   "themes/navigation",
+  "themes/complementary",
+  "themes/contentinfo",
   "themes/aside";
 
 // scss-lint:enable Indentation

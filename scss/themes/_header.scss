@@ -6,10 +6,17 @@ category: Layout - Layer
 ---
 
 ```html
-  <div class="banner">
-    <header id="banner" role="banner" class="container clearfix">
+  <div class="page-banner banner">
+    <header id="banner" role="banner" class="container">
       <div class="row">
-        ...
+        <div class="col-xs-12 col-sm-4">
+          ...logo
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="branding">
+            ...menu principal
+          </div>
+        </div>
       </div>
     </header>
   </div>
@@ -27,7 +34,7 @@ category: Layout - Layer
 
   @include mq("smaller") {
     .col-xs-12.col-sm-8 {
-      margin-bottom: 1em;
+      margin-top: 1em;
     }
   }
 }
