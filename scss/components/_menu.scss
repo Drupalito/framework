@@ -138,8 +138,7 @@ ul.primary a {
   color: #333;
 }
 ul.primary a:hover,
-ul.primary a:focus,
-ul.primary li:hover > a {
+ul.primary a:focus {
   text-decoration: none;
   background-color: transparent;
   border-bottom-color: #333;
@@ -157,6 +156,7 @@ ul.primary a.active {
 ul.primary ul {
   display: none;
   position: absolute;
+  width: 280px;
   left: -9999px;
   z-index: 30;
 }
@@ -165,7 +165,6 @@ ul.primary li > a:hover + ul,
 ul.primary li > a:focus + ul {
   display: block;
   left: 0;
-  width: 280px;
 }
 ul.primary ul {
   left: .5em;
@@ -180,16 +179,16 @@ ul.primary ul > li > a {
   background: #333;
   color: #fff;
 }
-ul.primary ul > li > a:hover,
-ul.primary ul > li > a:focus,
-ul.primary ul > li:hover > a {
+ul.primary ul li a:hover,
+ul.primary ul li a:focus {
   text-decoration: none;
-  background: #E11B27;
-  color: #fff;
+  background-color: transparent;
+  border-bottom-color: #333;
+  color: #333;
 }
 
 @media (max-width: $screen-xs-max) {
-  ul.primary {
+  .page-secondary ul.primary {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -197,7 +196,7 @@ ul.primary ul > li:hover > a {
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
-  ul.primary > li {
+  .page-secondary ul.primary > li {
     flex: 0 0 auto;
   }
 }
