@@ -406,23 +406,36 @@ Combine `.text` with `.text--icon` and icon `.i-info`
 .warning { @extend .text--warning; }
 .error   { @extend .text--error; }
 
-/* */
+/*doc
+---
+title: Label mark
+category: Components - Label
+---
 
-// [TODO]
+* `.mark--new`
+* `.mark--unpublished`
+* `.mark--updated`
+
+```html
+  <p>Lorem ipsum dolor sit amet. <mark class="mark mark--new">New</mark></p>
+  <p>Lorem ipsum dolor sit amet. <mark class="mark mark--updated">Updated</mark></p>
+  <p>Lorem ipsum dolor sit amet. <mark class="mark mark--unpublished">Unpublished</mark></p>
+```
+
+*/
+
 .mark--new {
   $type: map-get($message, "error");
   background: #{map-get($type, "color")};
   color: #fff;
 }
 
-// [TODO]
 .mark--unpublished {
   $type: map-get($message, "warning");
   background: #{map-get($type, "color")};
   color: #fff;
 }
 
-// [TODO]
 .mark--updated {
   $type: map-get($message, "info");
   background: #{map-get($type, "color")};
