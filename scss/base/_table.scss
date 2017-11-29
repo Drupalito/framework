@@ -147,7 +147,7 @@ table {
     width: 100%;
     max-width: 100%;
     display: table;
-    table-layout: fixed;
+    table-layout: auto;
     border-collapse: collapse; // fusion des bordures
     vertical-align: top;
   }
