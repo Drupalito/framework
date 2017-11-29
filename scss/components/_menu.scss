@@ -188,6 +188,20 @@ ul.primary ul > li:hover > a {
   color: #fff;
 }
 
+@media (max-width: $screen-xs-max) {
+  ul.primary {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  ul.primary > li {
+    flex: 0 0 auto;
+  }
+}
+
 /*doc
 ---
 title: Menu secondaire
