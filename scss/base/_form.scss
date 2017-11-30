@@ -180,9 +180,11 @@ category: Base - Forms
 ---
 
 */
+
 input[type="radio"],
 input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  left: -9999px;
 
   + label {
     display: inline-block;
@@ -213,6 +215,16 @@ input[type="checkbox"] {
       border-color: #{map-get($colorz, "primary")};
     }
   }
+
+  &:focus + label:before {
+    border-color: #{map-get($colorz, "primary")};
+    box-shadow: inset 0 0 0 3px #fff;
+    outline: 3px solid blue;
+  }
+
+  // &:focus + label {
+  //   font-weight: 600;
+  // }
 
   &:checked + label:before,
   &:disabled:checked + label:before {
@@ -263,8 +275,8 @@ category: Base - Forms
 
 ```html
   <div class="form-item">
-    <span class="label">Email</span>
-    <strong>email@example.com</strong>
+    <label for="Login">Login</label>
+    <input name="Login" type="text" placeholder="Login" />
   </div>
   <div class="form-item">
     <label for="password">Password</label>
@@ -284,15 +296,15 @@ title: Field Inline
 category: Base - Forms
 ---
 
-Add class `form-item--inline` on parent `div.form-item`
+Add class `form-item--inline` on same `div.form-item`
 
 ```html
-  <div class="form-item form-item--inline">
-    <div class="form-item">
+  <div class="clearfix">
+    <div class="form-item form-item--inline">
       <label for="Login">Login</label>
       <input name="Login" type="text" placeholder="Login" />
     </div>
-    <div class="form-item">
+    <div class="form-item form-item--inline">
       <label for="password">Password</label>
       <input name="password" type="text" placeholder="Password" />
     </div>
