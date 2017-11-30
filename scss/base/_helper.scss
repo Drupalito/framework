@@ -23,6 +23,28 @@ category: Base - Helpers
 .abottom { vertical-align: bottom; }
 .amiddle { vertical-align: middle; }
 
+.frame {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5em;
+  padding: 1em;
+
+  p,
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__action a {
+    margin-top: .5em;
+  }
+
+  @include mq("smaller") {
+    &__action a + a {
+      margin-lef: .5em;
+    }
+  }
+}
+
 /*doc
 ---
 show: false
