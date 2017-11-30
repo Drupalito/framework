@@ -11,11 +11,11 @@ category: Module - Webform
 Default Style CSS
 
 ```html
-  <div class="webform-progressbar">
+  <div class="webform-progressbar clearfix">
     <ul class="list-none mvn">
-      <li class="webform-progressbar__item current completed" style="width: 25%"><span class="webform-progressbar__label">Start</span></li>
-      <li class="webform-progressbar__item current" style="width: 25%"><span class="webform-progressbar__label">BREAK</span></li>
-      <li class="webform-progressbar__item" style="width: 25%"><span class="webform-progressbar__label">Test</span></li>
+      <li class="webform-progressbar__item step current completed" style="width: 25%"><span class="webform-progressbar__label">Panel 1</span></li>
+      <li class="webform-progressbar__item step current completed" style="width: 25%"><span class="webform-progressbar__label">Panel 2</span></li>
+      <li class="webform-progressbar__item step current" style="width: 25%"><span class="webform-progressbar__label">Panel 3</span></li>
       <li class="webform-progressbar__item" style="width: 25%"><span class="webform-progressbar__label">Complete</span></li>
     </ul>
     <div class="webform-progressbar-number">
@@ -26,8 +26,10 @@ Default Style CSS
 
 */
 
-.form-item.webform-container-inline {
-  @include form-item-inline($input-height);
+@media (min-width: 768px) {
+  .form-item.webform-container-inline {
+    @include form-item-inline($input-height);
+  }
 }
 
 .webform-progressbar {
@@ -52,6 +54,8 @@ Default Style CSS
       content: counter(step);
       counter-increment: step;
       display: inline-block;
+      position: relative;
+      z-index: 2;
       width: 20px;
       line-height: 20px;
       text-align: center;
@@ -70,7 +74,7 @@ Default Style CSS
       position: absolute;
       top: 9px;
       left: -50%;
-      z-index: -1;
+      z-index: 1;
     }
 
     &:before,
@@ -102,7 +106,7 @@ Default Style CSS
 
   @media (max-width: $screen-sm-min) {
     li {
-      width: 100%;
+      width: 100% !important;
       border-top: 1px solid #ccc;
       padding-top: 5px;
       margin-top: 5px;
@@ -134,7 +138,29 @@ Default Style CSS
   }
 }
 
-/* */
+/*doc
+---
+title: Webform confirmation
+category: Module - Webform
+---
+
+Page de confirmation après la soumission d'un formulaire.
+
+```html
+  <div class="webform-confirmation frame text-center">
+    <div class="webform-confirmation__inner">
+      <h2>Thanks</h2>
+      <p>Thank you, your submission has been received.<br/>
+      We will process your request as soon as possible.</p>
+    </div>
+
+    <div class="frame__action ">
+      <a class="btn btn--secondary" href="#"><span class="fa fa-caret-left prs" aria-hidden="true"></span> Go back to the form</a>
+    </div>
+  </div>
+```
+
+*/
 
 .webform-confirmation {
   padding: 1.5em;
@@ -149,16 +175,29 @@ Default Style CSS
     display: inline-block;
   }
 
-  // scss-lint:disable ImportantRule
   .description { display: block; }
-  // scss-lint:enable ImportantRule
 
   // scss-lint:disable QualifyingElement
   div.ajax-progress-bar div { display: inherit; }
   // scss-lint:enable QualifyingElement
 }
 
-/* */
+/*doc
+---
+title: Webform action buttons
+category: Module - Webform
+---
+
+Buttons côte à côte.
+
+```html
+<div class="form-actions">
+  <button class="webform-previous btn btn--primary btn--submit" name="op" value="Page précédente" type="submit"><span class="fa fa-caret-left prs" aria-hidden="true"></span> Page précédente</button>
+  <button class="btn btn--default btn--submit" name="op" value="Submit" type="submit">Envoyer <span class="fa fa-envelope pls" aria-hidden="true"></span></button>
+</div>
+```
+
+*/
 
 .webform-next,
 .webform-previous + button {
