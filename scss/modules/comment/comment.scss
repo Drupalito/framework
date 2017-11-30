@@ -32,7 +32,7 @@ Default Style CSS
 .comment-form .node {
   margin-top: rhythm(1);
   padding-top: rhythm(1);
-  border-top: pem(1px) solid #ccc;
+  border-top: 1px solid #ccc;
 }
 
 .comment,
@@ -54,14 +54,14 @@ Default Style CSS
   border: 2px solid #fff;
 
   &__header {
-    border-bottom: pem(1px) solid #ccc;
+    border-bottom: 1px solid #ccc;
     padding-bottom: rhythm(0.5);
     margin-bottom: rhythm(0.5);
   }
 
   &__signature,
   .links {
-    border-top: pem(1px) solid #ccc;
+    border-top: 1px solid #ccc;
     padding-top: rhythm(0.5);
     margin-top: rhythm(0.5);
     margin-bottom: 0;
