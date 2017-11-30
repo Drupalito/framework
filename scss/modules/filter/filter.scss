@@ -8,7 +8,36 @@ title: Filter
 category: Module - Filter
 ---
 
-Default Style CSS
+Default Style CSS Drupal
+
+```html
+  <fieldset class="filter-wrapper form-wrapper">
+    <div class="fieldset-wrapper">
+      <div class="filter-help form-wrapper" id="body-format-help">
+        <p><a href="#">Plus d'information sur les formats de texte</a></p>
+      </div>
+      <div class="form-item form-type--select form-item--body-format">
+        <label for="body-format--2">Format de texte </label>
+        <span class="select">
+          <select class="filter-list form-select" id="body-format--2" name="body[und][0][format]"><option value="filtered_html" selected="selected">Filtered HTML</option><option value="full_html">Full HTML</option><option value="plain_text">Plain text</option><option value="php_code">PHP code</option></select>
+        </span>
+      </div>
+      <div class="filter-guidelines form-wrapper filter-guidelines-processed" id="body-format-guidelines">
+        <div class="filter-guidelines-item filter-guidelines-filtered_html" style="display: block;">
+          <h3 class="mvm">Filtered HTML</h3>
+          <ul class="tips"><li>Les adresses de pages web et de courriels sont transformées en liens automatiquement.</li><li>Balises HTML autorisées&nbsp;: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; &lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; &lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</li><li>Les lignes et les paragraphes vont à la ligne automatiquement.</li></ul>
+        </div>
+        <div class="filter-guidelines-item filter-guidelines-full_html">
+          <h3 class="mvm">Full HTML</h3><ul class="tips"><li>Les adresses de pages web et de courriels sont transformées en liens automatiquement.</li><li>Les lignes et les paragraphes vont à la ligne automatiquement.</li></ul>
+        </div>
+        <div class="filter-guidelines-item filter-guidelines-plain_text">
+          <h3 class="mvm">Plain text</h3>
+          <ul class="tips"><li>Aucune balise HTML autorisée.</li><li>Les adresses de pages web et de courriels sont transformées en liens automatiquement.</li><li>Les lignes et les paragraphes vont à la ligne automatiquement.</li></ul></div><div class="filter-guidelines-item filter-guidelines-php_code"><h3 class="mvm">PHP code</h3><ul class="tips"><li>Vous pouvez utiliser du code PHP. Vous devrez inclure les tags &lt;?php ?&gt;.</li></ul>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+```
 
 */
 
@@ -23,17 +52,25 @@ Default Style CSS
       border-bottom: 0;
 
       &:before {
-        content: "\ed55";
-        font-family: "icomoon";
+        content: "\f059";
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "FontAwesome";
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         margin-right: .5em;
       }
     }
   }
 
   &-wrapper {
-    border-bottom: pem(1px) solid #ccc;
+    border-bottom: 1px solid #ccc;
     background: #fff;
-    border-top: 0;
+    // border-top: 0;
   }
 
   .fieldset-wrapper {
@@ -60,15 +97,15 @@ Default Style CSS
 .ckeditor_links {
   display: block;
   padding: rhythm(0.5) rhythm(1);
-  border-right: pem(1px) solid #ccc;
+  border-right: 1px solid #ccc;
   border-bottom: 0;
-  border-left: pem(1px) solid #ccc;
+  border-left: 1px solid #ccc;
   background: #fff;
 
   &:hover,
   &:focus {
-    border-right: pem(1px) solid #ccc;
-    border-left: pem(1px) solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
     background: #{map-get($colorz, "default")};
     color: #fff;
   }
