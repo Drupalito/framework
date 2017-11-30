@@ -417,9 +417,9 @@ category: Components - Label
 * `.mark--updated`
 
 ```html
-  <p>Lorem ipsum dolor sit amet. <mark class="mark mark--new">New</mark></p>
-  <p>Lorem ipsum dolor sit amet. <mark class="mark mark--updated">Updated</mark></p>
-  <p>Lorem ipsum dolor sit amet. <mark class="mark mark--unpublished">Unpublished</mark></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--new">New</mark></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--updated">Updated</mark></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--unpublished">Unpublished</mark></p>
 ```
 
 */

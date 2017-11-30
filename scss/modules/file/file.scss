@@ -8,7 +8,17 @@ title: File Manager
 category: Module - File Manager
 ---
 
-[TODO]
+```html
+  <div class="form-item form-type--managed-file">
+    <label for="field-image-upload">Ajouter un nouveau fichier </label>
+    <div class="image-widget form-managed-file clearfix">
+      <div class="image-widget-data">
+        <input type="file" id="field-image-upload" name="files[field_image]" size="22" class="form-file"><button value="Transférer" type="submit" class="btn btn--submit form-submit">Transférer <span></span></button>
+      </div>
+    </div>
+    <small class="description show">Les fichiers doivent peser moins de <strong>2 Mo</strong>.<br/>Extensions autorisées : <strong>png gif jpg jpeg</strong>.</small>
+  </div>
+```
 
 */
 
