@@ -7,121 +7,96 @@
  * (CURRENT_YEAR)
  */
 
-;(function($, window, document, undefined) {
+var framework = {
+  viewportWidth: jQuery('html').width(),
+  viewportHeight: jQuery('html').height(),
 
-  "use strict";
+  init: function() {
 
-  // Create the defaults once
-  var pluginName = "navigation",
-    defaults = {
-      title: 'Menu',
-      type: 'inline', // inline|block
-      expanded: {
-        title: 'Open',
-        icon: '<span class="i i-arrow-down" aria-hidden="true"></span>'
-      }
-    };
+    framework.hamburgers();
+    framework.smoothScroll('.scroll');
 
-  // The actual plugin constructor
-  function Plugin ( element, options ) {
-    this.element = element;
-    this.settings = $.extend({}, defaults, options);
-    this._defaults = defaults;
-    this._name = pluginName;
-    this.init();
-  }
-
-  // Avoid Plugin.prototype conflicts
-  $.extend(Plugin.prototype, {
-    init: function() {
-      var plugin = this,
-          $this = $(this.element);
-
-      return $this.each(function() {
-        $(this).prepend('<p class="menu-button">' + plugin.settings.title + '</p>');
-        $(this).find('.menu-button').on('click', function() {
-          $(this).toggleClass('is-actived');
-          var $mainMenu = $(this).next('ul');
-          if ($mainMenu.hasClass('is-opened')) {
-            $mainMenu.hide().removeClass('is-opened');
-          }
-          else {
-            $mainMenu.show().addClass('is-opened');
-          }
-        });
-        plugin.submenu();
-      });
-    },
-    openSubmenu: function() {
-
-    },
-    hasSubmenu: function() {
-
-    },
-    submenu: function() {
-      var plugin = this,
-          $this = $(this.element);
-
-      var $menuItem = $this.find('.menu__item--hasmenu');
-      $menuItem.prepend('<button class="menu__btn menu__btn-menu">' + plugin.settings.expanded.icon + ' <span class="hide">' + plugin.settings.expanded.title + '</span></button>');
-
-      $this.find('.menu__btn').on('click', function(e) {
-        var $el = $(this);
-        var $ulSibling = $el.siblings('ul');
-        $el.toggleClass('submenu-opened');
-        if ($ulSibling.hasClass('is-opened')) {
-          $ulSibling.removeClass('is-opened').hide();
-        }
-        else {
-          $ulSibling.addClass('is-opened').show();
-        }
-      });
-    }
-  });
-
-  // A really lightweight plugin wrapper around the constructor,
-  // preventing against multiple instantiations
-  $.fn[pluginName] = function(options) {
-    return this.each(function() {
-      if (!$.data(this, 'plugin_' + pluginName)) {
-        $.data(this, 'plugin_' +
-          pluginName, new Plugin(this, options));
-      }
+    // Open links in new window
+    jQuery('body').on('click', 'a[rel*="external"]', function() {
+      window.open(jQuery(this).attr('href'));
+      return false;
     });
-  };
 
-})(jQuery, window, document);
-
-
-(function ($, window, Drupal) {
-
-  // Smooth scroll anchor
-  Drupal.smoothScroll = function (element) {
-    $(element).on('click', function (e) {
+  },
+  // Smooth scroll anchor or on top.
+  // @example framework.smoothScroll('.scroll');
+  smoothScroll: function(element) {
+    jQuery(element).on('click', function (e) {
       e.preventDefault();
       var target = (this.hash) ? this.hash : 'html';
-      $('html, body').stop().animate({
-        'scrollTop': $(target).offset().top
+      jQuery('html, body').stop().animate({
+        'scrollTop': jQuery(target).offset().top
       }, 900, function () {
         window.location.hash = target;
       });
     });
-  };
-
-  Drupal.behaviors.subtheme_child = {
-    attach: function (context, settings) {
-
-      // Open links in new window
-      $('body', context).on('click', 'a[rel*="external"]', function() {
-        window.open($(this).attr('href'));
-        return false;
+  },
+  hamburgers: function() {
+    var hamburgers = document.querySelectorAll('.hamburger');
+    if (hamburgers.length > 0) {
+      hamburgers.forEach(function (hamburger) {
+        hamburger.addEventListener('click', function () {
+          this.classList.toggle('is-active');
+          jQuery('.navigation').toggleClass('is-opened');
+        }, false);
       });
-
-      Drupal.smoothScroll('.scroll');
-
-      // Responsive menu
-      $('#block-system-main-menu', context).navigation();
     }
-  };
+  },
+  navigation: function() {
+    // Responsive menu use plugin
+    jQuery('.navigation').navigation();
+  },
+  // Smooth counterUp.
+  // @example framework.counterUp('.counter');
+  counterUp: function(element) {
+    if ($.fn.counterUp) {
+      var element = (element) ? element : '.counter';
+      $(element).counterUp({
+        delay: 8,
+        time: 1400
+      });
+    }
+  },
+  owlCarousel: function(element) {
+    $(element).owlCarousel({
+      items: 3,
+      loop: true,
+      center: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      margin: 0,
+      dots: true,
+      nav: true,
+      navText: [
+        '<span aria-hidden="true" class="fa fa-angle-left"></span>',
+        '<span aria-hidden="true" class="fa fa-angle-right"></span>'
+      ],
+    });
+  },
+  // Parallax Sections
+  wowAnimation: function() {
+    // if (!Modernizr.touch) { }
+    new WOW().init();
+  },
+};
 
-})(jQuery, window, Drupal);
+(function ($) {
+  $(document).on('ready', function () {
+
+    framework.init();
+  });
+
+  // $(window).on(
+  //   'load', function () {
+  //
+  //   },
+  //   'resize', function () {
+  //
+  //   }
+  // );
+})(jQuery);
