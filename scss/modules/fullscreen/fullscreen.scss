@@ -1,0 +1,108 @@
+
+// Import Variables / Helpers
+@import "../../import";
+
+/*doc
+---
+title: Fullscreen
+category: Module - Fullscreen
+---
+
+Default Style CSS
+
+```html
+  <div id="fullscreen" class="page-fullscreen fullscreen">
+    <img class="fullscreen__image" src="http://via.placeholder.com/1280x768" alt="" />
+    <div id="fullscreen-block" class="fullscreen__table">
+      <div class="fullscreen__inner">
+        <div>
+          <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-push-1">
+              <div class="fullscreen__content text-center">
+                <p class="fullscreen__title">Lorem ipsum</p>
+                <p class="fullscreen__description">Blanditiis aperiam laborum eum</p>
+                <div class="fullscreen__actions">
+                  <a href="#" class="btn btn--default">Lorem Ipsum</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+```
+
+*/
+
+.fullscreen {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.fullscreen__table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen__inner {
+  padding: 2em 0;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 3;
+}
+
+.fullscreen__image,
+.fullscreen__video {
+  position: absolute;
+  // top: 50%;
+  // left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  // transform: translateX(-50%) translateY(-50%);
+  // transition: 1s opacity;
+  overflow: hidden;
+}
+
+.fullscreen__image {
+  top: 0;
+  left: 0;
+-webkit-animation: kenburn 60s infinite;
+  -moz-animation: kenburn 60s infinite;
+  -ms-animation: kenburn 60s infinite;
+  -o-animation: kenburn 60s infinite;
+  animation: kenburn 60s infinite;
+}
+
+.fullscreen__video {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 1s opacity;
+  // display: none;
+  max-width: none;
+  z-index: 2;
+}
+
+.fullscreen__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 500%;
+}
+
+.fullscreen__description {
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.2;
+  font-size: 150%;
+}

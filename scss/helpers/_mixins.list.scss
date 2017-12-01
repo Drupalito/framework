@@ -71,18 +71,20 @@
 
   @extend %clearfix;
 
-  dt {
-    float: left;
-    width: $width;
+  @media (min-width: $screen-sm-min) {
+    dt {
+      float: left;
+      width: $width;
 
-    @if ($ellipsis) {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
+      @if ($ellipsis) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     }
-  }
 
-  dd {
-    margin-left: $width + 10;
+    dd {
+      margin-left: $width + 10;
+    }
   }
 }
