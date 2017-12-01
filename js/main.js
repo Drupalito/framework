@@ -83,6 +83,16 @@ var framework = {
     // if (!Modernizr.touch) { }
     new WOW().init();
   },
+  // jsSocials
+  jsSocials: function() {
+    if ($.fn.jsSocials) {
+      jQuery('#share').jsSocials({url: window.location.href,
+        showLabel: false,
+        showCount: 'inside',
+        shares: ['facebook','linkedin','twitter','googleplus']
+      });
+    }
+  },
 };
 
 (function ($) {
