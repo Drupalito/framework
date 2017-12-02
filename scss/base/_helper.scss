@@ -1,5 +1,5 @@
 
-// @file: _form.scss
+// @file: _helper.scss
 // Helpers, classe atomique.
 
 /*doc
@@ -72,12 +72,13 @@ category: Base - Helpers
 
 /*doc
 ---
-title: Spacing
+title: Espacements
 category: Base - Helpers
 ---
 
-Should be used to modify the default spacing between objects (not between nodes of the same object)
-Please use judiciously. You want to be using defaults most of the time, these are exceptions!
+Doit être utilisé pour modifier l'espacement par défaut entre les objets (pas entre les noeuds du même objet).
+
+Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des exceptions!
 
 `<type><location><size>`
 
@@ -146,32 +147,6 @@ Please use judiciously. You want to be using defaults most of the time, these ar
 .mlm, .mhm, .mam { margin-left: round($grid-gutter-width / 2) !important; }
 .mll, .mhl, .mal { margin-left: $grid-gutter-width !important; }
 // scss-lint:enable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
-
-//
-// Responsive: Utility classes
-// --------------------------------------------------
-
-// IE10 in Windows (Phone) 8
-//
-// Support for responsive views via media queries is kind of borked in IE10, for
-// Surface/desktop in split view and for Windows Phone 8. This particular fix
-// must be accompanied by a snippet of JavaScript to sniff the user agent and
-// apply some conditional CSS to *only* the Surface/desktop Windows 8. Look at
-// our Getting Started page for more information on this bug.
-//
-// For more information, see the following:
-//
-// Issue: https://github.com/twbs/bootstrap/issues/10497
-// Docs: http://getbootstrap.com/getting-started/#support-ie10-width
-// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
-// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-
-// scss-lint:disable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
-@at-root {
-  @-ms-viewport {
-    width: device-width;
-  }
-}
 
 //
 // Responsive: Visibility classes
