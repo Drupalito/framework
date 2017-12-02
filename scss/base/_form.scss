@@ -38,6 +38,7 @@ input,
 select,
 textarea {
   outline: 0;
+  box-shadow: none;
   border: 1px solid #c0c0c0;
   background: #fff;
 }
@@ -72,10 +73,15 @@ select[disabled] {
   background-color: $form-disable;
 }
 
+input[type="range"],
 input[type="text"],
 input[type="tel"],
 input[type="date"],
 input[type="color"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
@@ -87,17 +93,22 @@ input[type="submit"] {
   height: $input-height;
 }
 
+input[type="range"],
 input[type="text"],
 input[type="tel"],
 input[type="date"],
 input[type="color"],
+input[type="month"],
+input[type="week"],
+input[type="datetime"],
+input[type="datetime-local"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
 input[type="url"],
 select,
 textarea {
-  width: 100%;
+  // width: 100%;
   transition: background-color .3s ease;
 
   &:focus {
@@ -169,10 +180,28 @@ input[type="search"] {
   }
 }
 
+// Remove the inner border and padding in Firefox.
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
   padding: 0;
-  border: 0;
+}
+
+// Restore the focus styles unset by the previous rule.
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+// 1. Correct the inability to style clickable types in iOS and Safari.
+// 2. Change font properties to `inherit` in Safari.
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /*
@@ -277,14 +306,16 @@ category: Base - Forms
 ---
 
 ```html
-  <div class="form-item">
-    <label for="Login">Login</label>
-    <input name="Login" type="text" placeholder="Login" />
-  </div>
-  <div class="form-item">
-    <label for="password">Password</label>
-    <input name="password" type="text" placeholder="Password" />
-  </div>
+  <form action="#" id="formLogin">
+    <div class="form-item">
+      <label for="login">Login</label>
+      <input name="login" id="login" type="text" placeholder="Login" />
+    </div>
+    <div class="form-item">
+      <label for="password">Password</label>
+      <input name="password" id="password" type="password" placeholder="Password" />
+    </div>
+  </form>
 ```
 
 */
@@ -302,16 +333,18 @@ category: Base - Forms
 Add class `form-item--inline` on same `div.form-item`
 
 ```html
-  <div class="clearfix">
-    <div class="form-item form-item--inline">
-      <label for="Login">Login</label>
-      <input name="Login" type="text" placeholder="Login" />
+  <form action="#" id="formLogin2">
+    <div class="clearfix">
+      <div class="form-item form-item--inline">
+        <label for="login2">Login</label>
+        <input name="login" id="login2" type="text" placeholder="Login" />
+      </div>
+      <div class="form-item form-item--inline">
+        <label for="password2">Password</label>
+        <input name="password" id="password2" type="password" placeholder="Password" />
+      </div>
     </div>
-    <div class="form-item form-item--inline">
-      <label for="password">Password</label>
-      <input name="password" type="text" placeholder="Password" />
-    </div>
-  </div>
+  </form>
 ```
 
 */
@@ -401,7 +434,7 @@ category: Base - Forms
 Drupal example HTML
 
 ```html
-  <form action="" id="formConfirm">
+  <form action="#" id="formConfirm">
     <div><p>This action cannot be undone.</p>
     <div class="form-actions form-wrapper">
       <button name="op" value="Confirm" type="submit" class="btn btn--primary btn--submit form-submit">Confirm</button><a href="#" id="edit-cancel">Cancel</a></div>
@@ -443,7 +476,7 @@ category: Base - Forms
 Drupal example HTML
 
 ```html
-  <form action="" id="formPassword">
+  <form action="#" id="formPassword">
     <div class="form-item form-type--password-confirm form-item--password-confirm">
       <label for="edit-password-confirm">Password confirm </label>
       <div class="form-item form-type--password form-item--password-confirm-pass1 password-parent"><div class="password-strength"><div class="password-strength-text" aria-live="assertive">Weak</div><div class="password-strength-title">Password strength:</div><div class="password-indicator"><div class="indicator" style="width: 0%;"></div></div></div>
@@ -503,7 +536,7 @@ category: Base - Forms
 ---
 
 ```html
-  <form action="" id="formExample">
+  <form action="#" id="formExample">
     <div class="form-item">
       <label for="name">Name</label>
       <input id="name" name="name" type="text" />
@@ -514,8 +547,8 @@ category: Base - Forms
       <br /><small>Error 1 : Enter valid email address, eg toto@domaine.com.</small>
     </div>
     <div class="form-item">
-      <label for="password">Password</label>
-      <input name="password" type="password" value="Password" />
+      <label for="password3">Password</label>
+      <input name="password" id="password3" type="password" value="Password" />
     </div>
     <div class="form-item">
       <label for="url">Url</label>
@@ -543,8 +576,8 @@ category: Base - Forms
       </select>
     </div>
     <div class="form-item">
-      <label for="select">Disabled select</label>
-      <select id="select" name="select" disabled="disabled">
+      <label for="select2">Disabled select</label>
+      <select id="select2" name="select" disabled="disabled">
         <option>1</option>
         <option>2</option>
         <option>3</option>
