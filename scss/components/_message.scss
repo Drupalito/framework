@@ -319,13 +319,20 @@ category: Base - Forms
 
       &:focus {
         $color-focus: map-get($values, "color");
-        box-shadow: 0 0 2px $color-focus, 0 0 5px $color-focus;
+        // box-shadow: 0 0 2px $color-focus, 0 0 5px $color-focus;
+        // box-shadow: 0 0 2px $color-focus, 0 0 5px $color-focus;
+        outline: 2px dotted $color-focus;
+        outline-offset: 3px;
       }
     } @else {
       border-color: $background;
 
       &:focus {
         box-shadow: 0 0 2px $background, 0 0 5px $background;
+        // box-shadow: 0 0 2px $background, 0 0 5px $background;
+        // box-shadow: 0 0 2px $background, 0 0 5px $background;
+        outline: 2px dotted $background;
+        outline-offset: 3px;
       }
     }
   }
