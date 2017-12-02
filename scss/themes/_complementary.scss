@@ -16,3 +16,93 @@ category: Layout - Pre footer
 ```
 
 */
+
+.page-complementary {
+  background: #201c35;
+  color: #fff;
+}
+.page-complementary .block__content a {
+  display: inline;
+  border-bottom: 1px solid transparent;
+  color: #fcfcfc;
+}
+
+.page-complementary .block__content a:hover,
+.page-complementary .block__content a:focus,
+.page-complementary .block__content a.active {
+  border-bottom-color: #fff;
+  color: inherit;
+}
+
+.page-complementary .block__content li {
+  padding: .25em 0;
+}
+
+.page-complementary .menu a,
+.page-complementary .menu .nolink {
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.page-complementary .block:first-child {
+  border-top: 0;
+}
+
+.page-complementary .block__title {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  text-transform: uppercase;
+  font-size: 120%;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+
+  .page-complementary .block {
+    border-top: 1px solid #161324;
+  }
+
+  .page-complementary .block__title:before {
+    content: "\f0da";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5em;
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page-complementary .block__content {
+    margin-bottom: .5em;
+    display: none;
+  }
+
+  .page-complementary .block__title.is-active:before {
+    transform: rotate(90deg);
+  }
+
+  .page-complementary .block__content.is-opened {
+    display: block;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .page-complementary {
+    padding-top: 3em;
+    padding-bottom: 1.5em;
+  }
+  .page-complementary .block {
+    margin-bottom: 1.5em;
+  }
+  .page-complementary .block__title {
+    margin-bottom: .75em;
+  }
+}

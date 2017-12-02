@@ -54,16 +54,16 @@ var framework = {
   // Smooth counterUp.
   // @example framework.counterUp('.counter');
   counterUp: function(element) {
-    if ($.fn.counterUp) {
+    if (jQuery.fn.counterUp) {
       var element = (element) ? element : '.counter';
-      $(element).counterUp({
+      jQuery(element).counterUp({
         delay: 8,
         time: 1400
       });
     }
   },
   owlCarousel: function(element) {
-    $(element).owlCarousel({
+    jQuery(element).owlCarousel({
       items: 3,
       loop: true,
       center: true,
@@ -85,7 +85,7 @@ var framework = {
   },
   // jsSocials
   jsSocials: function() {
-    if ($.fn.jsSocials) {
+    if (jQuery.fn.jsSocials) {
       jQuery('#share').jsSocials({url: window.location.href,
         showLabel: false,
         showCount: 'inside',
@@ -93,12 +93,27 @@ var framework = {
       });
     }
   },
+  complementary: function() {
+    var selector = '.complementary .block__title';
+    var complementaryToggle = document.querySelectorAll(selector);
+    if (complementaryToggle.length > 0) {
+      complementaryToggle.forEach(function(complementary) {
+        complementary.addEventListener('click', function() {
+          this.classList.toggle('is-active');
+          var $block_inner = $(complementary).parent().find('.block__content');
+          jQuery($block_inner).toggleClass('is-opened');
+        }, false);
+      });
+    }
+
+  },
 };
 
 (function ($) {
   $(document).on('ready', function () {
 
     framework.init();
+    framework.complementary();
   });
 
   // $(window).on(

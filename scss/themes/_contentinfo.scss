@@ -16,3 +16,17 @@ category: Layout - Footer
 ```
 
 */
+
+.page-contentinfo {
+  background: #161324;
+  color: #fff;
+}
+
+.page-contentinfo a {
+  color: #fff;
+}
+
+.page-contentinfo a:hover,
+.page-contentinfo a:focus {
+  color: inherit;
+}
