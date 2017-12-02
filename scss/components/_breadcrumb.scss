@@ -1,14 +1,18 @@
 
 // @file: _breadcrumb.scss
-// Fil d'Ariance.
+// Fil d'Ariane.
 
 /*doc
 ---
-title: Breadcrumb
+title: Fil d'Ariane
 category: Components - Breadcrumb
 ---
 
-* Obligatoire
+Obligatoire.
+
+* [RGAA - Critère 12.8 [AAA] Dans chaque page web, un fil d'Ariane est-il présent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-8)
+* [RGAA - Critère 12.9 [AAA] Dans chaque page web, le fil d'Ariane est-il pertinent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-9)
+* [OPQUAST - SEO - N°66 - Le site propose un fil d'Ariane.](https://checklists.opquast.com/seo/criteria/le-site-propose-un-fil-dariane)
 
 ```html
 
@@ -35,8 +39,9 @@ title: Skiplinks
 category: Components - Breadcrumb
 ---
 
-* Obligatoire
-* Affiché au `:focus`
+Obligatoire. **Affiché au `:focus`**. Le code HTML doit être inséré juste après le `<body>`.
+
+* [RGAA - Critère 12.11 [A] Dans chaque page web, des liens d'évitement ou d'accès rapide aux groupes de liens importants et à la zone de contenu sont-ils présents (hors cas particuliers) ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-11)
 
 ```html
   <p class="skiplinks" id="skiplinks">
