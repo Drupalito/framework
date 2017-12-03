@@ -282,13 +282,15 @@ input[type="radio"] + label:before {
 ---
 title: Field required
 category: Base - Forms
-show: false
 ---
 
-[TODO]
+Lorsqu'un champs est obligatoire, ajouter l'indication dans le label `field-required`. Ajouter également les attributs `required="true"` et `aria-required="true"` sur le input obligatoire.
 
 ```html
-  <abbr class="field-required" title="This field is required.">*</abbr>
+  <div class="form-item">
+    <label for="login">Login <abbr class="field-required" title="This field is required.">*</abbr></label>
+    <input name="login" id="login" type="text" placeholder="Login" required="true" aria-required="true" />
+  </div>
 ```
 
 */
