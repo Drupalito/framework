@@ -20,17 +20,20 @@ Default Style CSS
 }
 
 .block-demo-backlink {
+  $type: map-get($message, "error");
+  $color: map-get($type, "color");
+
   left: 0; /*LTR*/
   position: fixed;
   z-index: 499;
   padding: 1em;
   border-bottom: 0;
-  background: #b00;
+  background: $color;
   color: #fff;
 
   &:hover,
   &:focus {
-    background: darken(#b00, 10%);
+    background: darken($color, 45%);
     color: #fff;
   }
 }
