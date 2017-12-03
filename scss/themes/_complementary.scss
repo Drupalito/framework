@@ -18,13 +18,13 @@ category: Layout - Pre footer
 */
 
 .page-complementary {
-  background: #201c35;
+  background: #{map-get($colorz, "secondary")};
   color: #fff;
 }
 .page-complementary .block__content a {
   display: inline;
   border-bottom: 1px solid transparent;
-  color: #fcfcfc;
+  color: #f7f7f7;
 }
 
 .page-complementary .block__content a:hover,
@@ -62,7 +62,7 @@ category: Layout - Pre footer
 @media (max-width: 767px) {
 
   .page-complementary .block {
-    border-top: 1px solid #161324;
+    border-top: 1px solid #{map-get($colorz, "primary")};
   }
 
   .page-complementary .block__title:before {

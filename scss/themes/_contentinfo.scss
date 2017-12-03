@@ -18,7 +18,7 @@ category: Layout - Footer
 */
 
 .page-contentinfo {
-  background: #161324;
+  background: #{map-get($colorz, "primary")};
   color: #fff;
 }
 
