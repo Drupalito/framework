@@ -280,6 +280,45 @@ input[type="radio"] + label:before {
 
 /*doc
 ---
+title: Field & Button
+category: Base - Forms
+---
+
+Permet de coller un input et button (exemple pour la barre de search).
+
+Exemple: `input + button.btn`
+
+*/
+
+input + .btn {
+  border-radius: 0 4px 4px 0;
+  top: -2px;
+  left: -1px;
+
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  background: #{map-get($colorz, "default")};
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background: #{map-get($colorz, "secondary")};
+  }
+
+  &--icon {
+    height: 2.625rem;
+    width: 2.625rem;
+    font-size: 0;
+    line-height: 1;
+
+    .fa-search {
+      font-size: 1rem;
+    }
+  }
+}
+
+/*doc
+---
 title: Field required
 category: Base - Forms
 ---
