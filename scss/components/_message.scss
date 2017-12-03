@@ -214,6 +214,24 @@ Modifier `.messages--warning` && `.messages--icon`
 
 /*doc
 ---
+title: Buttons
+category: Components - Messages
+---
+
+```html
+  <p class="mvs">
+    <button class="btn btn--status">Success</button>
+    <button class="btn btn--error">Error</button>
+    <button class="btn btn--warning">Warning</button>
+    <button class="btn btn--info">Announcement</button>
+    <button class="btn pull-right">Reset</button>
+  </p>
+```
+
+*/
+
+/*doc
+---
 title: Table message
 category: Components - Messages
 ---
