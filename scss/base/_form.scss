@@ -312,8 +312,25 @@ category: Base - Forms
       <input name="login" id="login" type="text" placeholder="Login" />
     </div>
     <div class="form-item">
-      <label for="password">Password</label>
-      <input name="password" id="password" type="password" placeholder="Password" />
+      <label>Checkboxes</label>
+      <div id="edit-checkboxes" class="form-checkboxes">
+        <div class="form-item form-type--checkbox">
+          <input type="checkbox" id="checkboxes-erat-aliquam-lacus" name="checkboxes[Erat aliquam lacus]" value="Erat aliquam lacus" class="form-checkbox"> <label class="option" for="checkboxes-erat-aliquam-lacus">Erat aliquam lacus</label>
+        </div>
+        <div class="form-item form-type--checkbox">
+          <input type="checkbox" id="checkboxes-dictum-dictum-dictum" name="checkboxes[Dictum dictum dictum]" value="Dictum dictum dictum" class="form-checkbox"> <label class="option" for="checkboxes-dictum-dictum-dictum">Dictum dictum dictum</label>
+        </div>
+        <div class="form-item form-type--checkbox">
+          <input type="checkbox" id="checkboxes-iaculis-est-et" name="checkboxes[Iaculis est et]" value="Iaculis est et" class="form-checkbox"> <label class="option" for="checkboxes-iaculis-est-et">Iaculis est et</label>
+        </div>
+        <div class="form-item form-type--checkbox">
+          <input type="checkbox" id="checkboxes-erat-lorem-id" name="checkboxes[Erat lorem id]" value="Erat lorem id" class="form-checkbox">  <label class="option" for="checkboxes-erat-lorem-id">Erat lorem id </label>
+        </div>
+        <div class="form-item form-type--checkbox">
+          <input type="checkbox" id="checkboxes-nisl-auctor-ac" name="checkboxes[Nisl auctor ac]" value="Nisl auctor ac" class="form-checkbox"> <label class="option" for="checkboxes-nisl-auctor-ac">Nisl auctor ac</label>
+        </div>
+      </div>
+      <small class="description show">Curabitur sed ante non quam fermentum vehicula</small>
     </div>
   </form>
 ```
@@ -340,8 +357,25 @@ Add class `form-item--inline` on same `div.form-item`
         <input name="login" id="login2" type="text" placeholder="Login" />
       </div>
       <div class="form-item form-item--inline">
-        <label for="password2">Password</label>
-        <input name="password" id="password2" type="password" placeholder="Password" />
+        <label>Checkboxes</label>
+        <div id="edit-checkboxes" class="form-checkboxes">
+          <div class="form-item form-type--checkbox">
+            <input type="checkbox" id="checkboxes-erat-aliquam-lacus" name="checkboxes[Erat aliquam lacus]" value="Erat aliquam lacus" class="form-checkbox"> <label class="option" for="checkboxes-erat-aliquam-lacus">Erat aliquam lacus</label>
+          </div>
+          <div class="form-item form-type--checkbox">
+            <input type="checkbox" id="checkboxes-dictum-dictum-dictum" name="checkboxes[Dictum dictum dictum]" value="Dictum dictum dictum" class="form-checkbox"> <label class="option" for="checkboxes-dictum-dictum-dictum">Dictum dictum dictum</label>
+          </div>
+          <div class="form-item form-type--checkbox">
+            <input type="checkbox" id="checkboxes-iaculis-est-et" name="checkboxes[Iaculis est et]" value="Iaculis est et" class="form-checkbox"> <label class="option" for="checkboxes-iaculis-est-et">Iaculis est et</label>
+          </div>
+          <div class="form-item form-type--checkbox">
+            <input type="checkbox" id="checkboxes-erat-lorem-id" name="checkboxes[Erat lorem id]" value="Erat lorem id" class="form-checkbox">  <label class="option" for="checkboxes-erat-lorem-id">Erat lorem id </label>
+          </div>
+          <div class="form-item form-type--checkbox">
+            <input type="checkbox" id="checkboxes-nisl-auctor-ac" name="checkboxes[Nisl auctor ac]" value="Nisl auctor ac" class="form-checkbox"> <label class="option" for="checkboxes-nisl-auctor-ac">Nisl auctor ac</label>
+          </div>
+        </div>
+        <small class="description show">Curabitur sed ante non quam fermentum vehicula</small>
       </div>
     </div>
   </form>
@@ -565,6 +599,24 @@ category: Base - Forms
     <div class="form-item">
       <label for="file">File</label>
       <input id="file" name="file" type="file" />
+    </div>
+    <div id="edit-date" class="container-inline">
+      <div class="form-item form-type--select form-item--date-month">
+        <label class="a11y" for="edit-date-month">Mois </label>
+        <span class="select"><select id="edit-date-month" name="date[month]" class="form-select"><option value="1">jan</option></select></span>
+      </div>
+      <div class="form-item form-type--select form-item--date-day">
+        <label class="a11y" for="edit-date-day">Jour </label>
+        <span class="select">
+          <select id="edit-date-day" name="date[day]" class="form-select">
+            <option value="1">1</option>
+          </select>
+        </span>
+      </div>
+      <div class="form-item form-type--select form-item--date-year">
+        <label class="a11y" for="edit-date-year">Année </label>
+        <span class="select"><select id="edit-date-year" name="date[year]" class="form-select"><option value="1900">1900</option></select></span>
+      </div>
     </div>
     <div class="form-item">
       <label for="select">Select</label>
