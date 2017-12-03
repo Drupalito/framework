@@ -83,7 +83,7 @@ $color-lg-bg-iterate: rgba(205, 232, 246, 0.5);
   right: 1px;
   font-size: 10px;
   font-style: italic;
-  color: #000;
+  color: #222;
   background-color: $color-default;
   white-space: nowrap;
 }
@@ -99,7 +99,7 @@ body:before {
 .aside,
 .content,
 [class*="col-"] {
-  box-shadow: rgba(#000, 0.05) 0 0 0 1px inset;
+  box-shadow: rgba(#222, 0.05) 0 0 0 1px inset;
 
   &:after {
     @extend .debug-output;

@@ -227,7 +227,7 @@ samp {
 
 kbd {
   border: 1px dotted;
-  background: #000;
+  background: #222;
   color: #fff;
 }
 
@@ -245,7 +245,7 @@ ins {
 mark {
   padding: 0 4px;
   background: $highlight-mark-color;
-  color: #000;
+  color: #222;
   font-size: 80%;
   font-style: normal;
   font-weight: bold;
@@ -351,7 +351,7 @@ Mise en forme d'une adresse postale
 */
 
 hr {
-  $color-hr: #000;
+  $color-hr: #222;
   clear: both;
   height: 0;
   padding: 0;
@@ -402,7 +402,7 @@ blockquote {
     display: block;
     font-size: 80%;
     font-style: normal;
-    color: #333;
+    color: #222;
 
     &:before {
       content: "\2014 \0020";

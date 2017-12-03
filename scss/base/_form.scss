@@ -337,7 +337,7 @@ Lorsqu'un champs est obligatoire, ajouter l'indication dans le label `field-requ
 .field-required {
   font-size: pem(12px);
   line-height: 1.2;
-  color: #333;
+  color: #222;
 }
 
 /*doc
@@ -730,7 +730,7 @@ Couleurs de placeholder : ne pas fusionner les sélecteurs !
 */
 
 // scss-lint:disable VendorPrefix
-$field-placeholder: #333;
+$field-placeholder: #222;
 ::-webkit-input-placeholder { // WebKit browsers
   color: $field-placeholder; }
 :-moz-placeholder { // Mozilla Firefox 4 to 18

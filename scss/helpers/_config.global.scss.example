@@ -120,6 +120,14 @@ $colorz: (
   secondary: COLORZ_SECONDARY,
 ) !default;
 
+$colorz_grey: (
+  grey-lightest: COLORZ_GREY_GREY_LIGHTEST,
+  grey-lighter:  COLORZ_GREY_GREY_LIGHTER,
+  grey-light:    COLORZ_GREY_GREY_LIGHT,
+  grey-dark:     COLORZ_GREY_GREY_DARK,
+  grey:          COLORZ_GREY_GREY,
+) !default;
+
 /// Theme Message
 /// @type Map
 /// @prop {Map} theme
