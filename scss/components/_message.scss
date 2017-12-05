@@ -192,7 +192,7 @@ Modifier `.messages--warning` && `.messages--icon`
 
     &--#{$name} {
       border-color: $background;
-      background: lighten($background, 45%);
+      background: lighten($background, $color-shade-lighter);
 
       a {
         color: $background;
@@ -282,7 +282,7 @@ category: Components - Messages
   }
 
   table tr.#{$new-name} {
-    background: lighten($color, 45%);
+    background: lighten($color, $color-shade-lighter);
 
     td {
       color: $color;
@@ -364,7 +364,7 @@ category: Base - Forms
     &:active,
     &.active {
       text-decoration: none;
-      background-color: darken($background, 10%);
+      background-color: darken($background, $color-shade-light);
       color: #fff;
     }
   }
