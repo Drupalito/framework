@@ -20,12 +20,12 @@ $form-background-color: #fff !default;
 
 /// Field border color
 /// @type Color
-$form-border-color: #c0c0c0 !default;
+$form-border-color: $color-grey-lighter !default;
 
 /// Field border color hover
 /// @type Color
-$form-hover: map-get($colorz, "primary") !default;
+$form-hover: coloriz(primary, base) !default;
 
 /// Field background disable
 /// @type Color
-$form-disable: #ebebeb !default;
+$form-disable: $color-grey-lightest !default;
