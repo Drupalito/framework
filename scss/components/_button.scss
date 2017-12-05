@@ -38,6 +38,7 @@ category: Components - Buttons
   background-clip: padding-box;
   background-color: $color-grey-lightest;
   color: #222;
+  border-radius: 0;
   white-space: nowrap;
   cursor: pointer;
   outline: none;
@@ -101,14 +102,15 @@ Couleurs disponibles.
 
 */
 
-@each $name, $color in $colorz {
+@each $name, $color in $colors {
+  $hexa: coloriz($name, base);
   .btn--#{$name} {
-    @include btn-theme(#fff, $color);
+    @include btn-theme(#fff, $hexa);
   }
 }
 
 .btn--edit-submit {
-  $background: color(primary, base);
+  $background: coloriz(primary, base);
   @include btn-theme(#fff, $background);
 }
 

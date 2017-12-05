@@ -175,11 +175,11 @@ $colorz_grey: (
   grey:          #5b616b,
 ) !default;
 
-$color-grey-lightest: map-get($colorz, "grey-lightest");
-$color-grey-lighter: map-get($colorz, "grey-lighter");
-$color-grey-light: map-get($colorz, "grey-light");
-$color-grey-dark: map-get($colorz, "grey-dark");
-$color-grey: map-get($colorz, "grey");
+$color-grey-lightest: map-get($colorz_grey, "grey-lightest");
+$color-grey-lighter: map-get($colorz_grey, "grey-lighter");
+$color-grey-light: map-get($colorz_grey, "grey-light");
+$color-grey-dark: map-get($colorz_grey, "grey-dark");
+$color-grey: map-get($colorz_grey, "grey");
 
 // Links colors.
 $link-color:         coloriz(default, base) !default;
