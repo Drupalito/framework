@@ -74,7 +74,7 @@ $font-size: (
 
 /// Font stack.
 /// @type Map
-/// @prop {Map} theme
+/// @prop {Map} Font stack
 $font-families: (
   body:     ("Open Sans", Helvetica, Arial, sans-serif),
   headline: ("Helvetica Neue", Helvetica, Arial, sans-serif),
@@ -83,7 +83,7 @@ $font-families: (
 ) !default;
 
 /// default `<dt>` width
-/// @type string
+/// @type Length
 $definition-inline-width: 150px !default;
 
 /// Définie la typo bold
@@ -211,17 +211,17 @@ $highlight-mark-color: #ff0 !default;
 /// @prop {Color} message.status.color [#77b647] - Alerte succès : couleur
 /// @prop {String} message.status.icon [\f00c] - Alerte succès : icône
 $message: (
-  info: (
-    color: #477bb6,
-    icon:  "\f05a",
+  error: (
+    color: #b64747,
+    icon:  "\f057",
   ),
   warning: (
     color: #ddae1e,
     icon:  "\f071",
   ),
-  error: (
-    color: #b64747,
-    icon:  "\f057",
+  info: (
+    color: #477bb6,
+    icon:  "\f05a",
   ),
   status: (
     color: #77b647,

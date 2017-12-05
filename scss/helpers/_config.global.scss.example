@@ -18,25 +18,63 @@ $body-background: BODY_BACKGROUND !default;
 /// @type Color
 $body-color: BODY_COLOR !default;
 
-// Links colors.
-$link-color:         LINK_COLOR !default;
-$link-color-hover:   LINK_HOVER !default;
-$link-color-active:  LINK_ACTIVE !default;
-$link-color-visited: LINK_VISITED !default;
+// Settings Typography
+// ===================
 
-/// Selection text color.
-/// @type Color
-$selection-background: SELECTION_BACKGROUND !default;
+/// Map font size
+/// @type Map
+/// @prop {Map} Fontsize
+$font-size: (
+  h1: FONT_SIZE_H1,
+  h2: FONT_SIZE_H2,
+  h3: FONT_SIZE_H3,
+  h4: FONT_SIZE_H4,
+  h5: FONT_SIZE_H5,
+  h6: FONT_SIZE_H6
+) !default;
 
-/// Selection text background.
-/// @type Color
-$selection-color: SELECTION_COLOR !default;
+// $dffdg: (
+//   xs: (
+//     body: (100%, 1.5, false, false, false)
+//     h1: (fz, lg, false, false, false),
+//     h2: (fz, lg, false, false, false),
+//     h3: (fz, lg, false, false, false),
+//     h4: (fz, lg, false, false, false),
+//     h5: (fz, lg, false, false, false),
+//     h6: (fz, lg, false, false, false),
+//   ),
+//   sm: (
+//     body: (100%, 1.5, false, false, false)
+//     h1: (fz, lg, false, false, false),
+//     h2: (fz, lg, false, false, false),
+//     h3: (fz, lg, false, false, false),
+//     h4: (fz, lg, false, false, false),
+//     h5: (fz, lg, false, false, false),
+//     h6: (fz, lg, false, false, false),
+//   ),
+//   md: (
+//     body: (100%, 1.5, false, false, false)
+//     h1: (fz, lg, false, false, false),
+//     h2: (fz, lg, false, false, false),
+//     h3: (fz, lg, false, false, false),
+//     h4: (fz, lg, false, false, false),
+//     h5: (fz, lg, false, false, false),
+//     h6: (fz, lg, false, false, false),
+//   ),
+//   lg: (
+//     body: (100%, 1.5, false, false, false)
+//     h1: (fz, lg, false, false, false),
+//     h2: (fz, lg, false, false, false),
+//     h3: (fz, lg, false, false, false),
+//     h4: (fz, lg, false, false, false),
+//     h5: (fz, lg, false, false, false),
+//     h6: (fz, lg, false, false, false),
+//   )
+// );
 
-/// Background color html <mark>.
-/// @type Color
-$highlight-mark-color: HIGHLIGHT_MARK_COLOR !default;
-
-// Font stack.
+/// Font stack.
+/// @type Map
+/// @prop {Map} Font stack
 $font-families: (
   body:     (FONT_FAMILIES_BODY),
   headline: (FONT_FAMILIES_HEADLINE),
@@ -45,7 +83,7 @@ $font-families: (
 ) !default;
 
 /// default `<dt>` width
-/// @type string
+/// @type Length
 $definition-inline-width: DEFINITION_INLINE_WIDTH !default;
 
 /// Définie la typo bold
@@ -70,56 +108,65 @@ $definition-inline-width: DEFINITION_INLINE_WIDTH !default;
   font-style: italic;
 }
 
-/*doc
----
-title: Heading Font Size
-category: Global - Variables
----
+// Settings Colorz
+// ===============
 
-| Key | Value | Example
-|-----|-------|--------
-| h1  |  FONT_SIZE_H1 | <h1>.h1 Lorem Ipsum</h1>
-| h2  |  FONT_SIZE_H2 | <h2>.h2 Lorem Ipsum</h2>
-| h3  |  FONT_SIZE_H3 | <h3>.h3 Lorem Ipsum</h3>
-| h4  |  FONT_SIZE_H4 | <h4>.h4 Lorem Ipsum</h4>
-| h5  |  FONT_SIZE_H5 | <h5>.h5 Lorem Ipsum</h5>
-| h6  |  FONT_SIZE_H6 | <h6>.h6 Lorem Ipsum</h6>
+/// Base color
+/// @type Color
+$color-default: COLORZ_DEFAULT;
 
-*/
-$font-size: (
-  h1: FONT_SIZE_H1,
-  h2: FONT_SIZE_H2,
-  h3: FONT_SIZE_H3,
-  h4: FONT_SIZE_H4,
-  h5: FONT_SIZE_H5,
-  h6: FONT_SIZE_H6
-) !default;
+/// Primary color
+/// @type Color
+$color-primary: COLORZ_PRIMARY;
 
-/*doc
----
-title: Colorz
-category: Global - Variables
----
+/// Secondary color
+/// @type Color
+$color-secondary: COLORZ_SECONDARY;
 
-Available for selectors :
+/// Color shade lighter
+/// @type Pourcent
+$color-shade-lighter: 45%;
 
-* `<key>-color`
-* `<key>-background`
-* `<key>-border`
+/// Color shade light
+/// @type Pourcent
+$color-shade-light: 15%;
 
-| Key | Hexa  | Background | Colorz
-|-----|-------|------------|--------
-| default | <span style="color:COLORZ_DEFAULT">COLORZ_DEFAULT</span> | <span class="default-background bl pas" sytle="width:200px;height:30px">Lorem Ipsum</span> | <span class="default-color pas">Lorem Ipsum</span>
-| primary | <span style="color:COLORZ_PRIMARY">COLORZ_PRIMARY</span> | <span class="primary-background bl pas" sytle="width:200px;height:30px">Lorem Ipsum</span> | <span class="primary-color pas">Lorem Ipsum</span>
-| secondary | <span style="color:COLORZ_SECONDARY">COLORZ_SECONDARY</span> | <span class="secondary-background bl pas" sytle="width:200px;height:30px">Lorem Ipsum</span> | <span class="secondary-color pas">Lorem Ipsum</span>
+/// Transparency amount
+/// @type Pourcent
+$color-trans-amount: 0.5;
 
-*/
-$colorz: (
-  default:   COLORZ_DEFAULT,
-  primary:   COLORZ_PRIMARY,
-  secondary: COLORZ_SECONDARY,
-) !default;
+/// Color variable map
+/// @type Map
+/// @prop {Map} Color map
+$colors: (
+  // text: $body-color,
+  // background: $body-background,
+  default: (
+    base: $color-default,
+    light: lighten($color-default, $color-shade-light),
+    lighter: lighten($color-default, $color-shade-lighter),
+    dark: darken($color-default, $color-shade-light),
+    trans: transparentize($color-default, $color-trans-amount)
+  ),
+  primary: (
+    base: $color-primary,
+    light: lighten($color-primary, $color-shade-light),
+    lighter: lighten($color-primary, $color-shade-lighter),
+    dark: darken($color-primary, $color-shade-light),
+    trans: transparentize($color-primary, $color-trans-amount)
+  ),
+  secondary: (
+    base: $color-secondary,
+    light: lighten($color-secondary, $color-shade-light),
+    lighter: lighten($color-secondary, $color-shade-lighter),
+    dark: darken($color-secondary, $color-shade-light),
+    trans: transparentize($color-secondary, $color-trans-amount)
+  )
+);
 
+/// Color grey variable map
+/// @type Map
+/// @prop {Map} Color grey
 $colorz_grey: (
   grey-lightest: COLORZ_GREY_GREY_LIGHTEST,
   grey-lighter:  COLORZ_GREY_GREY_LIGHTER,
@@ -127,6 +174,30 @@ $colorz_grey: (
   grey-dark:     COLORZ_GREY_GREY_DARK,
   grey:          COLORZ_GREY_GREY,
 ) !default;
+
+$color-grey-lightest: map-get($colorz_grey, "grey-lightest");
+$color-grey-lighter: map-get($colorz_grey, "grey-lighter");
+$color-grey-light: map-get($colorz_grey, "grey-light");
+$color-grey-dark: map-get($colorz_grey, "grey-dark");
+$color-grey: map-get($colorz_grey, "grey");
+
+// Links colors.
+$link-color:         coloriz(default, base) !default;
+$link-color-hover:   coloriz(primary, base) !default;
+$link-color-active:  coloriz(primary, base) !default;
+$link-color-visited: coloriz(default, base) !default;
+
+/// Selection text color.
+/// @type Color
+$selection-background: SELECTION_BACKGROUND !default;
+
+/// Selection text background.
+/// @type Color
+$selection-color: SELECTION_COLOR !default;
+
+/// Background color html <mark>.
+/// @type Color
+$highlight-mark-color: HIGHLIGHT_MARK_COLOR !default;
 
 /// Theme Message
 /// @type Map
@@ -140,17 +211,17 @@ $colorz_grey: (
 /// @prop {Color} message.status.color [MESSAGES_STATUS] - Alerte succès : couleur
 /// @prop {String} message.status.icon [\f00c] - Alerte succès : icône
 $message: (
-  info: (
-    color: MESSAGES_INFO,
-    icon:  "\f05a",
+  error: (
+    color: MESSAGES_ERROR,
+    icon:  "\f057",
   ),
   warning: (
     color: MESSAGES_WARNING,
     icon:  "\f071",
   ),
-  error: (
-    color: MESSAGES_ERROR,
-    icon:  "\f057",
+  info: (
+    color: MESSAGES_INFO,
+    icon:  "\f05a",
   ),
   status: (
     color: MESSAGES_STATUS,
