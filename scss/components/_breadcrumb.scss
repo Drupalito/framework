@@ -41,12 +41,14 @@ category: Components - Breadcrumb
 
 Obligatoire. **Affiché au `:focus`**. Le code HTML doit être inséré juste après le `<body>`.
 
+* [ACCEDE-WEB - Mettre en place des liens d’évitement](https://www.accede-web.com/notices/html-css-javascript/12-navigation-clavier/12-2-liens-evitement/)
+
 * [RGAA - Critère 12.11 [A] Dans chaque page web, des liens d'évitement ou d'accès rapide aux groupes de liens importants et à la zone de contenu sont-ils présents (hors cas particuliers) ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-11)
 
 ```html
   <p class="skiplinks" id="skiplinks">
-    <a href="#navigation">Menu</a>
-    <a href="#main">Contenu principal</a>
+    <a tabindex="-1" href="#navigation">Menu</a>
+    <a tabindex="-1" href="#main">Contenu principal</a>
   </p>
 ```
 
