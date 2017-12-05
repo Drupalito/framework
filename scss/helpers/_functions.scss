@@ -37,7 +37,10 @@
   @return ($px / $base) * 1em;
 }
 
-///
+/// Find color variant in map
+/// @param {string} $color-name - Name color
+/// @param {string} $color-variant - Variant
+/// @example scss - Usage SCSS
 /// body {
 ///   background: coloriz(background);
 /// }

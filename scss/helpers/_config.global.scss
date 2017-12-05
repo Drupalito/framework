@@ -182,10 +182,10 @@ $color-grey-dark: map-get($colorz_grey, "grey-dark");
 $color-grey: map-get($colorz_grey, "grey");
 
 // Links colors.
-$link-color:         coloriz(default, base) !default;
-$link-color-hover:   coloriz(primary, base) !default;
-$link-color-active:  coloriz(primary, base) !default;
-$link-color-visited: coloriz(default, base) !default;
+$link-color:         map-get(map-get($colors, "default"), "base") !default;
+$link-color-hover:   map-get(map-get($colors, "primary"), "base") !default;
+$link-color-active:  map-get(map-get($colors, "primary"), "base") !default;
+$link-color-visited: map-get(map-get($colors, "default"), "base") !default;
 
 /// Selection text color.
 /// @type Color
