@@ -74,7 +74,7 @@ category: Layout - Layer
   &__header {
     margin-bottom: rhythm(1);
     padding-bottom: rhythm(0.5);
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $color-grey-lighter;
   }
 }
 p.main__description{ margin-top:.25em; }

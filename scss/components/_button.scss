@@ -14,9 +14,9 @@ category: Components - Buttons
 
 ```html
   <button class="btn">Submit</button>
-  <input id="submit" name="submit" class="btn" type="submit" value="Submit" />
   <span class="btn">Submit</span>
   <a href="#" class="btn">Submit</a>
+  <input id="submit" name="submit" class="btn" type="submit" value="Submit" />
 ```
 
 */
@@ -36,7 +36,7 @@ category: Components - Buttons
   font-family: sans-serif;
   line-height: normal;
   background-clip: padding-box;
-  background-color: #ebebeb;
+  background-color: $color-grey-lightest;
   color: #222;
   white-space: nowrap;
   cursor: pointer;
@@ -51,7 +51,7 @@ category: Components - Buttons
   &:active,
   &.active {
     text-decoration: none;
-    background-color: #ccc;
+    background-color: $color-grey-lighter;
     color: #fff;
   }
 
@@ -77,27 +77,27 @@ Couleurs disponibles.
 * `.btn--secondary` - Couleur secondaire
 
   <button class="btn">btn</button>
-  <input id="submit" name="submit" class="btn" type="submit" value="btn" />
   <span class="btn">btn</span>
   <a href="#" class="btn">btn</a>
+  <input id="submit" name="submit" class="btn" type="submit" value="btn" />
   <br />
 
   <button class="btn btn--default">btn--default</button>
-  <input id="submit" name="submit" class="btn btn--default" type="submit" value="btn--default" />
   <span class="btn btn--default">btn--default</span>
   <a href="#" class="btn btn--default">btn--default</a>
+  <input id="submit" name="submit" class="btn btn--default" type="submit" value="btn--default" />
   <br />
 
   <button class="btn btn--primary">btn--primary</button>
-  <input id="submit" name="submit" class="btn btn--primary" type="submit" value="btn--primary" />
   <span class="btn btn--primary">btn--primary</span>
   <a href="#" class="btn btn--primary">btn--primary</a>
+  <input id="submit" name="submit" class="btn btn--primary" type="submit" value="btn--primary" />
   <br />
 
   <button class="btn btn--secondary">btn--secondary</button>
-  <input id="submit" name="submit" class="btn btn--secondary" type="submit" value="btn--secondary" />
   <span class="btn btn--secondary">btn--secondary</span>
   <a href="#" class="btn btn--secondary">btn--secondary</a>
+  <input id="submit" name="submit" class="btn btn--secondary" type="submit" value="btn--secondary" />
 
 */
 
@@ -108,7 +108,7 @@ Couleurs disponibles.
 }
 
 .btn--edit-submit {
-  $background: map-get($colorz, "primary");
+  $background: color(primary, base);
   @include btn-theme(#fff, $background);
 }
 
@@ -146,21 +146,21 @@ category: Components - Buttons
   <br />
 
   <button class="btn btn--default active">btn--default</button>
-  <input id="submit" name="submit" class="btn btn--default active" type="submit" value="btn--default" />
   <span class="btn btn--default active">btn--default</span>
   <a href="#" class="btn btn--default active">btn--default</a>
+  <input id="submit" name="submit" class="btn btn--default active" type="submit" value="btn--default" />
   <br />
 
   <button class="btn btn--primary active">btn--primary</button>
-  <input id="submit" name="submit" class="btn btn--primary active" type="submit" value="btn--primary" />
   <span class="btn btn--primary active">btn--primary</span>
   <a href="#" class="btn btn--primary active">btn--primary</a>
+  <input id="submit" name="submit" class="btn btn--primary active" type="submit" value="btn--primary" />
   <br />
 
   <button class="btn btn--secondary active">btn--secondary</button>
-  <input id="submit" name="submit" class="btn btn--secondary active" type="submit" value="btn--secondary" />
   <span class="btn btn--secondary active">btn--secondary</span>
   <a href="#" class="btn btn--secondary active">btn--secondary</a>
+  <input id="submit" name="submit" class="btn btn--secondary active" type="submit" value="btn--secondary" />
 ```
 
 */
@@ -175,27 +175,27 @@ category: Components - Buttons
 
 ```html
   <button class="btn btn--disabled">btn</button>
-  <input id="submit" name="submit" class="btn btn--disabled" type="submit" value="btn" />
   <span class="btn btn--disabled">btn</span>
   <a href="#" class="btn btn--disabled">btn</a>
+  <input id="submit" name="submit" class="btn btn--disabled" type="submit" value="btn" />
   <br />
 
   <button class="btn btn--default btn--disabled">btn--default</button>
-  <input id="submit" name="submit" class="btn btn--default btn--disabled" type="submit" value="btn--default" />
   <span class="btn btn--default btn--disabled">btn--default</span>
   <a href="#" class="btn btn--default btn--disabled">btn--default</a>
+  <input id="submit" name="submit" class="btn btn--default btn--disabled" type="submit" value="btn--default" />
   <br />
 
   <button class="btn btn--primary btn--disabled">btn--primary</button>
-  <input id="submit" name="submit" class="btn btn--primary btn--disabled" type="submit" value="btn--primary" />
   <span class="btn btn--primary btn--disabled">btn--primary</span>
   <a href="#" class="btn btn--primary btn--disabled">btn--primary</a>
+  <input id="submit" name="submit" class="btn btn--primary btn--disabled" type="submit" value="btn--primary" />
   <br />
 
   <button class="btn btn--secondary btn--disabled">btn--secondary</button>
-  <input id="submit" name="submit" class="btn btn--secondary btn--disabled" type="submit" value="btn--secondary" />
   <span class="btn btn--secondary btn--disabled">btn--secondary</span>
   <a href="#" class="btn btn--secondary btn--disabled">btn--secondary</a>
+  <input id="submit" name="submit" class="btn btn--secondary btn--disabled" type="submit" value="btn--secondary" />
 ```
 
 */

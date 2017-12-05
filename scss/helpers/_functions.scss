@@ -36,3 +36,22 @@
 
   @return ($px / $base) * 1em;
 }
+
+///
+/// body {
+///   background: coloriz(background);
+/// }
+/// h1 {
+///   color: coloriz(primary, base);
+/// }
+@function coloriz($color-name, $color-variant:nil) {
+  // color variant is optional
+  @if ($color-variant != nil) {
+    // map inception, need two deep
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  }
+  @else {
+    // single-level color, one deep
+    @return map-get($colors, $color-name);
+  }
+}

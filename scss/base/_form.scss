@@ -39,7 +39,7 @@ select,
 textarea {
   outline: 0;
   box-shadow: none;
-  border: 1px solid #c0c0c0;
+  border: 1px solid $color-grey-lighter;
   background: #fff;
 }
 
@@ -114,7 +114,7 @@ textarea {
   transition: background-color .3s ease;
 
   &:focus {
-    $color-focus: map-get($colorz, "primary");
+    $color-focus: coloriz(primary, base);
     // box-shadow: 0 0 2px $color-focus, 0 0 5px $color-focus;
     outline: 2px dotted $color-focus;
     outline-offset: 3px;
@@ -247,12 +247,12 @@ input[type="checkbox"] {
     &:hover:before,
     &:focus:before {
       cursor: pointer;
-      border-color: #{map-get($colorz, "primary")};
+      border-color: coloriz(primary, base);
     }
   }
 
   &:focus + label:before {
-    border-color: #{map-get($colorz, "primary")};
+    border-color: coloriz(primary, base);
     box-shadow: inset 0 0 0 3px #fff;
     outline: 2px dotted #aeb0b5;
     outline-offset: 3px;
@@ -264,8 +264,8 @@ input[type="checkbox"] {
 
   &:checked + label:before,
   &:disabled:checked + label:before {
-    border-color: #{map-get($colorz, "primary")};
-    background: #{map-get($colorz, "primary")};
+    border-color: coloriz(primary, base);
+    background: coloriz(primary, base);
     box-shadow: inset 0 0 0 3px #fff;
   }
 
@@ -301,12 +301,12 @@ input + .btn {
 
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  background: #{map-get($colorz, "default")};
+  background: coloriz(default, base);
   color: #fff;
 
   &:hover,
   &:focus {
-    background: #{map-get($colorz, "secondary")};
+    background: coloriz(secondary, base);
   }
 
   &--icon {
@@ -446,8 +446,8 @@ Collapsed
 */
 
 fieldset {
-  border: 1px solid #ccc;
-  border-top: 3px solid #{map-get($colorz, "primary")};
+  border: 1px solid $color-grey-lighter;
+  border-top: 3px solid coloriz(primary, base);
   padding: $base-line-height;
   margin: 0 0 rhythm(1);
 
@@ -456,7 +456,7 @@ fieldset {
     padding-bottom: 0;
 
     a {
-      color: #{map-get($colorz, "primary")};
+      color: coloriz(primary, base);
     }
 
     .fieldset-legend {
@@ -604,7 +604,7 @@ div.password-confirm {
 
 .form-item .password-suggestions {
   padding: 10px 20px;
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey-lighter;
 }
 // scss-lint:enable MergeableSelector
 

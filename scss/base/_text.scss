@@ -10,6 +10,18 @@
     background-color: $color;
     color: #fff;
   }
+  .#{$name}-background--lighter {
+    background-color: lighten($color, 45%);
+    color: #fff;
+  }
+  .#{$name}-background--light {
+    background-color: lighten($color, 15%);
+    color: #fff;
+  }
+  .#{$name}-background--dark {
+    background-color: darken($color, 15%);
+    color: #fff;
+  }
 }
 
 /*doc

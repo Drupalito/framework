@@ -56,7 +56,7 @@ category: Module - Search
 }
 
 .search-advanced {
-  border: pem(1px) solid #ccc;
+  border: pem(1px) solid $color-grey-lighter;
   padding: 0 rhythm(1) rhythm(1);
 
   legend {

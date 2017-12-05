@@ -18,7 +18,7 @@ Default Style CSS
   margin-top: 0;
   list-style: none;
   font-size: 80%;
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey-lighter;
   background: #fff;
 
   a {
@@ -28,7 +28,7 @@ Default Style CSS
 
     &:hover,
     &:focus {
-      background: #ccc;
+      background: $color-grey-lighter;
       color: #222;
     }
   }

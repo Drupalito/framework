@@ -131,7 +131,7 @@ Modifier `.messages--warning` && `.messages--icon`
   padding: 1.5em;
   margin: 0 0 rhythm(1); /* LTR */
   border-left: 1.5em solid; /* LTR */
-  background: #ccc;
+  background: $color-grey-lighter;
 
   p,
   ul {
@@ -414,7 +414,7 @@ Combine `.text` with `.text--icon` and icon `.i-info`
   }
 
   &--muted {
-    color: #ccc;
+    color: $color-grey-lighter;
   }
 
   @each $name, $values in $message {

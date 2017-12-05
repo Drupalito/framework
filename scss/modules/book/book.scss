@@ -1,15 +1,19 @@
+
+// Import Variables / Helpers
+@import "../../import";
+
  /**
   * @file
   * Styling for the Book module.
   */
 
 .book-navigation .menu {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid $color-grey-lighter;
   padding: 1em 0 0 3em; /* LTR */
 }
 .book-navigation .page-links {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid $color-grey-lighter;
+  border-bottom: 1px solid $color-grey-lighter;
   text-align: center;
   padding: 0.5em;
 }

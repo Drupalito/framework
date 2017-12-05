@@ -166,7 +166,7 @@ th a {
 th,
 td {
   padding: rhythm(0.5) ($grid-gutter-width / 2);
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $color-grey-lighter;
   text-align: left; /* LTR */
 
   .views-row-last & {
@@ -192,15 +192,15 @@ caption {
 }
 
 tbody {
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey-lighter;
 
   th {
-    background: #f7f7f7;
+    background: $color-grey-lightest;
     color: inherit;
   }
   tr {
     > * + * {
-      border-left: 1px solid #ccc;
+      border-left: 1px solid $color-grey-lighter;
     }
   }
 }
@@ -212,12 +212,12 @@ tbody tr:nth-child(odd) {
 
 .views-row-even,
 tbody tr:nth-child(even) {
-  background: #f7f7f7;
+  background: $color-grey-lightest;
 }
 
 th.active,
 th.active a {
-  background: #{map-get($colorz, "primary")};
+  background: coloriz(primary, base);
   color: #fff;
 }
 
@@ -227,7 +227,7 @@ td.active {
   }
 
   tbody tr:nth-child(even) & {
-    background: darken(#f7f7f7, 5%);
+    background: darken($color-grey-lightest, 5%);
   }
 }
 
@@ -235,7 +235,7 @@ td.active {
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey-lighter;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 

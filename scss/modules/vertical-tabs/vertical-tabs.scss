@@ -14,12 +14,12 @@ Default Style CSS
 
 .vertical-tabs {
   margin: rhythm(1) 0 rhythm(1) 15em; /* LTR */
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey-lighter;
 
   &-list {
     width: 15em;
     list-style: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $color-grey-lighter;
     padding: 0;
     margin: -1px 0 -1px -15em; /* LTR */
     float: left; /* LTR */
@@ -53,8 +53,8 @@ Default Style CSS
   }
 
   li {
-    background: #ebebeb;
-    border: 1px solid #ccc;
+    background: $color-grey-lightest;
+    border: 1px solid $color-grey-lighter;
     border-top: 0;
     padding: 0;
     margin: 0;

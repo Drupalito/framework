@@ -233,7 +233,7 @@ kbd {
 
 code {
   font-size: 90%;
-  background: #f7f7f7;
+  background: $color-grey-lightest;
 }
 
 ins {
@@ -252,7 +252,7 @@ mark {
 }
 
 .highlight {
-  color: map-get($colorz, "default");
+  color: coloriz(default, dark);
 }
 
 dd {

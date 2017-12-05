@@ -74,7 +74,7 @@ ul li.collapsed > ul {
 
 li a.active,
 li.active-trail > a {
-  color: #{map-get($colorz, "primary")};
+  color: coloriz(primary, base);
 }
 
 /*doc
@@ -148,8 +148,8 @@ ul.primary a:focus {
 ul.primary li.active a,
 ul.primary a.active {
   font-weight: bold;
-  border-bottom-color: #E11B27;
-  color: #E11B27;
+  border-bottom-color: coloriz(default, base);
+  color: coloriz(default, base);
 }
 
 /* Sub menu */
@@ -240,7 +240,7 @@ ul.secondary {
   margin: 0;
 }
 ul.secondary li {
-  border-left: 1px solid #ccc; /* LTR */
+  border-left: 1px solid $color-grey-lighter; /* LTR */
   position: relative;
   list-style: none;
   display: inline-block;
@@ -274,8 +274,8 @@ ul.secondary li:hover > a {
 ul.secondary li.active a,
 ul.secondary a.active {
   font-weight: bold;
-  border-bottom-color: #E11B27;
-  color: #E11B27;
+  border-bottom-color: coloriz(default, base);
+  color: coloriz(default, base);
 }
 ul.secondary li.expanded > a:before,
 ul.secondary li.collapsed > a:before {

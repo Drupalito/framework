@@ -25,14 +25,14 @@ category: Components - Progress bar
 .progress {
 
   .bar {
-    border: 1px solid #ccc;
+    border: 1px solid $color-grey-lighter;
     background: #fff;
   }
 
   .filled {
     height: 1.5em;
     width: 5px;
-    background: #{map-get($colorz, "default")};
+    background: coloriz(default, base);
   }
 
   .percentage {

@@ -68,8 +68,8 @@ Default Style CSS Drupal
   }
 
   &-wrapper {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid $color-grey-lighter;
+    border-bottom: 1px solid $color-grey-lighter;
     background: #fff;
     // border-top: 0;
   }
@@ -98,16 +98,16 @@ Default Style CSS Drupal
 .ckeditor_links {
   display: block;
   padding: rhythm(0.5) rhythm(1);
-  border-right: 1px solid #ccc;
+  border-right: 1px solid $color-grey-lighter;
   border-bottom: 0;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid $color-grey-lighter;
   background: #fff;
 
   &:hover,
   &:focus {
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    background: #{map-get($colorz, "default")};
+    border-right: 1px solid $color-grey-lighter;
+    border-left: 1px solid $color-grey-lighter;
+    background: coloriz(default, base);
     color: #fff;
   }
 }

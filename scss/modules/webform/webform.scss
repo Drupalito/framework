@@ -84,11 +84,11 @@ Default Style CSS
     }
 
     &.step {
-      color: #{map-get($colorz, "default")};
+      color: coloriz(default, base);
 
       &:before,
       &:after {
-        background: #{map-get($colorz, "default")};
+        background: coloriz(default, base);
         color: #fff;
       }
     }
@@ -107,7 +107,7 @@ Default Style CSS
   @media (max-width: $screen-sm-min) {
     li {
       width: 100% !important;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid $color-grey-lighter;
       padding-top: 5px;
       margin-top: 5px;
 
@@ -164,7 +164,7 @@ Page de confirmation après la soumission d'un formulaire.
 
 .webform-confirmation {
   padding: 1.5em;
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey-lighter;
 }
 
 /* */
@@ -205,16 +205,16 @@ Buttons côte à côte.
 }
 
 .webform-previous {
-  $background: map-get($colorz, "secondary");
+  $background: coloriz(secondary, base);
   @include btn-theme(#fff, $background);
 }
 
 .webform-next {
-  $background: map-get($colorz, "default");
+  $background: coloriz(default, base);
   @include btn-theme(#fff, $background);
 }
 
 .webform-submit {
-  $background: map-get($colorz, "primary");
+  $background: coloriz(primary, base);
   @include btn-theme(#fff, $background);
 }

@@ -31,17 +31,17 @@ category: Component
 
   &--views {
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid $color-grey-lighter;
   }
 
   &__title {
     padding-bottom: rhythm(0.5);
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $color-grey-lighter;
     margin-bottom: 0;
     padding: 13px 15px;
     line-height: 1.5;
     font-weight: bold;
-    color: #E11B27;
+    color: coloriz(default, base);
     text-transform: uppercase;
   }
 
@@ -126,7 +126,7 @@ category: Component
 .block__content ul.primary li {
   display: block;
   padding: 0;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $color-grey-lighter;
 }
 .block__content ul.primary li:last-child {
   border-bottom: 0;
@@ -153,18 +153,18 @@ category: Component
   right: 1em;
 }
 .block__content ul.primary a:hover {
-  // border-left: 1px solid #ccc;
-  background: #fefafb;
+  // border-left: 1px solid $color-grey-lighter;
+  background: coloriz(default, lighter);
 }
 .block__content ul.primary a:focus {
   outline: 0;
-  border-left: 1px dotted #E11B27;
-  background: #fce8e9;
+  border-left: 1px dotted coloriz(default, base);
+  background: coloriz(default, lighter);
 }
 .block__content ul.primary a.active,
 .block__content ul.primary a.active:hover {
-  border-left: 2px solid #E11B27;
-  background: #fefafb;
+  border-left: 2px solid coloriz(default, base);
+  background: coloriz(default, lighter);
   color: #222;
 }
 

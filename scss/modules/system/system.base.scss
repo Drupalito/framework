@@ -62,8 +62,8 @@ html.js .js-hide {
 }
 
 .resizable-textarea .grippie {
-  background: #ebebeb url(/misc/grippie.png) no-repeat center 2px;
-  border: 1px solid #ccc;
+  background: $color-grey-lightest url(/misc/grippie.png) no-repeat center 2px;
+  border: 1px solid $color-grey-lighter;
   border-top-width: 0;
   cursor: s-resize;
   height: 9px;

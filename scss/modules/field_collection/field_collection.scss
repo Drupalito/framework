@@ -13,7 +13,7 @@ category: Module - Field Collection
 */
 
 .field-collection-container {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $color-grey-lighter;
   margin-bottom: 1em;
 
   .field-items .field-item {
@@ -28,7 +28,7 @@ category: Module - Field Collection
 // .field-collection-view {
 //   padding: 1em 0 0.3em 0;
 //   margin: 0 1em 0 1em;
-//   border-bottom: 1px dotted #ccc;
+//   border-bottom: 1px dotted $color-grey-lighter;
 // }
 
 // /* If there is no add link, don't show the final border. */

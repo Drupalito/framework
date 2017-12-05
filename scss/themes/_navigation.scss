@@ -34,12 +34,12 @@ category: Layout - Menu
 */
 
 .navigation {
-  background: #{map-get($colorz, "default")};
+  background: coloriz(default, base);
 
   .menu {
     a {
       padding: .5em 1em;
-      background: #{map-get($colorz, "default")};
+      background: coloriz(default, base);
       color: #fff;
       transition: background 0.3s ease;
 
@@ -47,13 +47,13 @@ category: Layout - Menu
       &:focus,
       &:active {
         background: #fff;
-        color: #{map-get($colorz, "default")};
+        color: coloriz(default, base);
       }
     }
 
     a.active,
     li.active-trail > a {
-      background: #{map-get($colorz, "primary")};
+      background: coloriz(primary, base);
       color: #fff;
     }
 
@@ -185,10 +185,10 @@ category: Layout - Menu
           border-right-style: solid;
           border-left-width: 1px;
           border-left-style: solid;
-          border-color: #{darken(map-get($colorz, "default"), 15%)};
+          border-color: coloriz(default, dark);
 
           &.last {
-            border-bottom: 1px solid #{darken(map-get($colorz, "default"), 15%)};
+            border-bottom: 1px solid coloriz(default, dark);
           }
 
           a {
@@ -211,10 +211,10 @@ category: Layout - Menu
     .menu {
 
       li {
-        border-bottom: 1px solid #{darken(map-get($colorz, "default"), 15%)};
+        border-bottom: 1px solid coloriz(default, dark);
 
         &.first {
-          border-top: 1px solid #{darken(map-get($colorz, "default"), 15%)};
+          border-top: 1px solid coloriz(default, dark);
         }
       }
     }
@@ -231,8 +231,8 @@ category: Layout - Menu
   width: 38px;
   height: 38px;
   cursor: pointer;
-  border-left: 1px solid #{darken(map-get($colorz, "default"), 15%)};
-  background: #{map-get($colorz, "default")};
+  border-left: 1px solid coloriz(default, dark);
+  background: coloriz(default, base);
   color: #fff;
   overflow: hidden;
   outline: none;
@@ -241,7 +241,7 @@ category: Layout - Menu
   &:focus,
   &:active,
   &.active {
-    background: #{map-get($colorz, "secondary")};
+    background: coloriz(secondary, base);
     color: #fff;
   }
 
@@ -266,7 +266,7 @@ category: Layout - Menu
 //   font-size: 1em;
 //   font-weight: 700;
 //   background: #f2f2f2;
-//   color: #{map-get($colorz, "secondary")};
+//   color: coloriz(secondary, base);
 
 //   &:before,
 //   &:after {
@@ -280,18 +280,18 @@ category: Layout - Menu
 
 //   &:after {
 //     height: 9px;
-//     border-top: 2px solid #{map-get($colorz, "secondary")};
-//     border-bottom: 2px solid #{map-get($colorz, "secondary")};
+//     border-top: 2px solid coloriz(secondary, base);
+//     border-bottom: 2px solid coloriz(secondary, base);
 //   }
 
 //   &:before {
 //     top: 1.29em;
 //     height: 2px;
-//     background: #{map-get($colorz, "secondary")};
+//     background: coloriz(secondary, base);
 //   }
 
 //   &.is-actived {
-//     background: #{map-get($colorz, "secondary")};
+//     background: coloriz(secondary, base);
 //     color: #fff;
 
 //     &:before,

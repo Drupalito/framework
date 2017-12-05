@@ -152,11 +152,11 @@ div.date-calendar-day {
 
 /* Calendar day css */
 div.date-calendar-day {
-  background: #f7f7f7;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  background: $color-grey-lightest;
+  border-top: 1px solid $color-grey-lighter;
+  border-left: 1px solid $color-grey-lighter;
+  border-right: 1px solid $color-grey-lighter;
+  border-bottom: 1px solid $color-grey-lighter;
   color: #222;
   line-height: 1;
   margin: 6px 10px 0 0;
@@ -169,7 +169,7 @@ div.date-calendar-day span {
   text-align: center;
 }
 div.date-calendar-day span.month {
-  background-color: #ccc;
+  background-color: $color-grey-lighter;
   color: white;
   font-size: .9em;
   padding: 2px;
@@ -186,7 +186,7 @@ div.date-calendar-day span.year {
 
 .date-form-element-content-multiline {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid $color-grey-lighter;
 }
 /* Admin styling */
 .form-item.form-item-instance-widget-settings-input-format-custom,

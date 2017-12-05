@@ -73,7 +73,7 @@ Le titre peut être caché avec `.a11y`
   }
 
   &--current strong {
-    background: #{map-get($colorz, "primary")};
+    background: coloriz(primary, base);
     color: #fff;
   }
 
@@ -81,7 +81,7 @@ Le titre peut être caché avec `.a11y`
     &:hover,
     &:focus {
       text-decoration: none;
-      background: #{map-get($colorz, "default")};
+      background: coloriz(default, base);
       color: #fff;
     }
   }
