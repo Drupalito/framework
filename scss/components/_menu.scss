@@ -85,7 +85,7 @@ category: Components - Menu primaire
 
 ```html
   <ul class="primary">
-    <li class="active"><a href="#">Link</a></li>
+    <li class="active"><a href="#" title="Link active (current page)">Link active</a></li>
     <li class="collapsed">
       <a href="#">Link collapsed</a>
       <ul>
@@ -219,7 +219,7 @@ category: Components - Menu secondaire
         <li><a href="#">Link</a></li>
       </ul>
     </li>
-    <li class="active"><a href="#">Link active</a></li>
+    <li class="active"><a href="#" title="Link active (current page)">Link active</a></li>
     <li class="expanded">
       <a href="#">Link expanded</a>
       <ul>
