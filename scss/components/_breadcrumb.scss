@@ -15,16 +15,14 @@ Obligatoire.
 * [OPQUAST - SEO - N°66 - Le site propose un fil d'Ariane.](https://checklists.opquast.com/seo/criteria/le-site-propose-un-fil-dariane)
 
 ```html
-
   <div class="breadcrumb clearfix" id="breadcrumb">
     <p>
-      <span>You are here&nbsp;:</span>
-      <a itemprop="url" href="/"><span itemprop="title">Home</span></a> ›
-      <a itemprop="url" href="/"><span itemprop="title">Catégorie One</span></a> ›
-      <strong class="regular">Current page title</strong>
+      <span>Vous êtes ici&nbsp;:</span>
+      <a itemprop="url" href="/"><span itemprop="title">Accueil</span></a> ›
+      <a itemprop="url" href="/"><span itemprop="title">Catégorie </span></a> ›
+      <strong class="regular">Titre de la page en cours</strong>
     </p>
   </div>
-
 ```
 
 */
@@ -36,7 +34,7 @@ Obligatoire.
 /*doc
 ---
 title: Skiplinks
-category: Components - Breadcrumb
+category: Components - Skiplinks
 ---
 
 Obligatoire. **Affiché au `:focus`**. Le code HTML doit être inséré juste après le `<body>`.
@@ -47,8 +45,8 @@ Obligatoire. **Affiché au `:focus`**. Le code HTML doit être inséré juste ap
 
 ```html
   <p class="skiplinks" id="skiplinks">
-    <a tabindex="-1" href="#navigation">Menu</a>
-    <a tabindex="-1" href="#main">Contenu principal</a>
+    <a href="#navigation">Menu</a>
+    <a href="#main">Contenu principal</a>
   </p>
 ```
 
