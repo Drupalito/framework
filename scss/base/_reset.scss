@@ -331,19 +331,18 @@ Mise en forme d'une adresse postale
 ```html
   <address>
     <p>
-      <strong>Axel Roche,</strong><a href="mailto:axel@aquelito.fr">axel@aquelito.fr</a><br/>
-      184 rue du Bled,<br/>
-      33000 Bordeaux (France)<br/>
-      <abbr title="Téléphone">Tél.</abbr> : 06 58 28 56 67<br/>
-      <abbr title="Fax">Fax.</abbr> : 05 57 55 55 55<br/>
-      <a href="http://aquelito.fr">aquelito.fr</a>
+      <strong>OWNER_CONTACT,</strong><a href="mailto:OWNER_EMAIL">OWNER_EMAIL</a><br/>
+      OWNER_ADDRESS,<br/>
+      OWNER_ADDRESS_CODE_POSTAL OWNER_ADDRESS_LOCALITY (France)<br/>
+      <abbr title="Téléphone">Tél.</abbr> : OWNER_PHONE<br/>
+      <a href="OWNER_URL">OWNER_URL</a>
     </p>
   </address>
   <address class="mtl">
     <p>
-      <strong>John.doe</strong><br/>
-      <a href="mailto:john.doe@gmail.com">john.doe@gmail.com</a><br/>
-      <a href="http://google.com">Google.com</a>
+      <strong>OWNER_CONTACT</strong><br/>
+      <a href="mailto:OWNER_EMAIL">OWNER_EMAIL</a><br/>
+      <a href="OWNER_URL">OWNER_URL</a>
     </p>
   </address>
 ```
