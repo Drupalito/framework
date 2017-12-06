@@ -58,3 +58,25 @@
     @return map-get($colors, $color-name);
   }
 }
+
+/// Find color message in map
+/// @param {string} $color-name - Name color
+/// @param {string} $color-variant - Variant
+/// @example scss - Usage SCSS
+/// div.error {
+///   background: message(error, color);
+/// }
+/// div.success {
+///   color: message(status, color);
+/// }
+@function message($color-name, $color-variant:nil) {
+  // color variant is optional
+  @if ($color-variant != nil) {
+    // map inception, need two deep
+    @return map-get(map-get($message, $color-name), $color-variant);
+  }
+  @else {
+    // single-level color, one deep
+    @return map-get($message, $color-name);
+  }
+}

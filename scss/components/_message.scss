@@ -187,26 +187,23 @@ Modifier `.messages--warning` && `.messages--icon`
   }
 
   @each $name, $values in $message {
-    $icon: map-get($values, "icon");
-    $background: map-get($values, "color");
+    $hexa: message($name, base);
 
     &--#{$name} {
-      border-color: $background;
-      background: lighten($background, $color-shade-lighter);
+      border-color: $hexa;
+      background: message($name, light);
 
       a {
-        color: $background;
+        color: $hexa;
       }
 
       // scss-lint:disable SelectorFormat
       &.messages--icon .messages__content {
         &:before {
-          // @extend ;
-          content: $icon;
-          color: $background;
+          content: message($name, icon);
+          color: $hexa;
         }
       }
-
       // scss-lint:enable SelectorFormat
     }
   }
@@ -274,18 +271,18 @@ category: Components - Messages
 */
 
 @each $name, $values in $message {
-  $color: map-get($values, "color");
-  $new-name: #{$name};
+  $hexa: message($name, base);
 
+  $new-name: $name;
   @if $name == "status" {
     $new-name: "ok";
   }
 
   table tr.#{$new-name} {
-    background: lighten($color, $color-shade-lighter);
+    background: message($name, light);
 
     td {
-      color: $color;
+      color: $hexa;
     }
   }
 }
@@ -322,7 +319,7 @@ category: Base - Forms
 */
 
 @each $name, $values in $message {
-  $background: map-get($values, "color");
+  $hexa: message($name, base);
 
   .has--#{$name} {
     @extend .text--#{$name};
@@ -332,31 +329,19 @@ category: Base - Forms
   .has--#{$name} select,
   .has--#{$name} textarea {
     border-left-width: 4px; /* LTR */
-    @if map-get($values, "color") {
-      border-color: map-get($values, "color");
+    @if $hexa {
+      border-color: $hexa;
 
       &:focus {
-        $color-focus: map-get($values, "color");
-        // box-shadow: 0 0 2px $color-focus, 0 0 5px $color-focus;
-        // box-shadow: 0 0 2px $color-focus, 0 0 5px $color-focus;
-        outline: 2px dotted $color-focus;
-        outline-offset: 3px;
-      }
-    } @else {
-      border-color: $background;
-
-      &:focus {
-        box-shadow: 0 0 2px $background, 0 0 5px $background;
-        // box-shadow: 0 0 2px $background, 0 0 5px $background;
-        // box-shadow: 0 0 2px $background, 0 0 5px $background;
-        outline: 2px dotted $background;
+        box-shadow: 0 0 2px $hexa, 0 0 5px $hexa;
+        outline: 2px dotted $hexa;
         outline-offset: 3px;
       }
     }
   }
 
   .btn--#{$name} {
-    background-color: $background;
+    background-color: $hexa;
     color: #fff;
 
     &:hover,
@@ -364,7 +349,7 @@ category: Base - Forms
     &:active,
     &.active {
       text-decoration: none;
-      background-color: darken($background, $color-shade-light);
+      background-color: message($name, dark);
       color: #fff;
     }
   }
@@ -409,7 +394,6 @@ Combine `.text` with `.text--icon` and icon `.i-info`
 
 .text {
   &--icon:before {
-    // @extend .i;
     margin-right: 5px; /* LTR */
   }
 
@@ -418,10 +402,9 @@ Combine `.text` with `.text--icon` and icon `.i-info`
   }
 
   @each $name, $values in $message {
-    $color: map-get($values, "color");
-
+    $hexa: message($name, base);
     &--#{$name} {
-      color: $color;
+      color: $hexa;
     }
   }
 }
@@ -450,19 +433,19 @@ category: Components - Label
 */
 
 .mark--new {
-  $type: map-get($message, "error");
-  background: #{map-get($type, "color")};
+  $hexa: message(error, base);
+  background: $hexa;
   color: #fff;
 }
 
 .mark--unpublished {
-  $type: map-get($message, "warning");
-  background: #{map-get($type, "color")};
+  $hexa: message(warning, base);
+  background: $hexa;
   color: #fff;
 }
 
 .mark--updated {
-  $type: map-get($message, "info");
-  background: #{map-get($type, "color")};
+  $hexa: message(info, base);
+  background: $hexa;
   color: #fff;
 }

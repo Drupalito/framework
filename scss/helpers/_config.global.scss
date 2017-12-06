@@ -199,32 +199,59 @@ $selection-color: #666 !default;
 /// @type Color
 $highlight-mark-color: #ff0 !default;
 
+// Settings Message
+// ================
+
+/// Error color
+/// @type Color
+$color-error: #b64747;
+
+/// Warning color
+/// @type Color
+$color-warning: #ddae1e;
+
+/// Info color
+/// @type Color
+$color-info: #477bb6;
+
+/// Status color
+/// @type Color
+$color-status: #77b647;
+
 /// Theme Message
 /// @type Map
 /// @prop {Map} theme
-/// @prop {Color} message.info.color [#477bb6] - Alerte info : couleur
+/// @prop {Color} message.info.base [#477bb6] - Alerte info : couleur
 /// @prop {String} message.info.icon [\f05a] - Alerte info : icône
-/// @prop {Color} message.warning.color [#ddae1e] - Alerte warning : couleur
+/// @prop {base} message.warning.base [#ddae1e] - Alerte warning : couleur
 /// @prop {String} message.warning.icon [\f071] - Alerte warning : icône
-/// @prop {Color} message.error.color [#b64747] - Alerte erreur : couleur
+/// @prop {base} message.error.base [#b64747] - Alerte erreur : couleur
 /// @prop {String} message.error.icon [\f057] - Alerte erreur : icône
-/// @prop {Color} message.status.color [#77b647] - Alerte succès : couleur
+/// @prop {base} message.status.base [#77b647] - Alerte succès : couleur
 /// @prop {String} message.status.icon [\f00c] - Alerte succès : icône
 $message: (
   error: (
-    color: #b64747,
+    base:  $color-error,
+    light: lighten($color-error, 45%),
+    dark:  darken($color-error, 15%),
     icon:  "\f057",
   ),
   warning: (
-    color: #ddae1e,
+    base:  $color-warning,
+    light: lighten($color-warning, 45%),
+    dark:  darken($color-warning, 15%),
     icon:  "\f071",
   ),
   info: (
-    color: #477bb6,
+    base:  $color-info,
+    light: lighten($color-info, 45%),
+    dark:  darken($color-info, 15%),
     icon:  "\f05a",
   ),
   status: (
-    color: #77b647,
+    base:  $color-status,
+    light: lighten($color-status, 45%),
+    dark:  darken($color-status, 15%),
     icon:  "\f00c",
   )
 ) !default;

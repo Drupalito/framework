@@ -53,7 +53,7 @@ category: Components - Buttons
   &.active {
     text-decoration: none;
     background-color: $color-grey-lighter;
-    color: #fff;
+    color: #222;
   }
 
   // Kill phantom spacing and dotted
@@ -110,26 +110,23 @@ Couleurs disponibles.
 }
 
 .btn--edit-submit {
-  $background: coloriz(primary, base);
-  @include btn-theme(#fff, $background);
+  $hexa: coloriz(primary, base);
+  @include btn-theme(#fff, $hexa);
 }
 
 .btn--edit-add {
-  $type: map-get($message, "status");
-  $background: map-get($type, "color");
-  @include btn-theme(#fff, $background);
+  $hexa: message(status, base);
+  @include btn-theme(#fff, $hexa);
 }
 
 .btn--edit-preview {
-  $type: map-get($message, "info");
-  $background: map-get($type, "color");
-  @include btn-theme(#fff, $background);
+  $hexa: message(info, base);
+  @include btn-theme(#fff, $hexa);
 }
 
 .btn--edit-delete {
-  $type: map-get($message, "error");
-  $background: map-get($type, "color");
-  @include btn-theme(#fff, $background);
+  $hexa: message(error, base);
+  @include btn-theme(#fff, $hexa);
 }
 
 /*doc

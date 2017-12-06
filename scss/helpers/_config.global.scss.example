@@ -199,6 +199,25 @@ $selection-color: SELECTION_COLOR !default;
 /// @type Color
 $highlight-mark-color: HIGHLIGHT_MARK_COLOR !default;
 
+// Settings Message
+// ================
+
+/// Error color
+/// @type Color
+$color-error: MESSAGES_ERROR;
+
+/// Warning color
+/// @type Color
+$color-warning: MESSAGES_WARNING;
+
+/// Info color
+/// @type Color
+$color-info: MESSAGES_INFO;
+
+/// Status color
+/// @type Color
+$color-status: MESSAGES_STATUS;
+
 /// Theme Message
 /// @type Map
 /// @prop {Map} theme
@@ -212,19 +231,27 @@ $highlight-mark-color: HIGHLIGHT_MARK_COLOR !default;
 /// @prop {String} message.status.icon [\f00c] - Alerte succès : icône
 $message: (
   error: (
-    color: MESSAGES_ERROR,
+    base:  $color-error,
+    light: lighten($color-error, 45%),
+    dark:  darken($color-error, 15%),
     icon:  "\f057",
   ),
   warning: (
-    color: MESSAGES_WARNING,
+    base:  $color-warning,
+    light: lighten($color-warning, 45%),
+    dark:  darken($color-warning, 15%),
     icon:  "\f071",
   ),
   info: (
-    color: MESSAGES_INFO,
+    base:  $color-info,
+    light: lighten($color-info, 45%),
+    dark:  darken($color-info, 15%),
     icon:  "\f05a",
   ),
   status: (
-    color: MESSAGES_STATUS,
+    base:  $color-status,
+    light: lighten($color-status, 45%),
+    dark:  darken($color-status, 15%),
     icon:  "\f00c",
   )
 ) !default;
