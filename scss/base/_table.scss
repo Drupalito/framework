@@ -157,8 +157,8 @@ table {
   table-layout: fixed;
 }
 
-th,
-th a {
+thead th,
+thead th a {
   background: $body-color;
   color: #fff;
 }
@@ -195,8 +195,8 @@ tbody {
   border: 1px solid $color-grey-lighter;
 
   th {
-    background: $color-grey-lightest;
-    color: inherit;
+    // background: $color-grey-lightest;
+    // color: inherit;
   }
   tr {
     > * + * {
@@ -207,7 +207,7 @@ tbody {
 
 .views-row-odd,
 tbody tr:nth-child(odd) {
-  background: #ececec;
+  background: #fff;
 }
 
 .views-row-even,
@@ -223,11 +223,11 @@ th.active a {
 
 td.active {
   tbody tr:nth-child(odd) & {
-    background: darken(#ececec, 5%);
+    // background: darken(#ebebeb, 5%);
   }
 
   tbody tr:nth-child(even) & {
-    background: darken($color-grey-lightest, 5%);
+    // background: darken($color-grey-lightest, 5%);
   }
 }
 
