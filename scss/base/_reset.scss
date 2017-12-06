@@ -331,18 +331,18 @@ Mise en forme d'une adresse postale
 ```html
   <address>
     <p>
-      <strong>OWNER_CONTACT,</strong><a href="mailto:OWNER_EMAIL">OWNER_EMAIL</a><br/>
-      OWNER_ADDRESS,<br/>
-      OWNER_ADDRESS_CODE_POSTAL OWNER_ADDRESS_LOCALITY (France)<br/>
-      <abbr title="Téléphone">Tél.</abbr> : OWNER_PHONE<br/>
-      <a href="OWNER_URL">OWNER_URL</a>
+      <strong>{{ site.OWNER_CONTACT }}</strong>, <a href="mailto:{{ site.OWNER_EMAIL }}">{{ site.OWNER_EMAIL }}</a><br/>
+      {{ site.OWNER_ADDRESS }},<br/>
+      {{ site.OWNER_ADDRESS_CODE_POSTAL }} {{ site.OWNER_ADDRESS_LOCALITY (France)<br/>
+      <abbr title="Téléphone">Tél.</abbr> : {{ site.OWNER_PHONE }}<br/>
+      <a href="{{ site.OWNER_URL }}">{{ site.OWNER_URL }}</a>
     </p>
   </address>
   <address class="mtl">
     <p>
-      <strong>OWNER_CONTACT</strong><br/>
-      <a href="mailto:OWNER_EMAIL">OWNER_EMAIL</a><br/>
-      <a href="OWNER_URL">OWNER_URL</a>
+      <strong>{{ site.OWNER_CONTACT }}</strong><br/>
+      <a href="mailto:{{ site.OWNER_EMAIL }}">{{ site.OWNER_EMAIL }}</a><br/>
+      <a href="{{ site.OWNER_URL }}">{{ site.OWNER_URL }}</a>
     </p>
   </address>
 ```
