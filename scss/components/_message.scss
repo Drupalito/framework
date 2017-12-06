@@ -18,6 +18,7 @@ Message d'avertissement délivré par Drupal.
         <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
         <li class="messages__item">Le champ Mot de passe est requis.</li>
       </ul>
+      <p class="mtm"><a href="#" class="btn btn--info">Demo button</a></p>
     </div>
   </div>
 
@@ -29,6 +30,7 @@ Message d'avertissement délivré par Drupal.
         <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
         <li class="messages__item">Le champ Mot de passe est requis.</li>
       </ul>
+      <p class="mtm"><a href="#" class="btn btn--info">Demo button</a></p>
     </div>
   </div>
 
@@ -47,6 +49,7 @@ Modifier `.messages--error` && `.messages--icon`
     <div class="messages__content">
       <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a><br />
       Nous vous recommadons de vérifier les données.</p>
+      <p class="mtm"><a href="#" class="btn btn--error">Demo button</a></p>
     </div>
   </div>
 
@@ -55,6 +58,7 @@ Modifier `.messages--error` && `.messages--icon`
     <div class="messages__content">
       <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a><br />
       Nous vous recommadons de vérifier les données.</p>
+      <p class="mtm"><a href="#" class="btn btn--error">Demo button</a></p>
     </div>
   </div>
 
@@ -76,6 +80,7 @@ Modifier `.messages--status` && `.messages--icon`
         <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
         <li class="messages__item">Le champ Mot de passe est requis.</li>
       </ul>
+      <p class="mtm"><a href="#" class="btn btn--status">Demo button</a></p>
     </div>
   </div>
 
@@ -87,6 +92,7 @@ Modifier `.messages--status` && `.messages--icon`
         <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
         <li class="messages__item">Le champ Mot de passe est requis.</li>
       </ul>
+      <p class="mtm"><a href="#" class="btn btn--status">Demo button</a></p>
     </div>
   </div>
 
@@ -109,6 +115,7 @@ Modifier `.messages--warning` && `.messages--icon`
         <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
         <li class="messages__item">Le champ Mot de passe est requis.</li>
       </ul>
+      <p class="mtm"><a href="#" class="btn btn--warning">Demo button</a></p>
     </div>
   </div>
 
@@ -120,6 +127,7 @@ Modifier `.messages--warning` && `.messages--icon`
         <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
         <li class="messages__item">Le champ Mot de passe est requis.</li>
       </ul>
+      <p class="mtm"><a href="#" class="btn btn--warning">Demo button</a></p>
     </div>
   </div>
 ```
@@ -142,9 +150,9 @@ Modifier `.messages--warning` && `.messages--icon`
   a {
     @include bold;
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:not(.btn):hover,
+    &:not(.btn):focus,
+    &:not(.btn):active {
       color: inherit;
     }
   }
@@ -193,7 +201,7 @@ Modifier `.messages--warning` && `.messages--icon`
       border-color: $hexa;
       background: message($name, light);
 
-      a {
+      a:not(.btn) {
         color: $hexa;
       }
 
@@ -226,6 +234,7 @@ category: Components - Messages
 ```
 
 */
+
 
 /*doc
 ---
@@ -339,7 +348,7 @@ category: Base - Forms
       }
     }
   }
-
+  // Generated btn message
   .btn--#{$name} {
     background-color: $hexa;
     color: #fff;
