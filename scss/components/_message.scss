@@ -155,6 +155,11 @@ Modifier `.messages--warning` && `.messages--icon`
     &:not(.btn):active {
       color: inherit;
     }
+
+    &:focus {
+      outline: 2px dotted $color-grey-light;
+      outline-offset: 2px;
+    }
   }
 
   &__title,
@@ -203,6 +208,12 @@ Modifier `.messages--warning` && `.messages--icon`
 
       a:not(.btn) {
         color: $hexa;
+
+      }
+
+      a:focus {
+        outline: 2px dotted $hexa;
+        outline-offset: 2px;
       }
 
       // scss-lint:disable SelectorFormat
@@ -329,6 +340,7 @@ category: Base - Forms
 
 @each $name, $values in $message {
   $hexa: message($name, base);
+  $hexa-dark: message($name, dark);
 
   .has--#{$name} {
     @extend .text--#{$name};
@@ -342,7 +354,6 @@ category: Base - Forms
       border-color: $hexa;
 
       &:focus {
-        box-shadow: 0 0 2px $hexa, 0 0 5px $hexa;
         outline: 2px dotted $hexa;
         outline-offset: 3px;
       }
@@ -358,8 +369,13 @@ category: Base - Forms
     &:active,
     &.active {
       text-decoration: none;
-      background-color: message($name, dark);
+      background-color: $hexa-dark;
       color: #fff;
+    }
+
+    &:focus {
+      outline: 2px dotted $hexa-dark;
+      outline-offset: 2px;
     }
   }
 }
