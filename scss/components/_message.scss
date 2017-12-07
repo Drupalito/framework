@@ -451,6 +451,7 @@ category: Components - Label
 
 ```html
   <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--new">New</mark></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--error">Updated</mark></p>
   <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--updated">Updated</mark></p>
   <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--unpublished">Unpublished</mark></p>
 ```
@@ -458,17 +459,20 @@ category: Components - Label
 */
 
 .mark--new {
+  $hexa: message(status, base);
+  background: $hexa;
+  color: #fff;
+}
+.mark--error {
   $hexa: message(error, base);
   background: $hexa;
   color: #fff;
 }
-
 .mark--unpublished {
   $hexa: message(warning, base);
   background: $hexa;
   color: #fff;
 }
-
 .mark--updated {
   $hexa: message(info, base);
   background: $hexa;
