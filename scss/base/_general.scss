@@ -27,6 +27,19 @@ Deux moyens pour l'utiliser
 
 */
 
+/// Clearfix extend
+/// @example scss - Usage SCSS
+///   .foo {
+///     @extend %clearfix;
+///   }
+%clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
 .clearfix {
   @extend %clearfix;
 }

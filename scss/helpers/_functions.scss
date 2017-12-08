@@ -2,19 +2,6 @@
 // Functions
 // =========
 
-/// Clearfix extend
-/// @example scss - Usage SCSS
-///   .foo {
-///     @extend %clearfix;
-///   }
-%clearfix {
-  &:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-}
-
 /// Convert px to em.
 /// @see list-inline
 /// @see list-separate
