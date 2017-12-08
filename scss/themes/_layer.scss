@@ -6,6 +6,13 @@ category: Layout - Layer
 ---
 
 ```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <titlte>TITRE_DE_LA_PAGE</title>
+</head>
+<body>
+  ...
   <div id="page" class="page">
     ... header
     ... navigation
@@ -20,6 +27,8 @@ category: Layout - Layer
     </div>
     ... footer
   </div>
+</body>
+</html>
 ```
 
 */
