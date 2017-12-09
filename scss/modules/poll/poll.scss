@@ -30,7 +30,7 @@ Default Style CSS
         <div style="width: 70%;" class="foreground"></div>
       </div>
     </div>
-    <div class="poll-results__total mtl">
+    <div class="poll-results__total mtm">
       <p class="bold">Total votes&nbsp;: 2</p>
     </div>
   </div>
@@ -46,7 +46,7 @@ Default Style CSS
   }
 
   &-bars {
-    margin-top: rhythm(1);
+    margin-top: rhythm(.5);
 
     &:first-child {
       margin-top: 0;
@@ -59,6 +59,6 @@ Default Style CSS
   }
 
   &-results {
-    padding: 1.5em;
+    padding: 1em;
   }
 }
