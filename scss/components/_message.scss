@@ -346,6 +346,34 @@ category: Base - Forms
     @extend .text--#{$name};
   }
 
+  .has--#{$name} {
+    input[type="radio"],
+    input[type="checkbox"] {
+
+      + label {
+        &:before {
+          border-color: $hexa;
+          background: $hexa-light;
+        }
+
+        &:hover:before,
+        &:focus:before {
+          border-color: $hexa-dark;
+        }
+      }
+
+      &:focus + label:before {
+        border-color: $hexa-dark;
+        outline: 2px dotted $hexa-dark;
+      }
+
+      &:checked + label:before {
+        border-color: $hexa-dark;
+        background: $hexa-dark;
+      }
+    }
+  }
+
   .has--#{$name} input,
   .has--#{$name} select,
   .has--#{$name} textarea {
