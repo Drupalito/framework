@@ -49,7 +49,11 @@ Default Style CSS
   }
 
   &-container-inline {
-    @extend %clearfix;
+     &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
 
     .form-item {
       float: left; /* LTR */
