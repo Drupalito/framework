@@ -30,6 +30,8 @@ title: Typography
 section: true
 ---
 
+Class CSS spécifiques pour gérer la typographie. Peut être utilisé pour le WYSIWYG.
+
 |Key | Example | Code
 |----|---------|-----|
 |CAPS TEXT | <span class="caps">Text</span> | ``` <span class="caps">Text</span> ```
@@ -93,6 +95,8 @@ title: Taille
 section: true
 ---
 
+Class CSS spécifiques pour gérer rapidement une taille.
+
 <span class="size-1x">`.size-1x` : 1x</span>\\
 <span class="size-2x">`.size-2x` : 2x</span>\\
 <span class="size-3x">`.size-3x` : 3x</span>\\
@@ -135,7 +139,6 @@ section: true
 ---
 
 La justification n'est pas disponible car interdite en accessibilité pour des questions de lisibilité. Ou alors, la justication doit être contrôlable par l'utilisateur.
-
 
 * [RGAA - Critère 10.9 [AAA] Pour chaque page web, le texte ne doit pas être justifié.](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-10-9)
 * [OPQUAST - QUALITÉ - N°183 - Les styles ne justifient pas le texte.](https://checklists.opquast.com/oqs-v3/criteria/les-styles-ne-justifient-pas-le-texte)

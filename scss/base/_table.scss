@@ -8,6 +8,8 @@ title: Table
 category: Base - Table
 ---
 
+Mise en forme par défault d'une tableau.
+
 ```html
   <table>
     <caption>Jimi Hendrix - albums</caption>
@@ -58,8 +60,7 @@ title: Table Responsive
 category: Base - Table
 ---
 
-Faire une table responsive ajouté un wrapper autour de l'élément `<table>`
-`<div class="table-responsive">`
+Faire une table responsive, ajouter un wrapper autour de l'élément `<table>`.
 
 ```html
   <div class="table-responsive">
@@ -76,6 +77,8 @@ Faire une table responsive ajouté un wrapper autour de l'élément `<table>`
 title: Table Striped
 category: Base - Table
 ---
+
+Mise en forme d'un tableau avec la class `.table`.
 
 ```html
   <table class="table">

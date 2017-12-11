@@ -265,6 +265,8 @@ title: Ordered list and Unordered list
 category: Base - Base
 ---
 
+Style par défault des listes ordonnées (`<ol>`) et non ordonnées (`<ul>`).
+
 ```html
   <ul>
     <li>Unordered list test</li>
@@ -326,7 +328,7 @@ title: Address
 category: Base - Base
 ---
 
-Mise en forme d'une adresse postale
+Mise en forme d'une adresse postale.
 
 ```html
   <address>
@@ -367,6 +369,8 @@ title: Blockquote
 category: Base - Base
 ---
 
+Mise en forme par défault d'un bloc de citation.
+
 ```html
   <blockquote>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</p>
@@ -387,6 +391,8 @@ blockquote {
 title: Blockquote cite
 category: Base - Base
 ---
+
+Mise en forme par défault d'un bloc de citation avec auteur.
 
 ```html
   <blockquote>Those people who think they know everything are a great annoyance to those of us who do.<cite>Isaac Asimov</cite></blockquote>
@@ -436,6 +442,8 @@ samp {
 title: Quotes
 category: Base - Base
 ---
+
+Mise en forme par défault d'une citation en ligne suivant la langue définie.
 
 ```html
   <p lang="en"><q>EN: Eius, natus vitae similique impedit quod dolor</q></p>
