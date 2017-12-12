@@ -3,23 +3,23 @@
 // Text class helpers.
 
 // Base colorz
-@each $name, $color in $colorz {
-  .#{$name}-color { color: $color; }
-  .#{$name}-border { border-color: $color; }
+@each $name, $color in $colors {
+  .#{$name}-color { color: coloriz($name, base); }
+  .#{$name}-border { border-color: coloriz($name, base); }
   .#{$name}-background {
-    background-color: $color;
+    background-color: coloriz($name, base);
     color: #fff;
   }
   .#{$name}-background--lighter {
-    background-color: lighten($color, 45%);
+    background-color: coloriz($name, lighter);
     color: #fff;
   }
   .#{$name}-background--light {
-    background-color: lighten($color, 15%);
+    background-color: coloriz($name, light);
     color: #fff;
   }
   .#{$name}-background--dark {
-    background-color: darken($color, 15%);
+    background-color: coloriz($name, dark);
     color: #fff;
   }
 }
