@@ -113,27 +113,27 @@ $definition-inline-width: DEFINITION_INLINE_WIDTH !default;
 
 /// Base color
 /// @type Color
-$color-default: COLORZ_DEFAULT;
+$color-default: COLORZ_DEFAULT !default;
 
 /// Primary color
 /// @type Color
-$color-primary: COLORZ_PRIMARY;
+$color-primary: COLORZ_PRIMARY !default;
 
 /// Secondary color
 /// @type Color
-$color-secondary: COLORZ_SECONDARY;
+$color-secondary: COLORZ_SECONDARY !default;
 
 /// Color shade lighter
 /// @type Pourcent
-$color-shade-lighter: 45%;
+$color-shade-lighter: 45% !default;
 
 /// Color shade light
 /// @type Pourcent
-$color-shade-light: 15%;
+$color-shade-light: 15% !default;
 
 /// Transparency amount
 /// @type Pourcent
-$color-trans-amount: 0.5;
+$color-trans-amount: 0.5 !default;
 
 /// Color variable map
 /// @type Map
@@ -162,7 +162,7 @@ $colors: (
     dark: darken($color-secondary, $color-shade-light),
     trans: transparentize($color-secondary, $color-trans-amount)
   )
-);
+) !default;
 
 /// Color grey variable map
 /// @type Map
@@ -204,19 +204,19 @@ $highlight-mark-color: HIGHLIGHT_MARK_COLOR !default;
 
 /// Error color
 /// @type Color
-$color-error: MESSAGES_ERROR;
+$color-error: MESSAGES_ERROR !default;
 
 /// Warning color
 /// @type Color
-$color-warning: MESSAGES_WARNING;
+$color-warning: MESSAGES_WARNING !default;
 
 /// Info color
 /// @type Color
-$color-info: MESSAGES_INFO;
+$color-info: MESSAGES_INFO !default;
 
 /// Status color
 /// @type Color
-$color-status: MESSAGES_STATUS;
+$color-status: MESSAGES_STATUS !default;
 
 /// Theme Message
 /// @type Map

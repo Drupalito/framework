@@ -113,27 +113,27 @@ $definition-inline-width: 150px !default;
 
 /// Base color
 /// @type Color
-$color-default: #f31b44;
+$color-default: #f31b44 !default;
 
 /// Primary color
 /// @type Color
-$color-primary: #161324;
+$color-primary: #161324 !default;
 
 /// Secondary color
 /// @type Color
-$color-secondary: #343140;
+$color-secondary: #343140 !default;
 
 /// Color shade lighter
 /// @type Pourcent
-$color-shade-lighter: 45%;
+$color-shade-lighter: 45% !default;
 
 /// Color shade light
 /// @type Pourcent
-$color-shade-light: 15%;
+$color-shade-light: 15% !default;
 
 /// Transparency amount
 /// @type Pourcent
-$color-trans-amount: 0.5;
+$color-trans-amount: 0.5 !default;
 
 /// Color variable map
 /// @type Map
@@ -162,7 +162,7 @@ $colors: (
     dark: darken($color-secondary, $color-shade-light),
     trans: transparentize($color-secondary, $color-trans-amount)
   )
-);
+) !default;
 
 /// Color grey variable map
 /// @type Map
@@ -204,19 +204,19 @@ $highlight-mark-color: #ff0 !default;
 
 /// Error color
 /// @type Color
-$color-error: #b64747;
+$color-error: #b64747 !default;
 
 /// Warning color
 /// @type Color
-$color-warning: #ddae1e;
+$color-warning: #ddae1e !default;
 
 /// Info color
 /// @type Color
-$color-info: #477bb6;
+$color-info: #477bb6 !default;
 
 /// Status color
 /// @type Color
-$color-status: #77b647;
+$color-status: #77b647 !default;
 
 /// Theme Message
 /// @type Map
