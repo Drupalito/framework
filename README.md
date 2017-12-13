@@ -2,9 +2,19 @@
 
 ## Prérequis
 
+* NPM
+* Gulp
+* Sass
+
 ## Installation
 
+Ce repo contient uniquement les fichiers sources, ces derniers seront compilés afin de générer les fichiers définitifs. Il sera nécessaire d'installer un gestionnaire de tâches pour faciliter le travail de compilation.
+
+GULP est le gestionnaire de tâches proposés, [vous pouvez télécharger les fichiers](https://github.com/Drupalito/gulp_tasks). Vous devrez configurer le fichier `config.xml` pour le faire fonctionner.
+
 ## Prise en main
+
+[TODO]
 
 ## Architecture
 
