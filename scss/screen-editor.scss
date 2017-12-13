@@ -14,28 +14,21 @@
  * (CURRENT_YEAR)
  */
 
-// scss-lint:disable Indentation
-
 // Base
-@import
-  "base/reset",
-  "base/text",
-  "base/media",
-  "base/grid",
-  "base/helper",
-  "base/general",
-  "base/table",
-  "base/form";
+@import "base/reset";
+@import "base/text";
+@import "base/media";
+@import "base/grid";
+@import "base/helper";
+@import "base/general";
+@import "base/table";
+@import "base/form";
 
 // Components
-@import
-  "components/button";
+@import "components/button";
 
 // Layers
-@import
-  "helpers/debug-grid";
-
-// scss-lint:enable Indentation
+@import "helpers/debug-grid";
 
 // scss-lint:disable QualifyingElement SelectorFormat
 body.cke_show_borders { padding: 10px; }

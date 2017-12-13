@@ -11,18 +11,13 @@
  * (CURRENT_YEAR)
  */
 
-// scss-lint:disable Indentation
-
 // Components
-@import
-  "components/block",
-  "components/breadcrumb",
-  "components/button",
-  "components/hamburger",
-  "components/logo",
-  "components/menu",
-  "components/message",
-  "components/pagination",
-  "components/search";
-
-// scss-lint:enable Indentation
+@import "components/block";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/hamburger";
+@import "components/logo";
+@import "components/menu";
+@import "components/message";
+@import "components/pagination";
+@import "components/search";

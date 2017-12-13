@@ -7,23 +7,18 @@
 // (CURRENT_YEAR)
 //
 
-// scss-lint:disable Indentation
 // Custom config
-@import
-  "helpers/config.global",
-  "helpers/config.grid",
-  "helpers/config.form";
+@import "helpers/config.global";
+@import "helpers/config.grid";
+@import "helpers/config.form";
 
 // Custom functions
-@import
-  "helpers/functions";
+@import "helpers/functions";
 
 // Custom mixins
-@import
-  "helpers/mixins.global",
-  "helpers/mixins.grid",
-  "helpers/mixins.form",
-  "helpers/mixins.btn",
-  "helpers/mixins.list",
-  "helpers/mixins.utils";
-// scss-lint:enable Indentation
+@import "helpers/mixins.global";
+@import "helpers/mixins.grid";
+@import "helpers/mixins.form";
+@import "helpers/mixins.btn";
+@import "helpers/mixins.list";
+@import "helpers/mixins.utils";

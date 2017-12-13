@@ -12,15 +12,10 @@
  * (CURRENT_YEAR)
  */
 
-// scss-lint:disable Indentation
-
 // Layers
-@import
-  "themes/layer",
-  "themes/header",
-  "themes/navigation",
-  "themes/complementary",
-  "themes/contentinfo",
-  "themes/aside";
-
-// scss-lint:enable Indentation
+@import "themes/layer";
+@import "themes/header";
+@import "themes/navigation";
+@import "themes/complementary";
+@import "themes/contentinfo";
+@import "themes/aside";
