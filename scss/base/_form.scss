@@ -73,41 +73,41 @@ select[disabled] {
   background-color: $form-disable;
 }
 
-input[type="range"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="date"],
-input[type="color"],
-input[type="month"],
-input[type="week"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="number"],
-input[type="email"],
-input[type="password"],
-input[type="url"],
-input[type="submit"] {
+[type="range"],
+[type="search"],
+[type="text"],
+[type="tel"],
+[type="date"],
+[type="color"],
+[type="month"],
+[type="week"],
+[type="datetime"],
+[type="datetime-local"],
+[type="number"],
+[type="email"],
+[type="password"],
+[type="url"],
+[type="submit"] {
   display: inline-block;
   padding: 0 5px;
   line-height: normal;
   height: $input-height;
 }
 
-input[type="range"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="date"],
-input[type="color"],
-input[type="month"],
-input[type="week"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="number"],
-input[type="email"],
-input[type="password"],
-input[type="url"],
+[type="range"],
+[type="search"],
+[type="text"],
+[type="tel"],
+[type="date"],
+[type="color"],
+[type="month"],
+[type="week"],
+[type="datetime"],
+[type="datetime-local"],
+[type="number"],
+[type="email"],
+[type="password"],
+[type="url"],
 select,
 textarea {
   // width: 100%;
@@ -122,11 +122,11 @@ textarea {
 }
 
 textarea,
-input[type="file"] {
+[type="file"] {
   padding: 6px;
 }
 
-input[type="file"] {
+[type="file"] {
   display: inline-block;
   line-height: 1;
   height: 32px;
@@ -134,7 +134,7 @@ input[type="file"] {
   line-height: 0;
 }
 
-input[type="submit"] {
+[type="submit"] {
   padding: 0 10px;
 }
 
@@ -145,9 +145,9 @@ input[type="submit"] {
 //    `input` and others.
 button,
 html input[type="button"], // 1
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   cursor: pointer; // 3
   -webkit-appearance: button; // 2
 }
@@ -175,7 +175,7 @@ select::-ms-expand {
 // 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
 //    (include `-moz` to future-proof).
 // 3. Removes inner padding and search cancel button in Safari 5 and Chrome on OS X.
-input[type="search"] {
+[type="search"] {
   // box-sizing: content-box; // 2
   -webkit-appearance: textfield; // 1
   &::-webkit-search-cancel-button,
@@ -216,8 +216,8 @@ category: Base - Forms
 
 */
 
-input[type="radio"],
-input[type="checkbox"] {
+[type="radio"],
+[type="checkbox"] {
   position: absolute;
   left: -9999px;
 
@@ -278,7 +278,7 @@ input[type="checkbox"] {
   }
 }
 
-input[type="radio"] + label:before {
+[type="radio"] + label:before {
   border-radius: 50%;
 }
 
