@@ -87,7 +87,7 @@ select[disabled] {
 [type="email"],
 [type="password"],
 [type="url"],
-[type="submit"] {
+input[type="submit"] {
   display: inline-block;
   padding: 0 5px;
   line-height: normal;
@@ -134,7 +134,7 @@ textarea,
   line-height: 0;
 }
 
-[type="submit"] {
+inputinput[type="submit"] {
   padding: 0 10px;
 }
 
@@ -145,9 +145,9 @@ textarea,
 //    `input` and others.
 button,
 html input[type="button"], // 1
+input[type="submit"],
 [type="button"],
-[type="reset"],
-[type="submit"] {
+[type="reset"] {
   cursor: pointer; // 3
   -webkit-appearance: button; // 2
 }
@@ -186,18 +186,18 @@ select::-ms-expand {
 
 // Remove the inner border and padding in Firefox.
 button::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type="reset"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 // Restore the focus styles unset by the previous rule.
 button:-moz-focusring,
+inputinput[type="submit"]:-moz-focusring,
 [type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type="reset"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -216,8 +216,8 @@ category: Base - Forms
 
 */
 
-[type="radio"],
-[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
   position: absolute;
   left: -9999px;
 
@@ -278,7 +278,7 @@ category: Base - Forms
   }
 }
 
-[type="radio"] + label:before {
+input[type="radio"] + label:before {
   border-radius: 50%;
 }
 
@@ -697,6 +697,15 @@ category: Base - Forms
       </div>
     </div>
     <div class="form-item">
+      <div class="form-item has--error">
+        <input id="radio_off" name="optionsRadios" type="radio" />
+        <label for="radio_off">Radio is off</label>
+        <br />
+        <input id="radio_on" name="optionsRadios" type="radio" checked="checked" />
+        <label for="radio_on">Radio is on</label>
+      </div>
+    </div>
+    <div class="form-item">
       <div class="form-item">
         <input id="checkbox_off" name="optionsCheckboxes" type="checkbox" />
         <label for="checkbox_off">Checkbox is off</label>
@@ -709,6 +718,15 @@ category: Base - Forms
         <br />
         <input id="checkbox_on_disabled" name="optionsCheckboxesDisabled" type="checkbox" checked="checked" disabled="disabled" />
         <label class="text--muted" for="checkbox_on_disabled">Disabled checkbox is on</label>
+      </div>
+    </div>
+    <div class="form-item has--error">
+      <div class="form-item">
+        <input id="checkbox_off" name="optionsCheckboxes" type="checkbox" />
+        <label for="checkbox_off">Checkbox is off</label>
+        <br />
+        <input id="checkbox_on" name="optionsCheckboxes" type="checkbox" checked="checked" />
+        <label for="checkbox_on">Checkbox is on</label>
       </div>
     </div>
     <div class="form-item">

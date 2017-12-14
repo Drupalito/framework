@@ -313,80 +313,73 @@ title: Field states
 category: Base - Forms
 ---
 
+Affichager les erreurs d'un formulaire.
+
+```html
   <form action="" id="formErrors">
-    <div class="form-item has--info">
-      <label for="email">Email <abbr class="field-required" title="This field is required.">*</abbr></label>
-      <input aria-labelledby="error_email" class="field-txt error" name="email" type="email" required="required" aria-required="true" />
-      <br /><small id="error_email"> Error 1 : Enter valid email address, eg toto@domaine.com.</small>
-    </div>
-    <div class="form-item has--warning">
-      <label for="email">Email <abbr class="field-required" title="This field is required.">*</abbr></label>
-      <input aria-labelledby="error_email" class="field-txt error" name="email" type="email" required="required" aria-required="true" />
-      <br /><small id="error_email"> Error 1 : Enter valid email address, eg toto@domaine.com.</small>
-    </div>
     <div class="form-item has--error">
       <label for="email">Email <abbr class="field-required" title="This field is required.">*</abbr></label>
       <input aria-labelledby="error_email" class="field-txt error" name="email" type="email" required="required" aria-required="true" />
       <br /><small id="error_email"> Error 1 : Enter valid email address, eg toto@domaine.com.</small>
     </div>
-    <div class="form-item has--status">
-      <label for="email">Email <abbr class="field-required" title="This field is required.">*</abbr></label>
-      <input aria-labelledby="error_email" class="field-txt error" name="email" type="email" required="required" aria-required="true" />
-      <br /><small id="error_email"> Error 1 : Enter valid email address, eg toto@domaine.com.</small>
-    </div>
   </form>
+```
 
 */
 
 @each $name, $values in $message {
   $hexa: message($name, base);
   $hexa-dark: message($name, dark);
+  $hexa-light: message($name, light);
 
-  .has--#{$name} {
-    @extend .text--#{$name};
-  }
+  @if $name == "error" {
+    .has--#{$name} {
+      @extend .text--#{$name};
+    }
 
-  .has--#{$name} {
-    input[type="radio"],
-    input[type="checkbox"] {
+    .has--#{$name} {
+      [type="radio"],
+      [type="checkbox"] {
 
-      + label {
-        &:before {
-          border-color: $hexa;
-          background: $hexa-light;
+        + label {
+          &:before {
+            border-color: $hexa;
+            background: $hexa-light;
+          }
+
+          &:hover:before,
+          &:focus:before {
+            border-color: $hexa-dark;
+          }
         }
 
-        &:hover:before,
-        &:focus:before {
+        &:focus + label:before {
           border-color: $hexa-dark;
+          outline: 2px dotted $hexa-dark;
+        }
+
+        &:checked + label:before {
+          border-color: $hexa-dark;
+          background: $hexa-dark;
         }
       }
+    }
 
-      &:focus + label:before {
-        border-color: $hexa-dark;
-        outline: 2px dotted $hexa-dark;
-      }
+    .has--#{$name} input,
+    .has--#{$name} select,
+    .has--#{$name} textarea {
+      border-left-width: 4px; /* LTR */
+      @if $hexa {
+        border-color: $hexa;
 
-      &:checked + label:before {
-        border-color: $hexa-dark;
-        background: $hexa-dark;
+        &:focus {
+          outline: 2px dotted $hexa;
+          outline-offset: 3px;
+        }
       }
     }
   }
 
-  .has--#{$name} input,
-  .has--#{$name} select,
-  .has--#{$name} textarea {
-    border-left-width: 4px; /* LTR */
-    @if $hexa {
-      border-color: $hexa;
-
-      &:focus {
-        outline: 2px dotted $hexa;
-        outline-offset: 3px;
-      }
-    }
-  }
   // Generated btn message
   .btn--#{$name} {
     background-color: $hexa;
