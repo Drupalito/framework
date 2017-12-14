@@ -66,5 +66,6 @@ $font-unit: if($relative-font-sizing, 1em, $base-font-size);
 
 @mixin font-size($taille: $base-font-size) {
   font-size: $font-unit * $taille / $base-font-size;
-  line-height: rhythm(lines-for-font-size($taille), if($relative-font-sizing, $taille, $base-font-size));
+  // line-height: rhythm(lines-for-font-size($taille), if($relative-font-sizing, $taille, $base-font-size));
+  line-height: 1.5;
 }

@@ -77,7 +77,7 @@ $font-size: (
 /// @prop {Map} Font stack
 $font-families: (
   body:     ("Open Sans", Helvetica, Arial, sans-serif),
-  headline: ("Helvetica Neue", Helvetica, Arial, sans-serif),
+  headline: ("Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif),
   pre:      (Menlo, Monaco, Consolas, "Courier New", monospace),
   print:    ("Helvetica Neue", Helvetica, Arial, sans-serif)
 ) !default;
