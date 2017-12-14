@@ -94,6 +94,10 @@ input[type="submit"] {
   height: $input-height;
 }
 
+input[type="submit"] {
+  padding: 0 1.5em;
+}
+
 [type="range"],
 [type="search"],
 [type="text"],
