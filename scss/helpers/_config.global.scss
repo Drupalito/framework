@@ -33,6 +33,114 @@ $font-size: (
   h6: 14px
 ) !default;
 
+/// Font stack.
+/// @type Map
+/// @prop {Map} Font stack
+$font-families: (
+  body:     ("Open Sans", Helvetica, Arial, sans-serif),
+  headline: ("Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif),
+  pre:      (Menlo, Monaco, Consolas, "Courier New", monospace),
+  print:    ("Helvetica Neue", Helvetica, Arial, sans-serif)
+) !default;
+
+/// default `<dt>` width
+/// @type Length
+$definition-inline-width: 150px !default;
+
+// Settings Colorz
+// ===============
+
+/// Base color
+/// @type Color
+$color-default: #f31b44 !default;
+
+/// Primary color
+/// @type Color
+$color-primary: #161324 !default;
+
+/// Secondary color
+/// @type Color
+$color-secondary: #343140 !default;
+
+/// Color shade lighter
+/// @type Pourcent
+$color-shade-lighter: 45% !default;
+
+/// Color shade light
+/// @type Pourcent
+$color-shade-light: 15% !default;
+
+/// Transparency amount
+/// @type Pourcent
+$color-trans-amount: 0.5 !default;
+
+/// Color grey variable map
+/// @type Map
+/// @prop {Map} Color grey
+$colorz_grey: (
+  grey-lightest: #f1f1f1,
+  grey-lighter:  #d6d7d9,
+  grey-light:    #aeb0b5,
+  grey-dark:     #323a45,
+  grey:          #5b616b,
+) !default;
+
+/// Selection text color.
+/// @type Color
+$selection-background: #fff8ab !default;
+
+/// Selection text background.
+/// @type Color
+$selection-color: #666 !default;
+
+/// Background color html <mark>.
+/// @type Color
+$highlight-mark-color: #ff0 !default;
+
+// Settings Message
+// ================
+
+/// Error color
+/// @type Color
+$color-error: #b64747 !default;
+
+/// Warning color
+/// @type Color
+$color-warning: #ddae1e !default;
+
+/// Info color
+/// @type Color
+$color-info: #477bb6 !default;
+
+/// Status color
+/// @type Color
+$color-status: #77b647 !default;
+
+// Mapping variables
+// =================
+
+/// Définie la typo bold
+/// @see italic
+/// @example scss - Usage SCSS
+///   p {
+///     @include bold;
+///   }
+@mixin bold {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/// Définie la typo italic
+/// @see bold
+/// @example scss - Usage SCSS
+///   p {
+///     @include italic;
+///   }
+@mixin italic {
+  font-weight: normal;
+  font-style: italic;
+}
+
 // $dffdg: (
 //   xs: (
 //     body: (100%, 1.5, false, false, false)
@@ -72,69 +180,6 @@ $font-size: (
 //   )
 // );
 
-/// Font stack.
-/// @type Map
-/// @prop {Map} Font stack
-$font-families: (
-  body:     ("Open Sans", Helvetica, Arial, sans-serif),
-  headline: ("Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif),
-  pre:      (Menlo, Monaco, Consolas, "Courier New", monospace),
-  print:    ("Helvetica Neue", Helvetica, Arial, sans-serif)
-) !default;
-
-/// default `<dt>` width
-/// @type Length
-$definition-inline-width: 150px !default;
-
-/// Définie la typo bold
-/// @see italic
-/// @example scss - Usage SCSS
-///   p {
-///     @include bold;
-///   }
-@mixin bold {
-  font-weight: bold;
-  font-style: normal;
-}
-
-/// Définie la typo italic
-/// @see bold
-/// @example scss - Usage SCSS
-///   p {
-///     @include italic;
-///   }
-@mixin italic {
-  font-weight: normal;
-  font-style: italic;
-}
-
-// Settings Colorz
-// ===============
-
-/// Base color
-/// @type Color
-$color-default: #f31b44 !default;
-
-/// Primary color
-/// @type Color
-$color-primary: #161324 !default;
-
-/// Secondary color
-/// @type Color
-$color-secondary: #343140 !default;
-
-/// Color shade lighter
-/// @type Pourcent
-$color-shade-lighter: 45% !default;
-
-/// Color shade light
-/// @type Pourcent
-$color-shade-light: 15% !default;
-
-/// Transparency amount
-/// @type Pourcent
-$color-trans-amount: 0.5 !default;
-
 /// Color variable map
 /// @type Map
 /// @prop {Map} Color map
@@ -164,17 +209,7 @@ $colors: (
   )
 ) !default;
 
-/// Color grey variable map
-/// @type Map
-/// @prop {Map} Color grey
-$colorz_grey: (
-  grey-lightest: #f1f1f1,
-  grey-lighter:  #d6d7d9,
-  grey-light:    #aeb0b5,
-  grey-dark:     #323a45,
-  grey:          #5b616b,
-) !default;
-
+// Grey color
 $color-grey-lightest: map-get($colorz_grey, "grey-lightest");
 $color-grey-lighter: map-get($colorz_grey, "grey-lighter");
 $color-grey-light: map-get($colorz_grey, "grey-light");
@@ -186,37 +221,6 @@ $link-color:         map-get(map-get($colors, "default"), "base") !default;
 $link-color-hover:   map-get(map-get($colors, "primary"), "base") !default;
 $link-color-active:  map-get(map-get($colors, "primary"), "base") !default;
 $link-color-visited: map-get(map-get($colors, "default"), "base") !default;
-
-/// Selection text color.
-/// @type Color
-$selection-background: #fff8ab !default;
-
-/// Selection text background.
-/// @type Color
-$selection-color: #666 !default;
-
-/// Background color html <mark>.
-/// @type Color
-$highlight-mark-color: #ff0 !default;
-
-// Settings Message
-// ================
-
-/// Error color
-/// @type Color
-$color-error: #b64747 !default;
-
-/// Warning color
-/// @type Color
-$color-warning: #ddae1e !default;
-
-/// Info color
-/// @type Color
-$color-info: #477bb6 !default;
-
-/// Status color
-/// @type Color
-$color-status: #77b647 !default;
 
 /// Theme Message
 /// @type Map
