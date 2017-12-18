@@ -1,10 +1,10 @@
 
 /**
- * subtheme_child Drupal Theme
+ * [SITE_NAME] Drupal Theme
  * JavaScript file for the theme.
  *
- * OWNER_NAME <OWNER_EMAIL>
- * (CURRENT_YEAR)
+ * [OWNER_NAME] <[OWNER_EMAIL]>
+ * ([CURRENT_YEAR])
  */
 
 var framework = {
