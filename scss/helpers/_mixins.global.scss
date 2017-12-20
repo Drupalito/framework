@@ -9,6 +9,17 @@ $relative-font-sizing:        true !default;
 $default-rhythm-border-style: solid !default;
 $font-unit: if($relative-font-sizing, 1em, $base-font-size);
 
+/// Clearfix
+/// @example scss - Usage SCSS
+///   @include clearfix;
+@mixin clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
 /// Media queries size
 /// @param {string} $keyword [smaller|small|medium|large] - Media queries name
 /// @example scss - Usage SCSS

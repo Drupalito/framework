@@ -241,7 +241,7 @@ Utiliser souvent par le WYSIWYG pour aligner les images Ã  gauche, centrer, ou Ã
 }
 
 .alignnone {
-  @extend .clearfix;
+  @include clearfix;
   margin-right: 0;
   margin-left: 0;
   display: block;

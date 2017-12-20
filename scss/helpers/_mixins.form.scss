@@ -11,7 +11,7 @@
 ///     @include form-item(32px);
 ///   }
 @mixin form-item($input-height) {
-  @extend %clearfix;
+  @include clearfix;
   position: relative;
   margin: 0 0 rhythm(.5);
 

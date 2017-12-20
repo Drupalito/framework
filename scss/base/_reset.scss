@@ -62,7 +62,7 @@ video {
 // Prevent modern browsers from displaying `audio` without controls.
 [hidden],
 audio:not([controls]) {
-  @extend .none; // Add the correct display in IE 10-.
+  display: none; // Add the correct display in IE 10-.
 }
 
 // Remove excess height in iOS 5 devices.
@@ -82,7 +82,7 @@ figure {
 body {
   background: $body-background;
   color: $body-color;
-  // > script { @extend .none; }
+  // > script { display: none; }
 }
 
 // Baseline
@@ -180,7 +180,7 @@ a {
 // a:focus { outline: thin dotted; }
 
 // Firefox 4+, Safari 5, et Chrome.
-strong { @extend .bold; }
+strong, dt { @include bold; }
 
 // Add the correct font size in all browsers.
 small {
@@ -211,8 +211,8 @@ abbr[title] {
 }
 
 dfn[title] {
-  @extend .bold;
-  @extend .italic;
+  @include bold;
+  @include italic;
   border-bottom: 1px dotted; // 1
   cursor: help;
 }
@@ -315,8 +315,6 @@ ol {
     list-style-type: upper-alpha;
   }
 }
-
-dt { @extend strong; }
 
 /*doc
 ---

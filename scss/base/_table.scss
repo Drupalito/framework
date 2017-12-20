@@ -190,8 +190,8 @@ table td {
 }
 
 caption {
-  @extend .italic;
-  @extend .mbm;
+  @include italic;
+  margin-bottom: 10px;
 }
 
 tbody {

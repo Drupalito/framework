@@ -580,7 +580,7 @@ Drupal example HTML
 // scss-lint:disable MergeableSelector
 div.password-confirm,
 .password-strength {
-  @extend .pull-right; /* LTR */
+  float: right; /* LTR */
   line-height: $input-height;
 }
 
@@ -594,7 +594,7 @@ div.password-confirm {
   }
 
   &-text {
-    @extend .pull-right; /* LTR */
+    float: right; /* LTR */
     font-weight: 700;
     font-style: normal;
     margin-left: 5px; /* LTR */

@@ -47,7 +47,7 @@ category: Base - Media Elements
 */
 
 figcaption {
-  @extend .italic;
+  @include italic;
   font-size: 0.85em;
 }
 

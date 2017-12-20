@@ -69,7 +69,7 @@
   $ellipsis: true
   ) {
 
-  @extend %clearfix;
+  @include clearfix;
 
   @media (min-width: $screen-sm-min) {
     dt {
