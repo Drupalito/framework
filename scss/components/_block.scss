@@ -133,7 +133,7 @@ category: Component
 }
 .block__content ul.primary a,
 .block__content ul.primary li > span {
-  color: #222;
+  color: $body-color;
   display: block;
   line-height: 1.2em;
   padding: 12px 25px 12px 15px;
@@ -165,7 +165,7 @@ category: Component
 .block__content ul.primary a.active:hover {
   border-left: 2px solid coloriz(default, base);
   background: coloriz(default, lighter);
-  color: #222;
+  color: $body-color;
 }
 
 .block__content ul.primary ul {

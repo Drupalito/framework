@@ -82,7 +82,7 @@ Default Style CSS
     &:before,
     &:after {
       background: #fff;
-      color: #222;
+      color: $body-color;
     }
 
     &.step {

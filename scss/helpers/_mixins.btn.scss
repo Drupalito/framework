@@ -4,14 +4,14 @@
 
 /// Add color for button.
 /// @param {Color} $color [#fff] - Color Font
-/// @param {Color} $background [#222] - Background Color
+/// @param {Color} $background [$body-color] - Background Color
 /// @example scss - Usage SCSS
 ///   a {
-///     @include btn-theme(#fff, #222);
+///     @include btn-theme(#fff, $body-color);
 ///   }
 @mixin btn-theme(
   $color: #fff,
-  $background: #222
+  $background: $body-color
   ) {
 
   background-color: $background;
@@ -26,13 +26,13 @@
 }
 
 /// Add color for button outline.
-/// @param {Color} $color [#222] - Color font & border
+/// @param {Color} $color [$body-color] - Color font & border
 /// @example scss - Usage SCSS
 ///   a {
-///     @include btn-outline(#222);
+///     @include btn-outline($body-color);
 ///   }
 @mixin btn-outline(
-  $color: #222
+  $color: $body-color
   ) {
 
   box-shadow: inset 0 0 0 2px $color;

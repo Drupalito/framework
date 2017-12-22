@@ -47,7 +47,7 @@ Content type : **Node**
 
   &--teaser {
     &.node--sticky {
-      background: #222;
+      background: $body-color;
 
       &,
       a {

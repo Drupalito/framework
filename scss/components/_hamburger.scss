@@ -72,7 +72,7 @@ Le code implanté ici peut être étendu.
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #222;
+    background-color: $body-color;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -103,7 +103,7 @@ Le code implanté ici peut être étendu.
 .hamburger--accessible .hamburger-inner,
 .hamburger--accessible .hamburger-inner:after,
 .hamburger--accessible .hamburger-inner:before {
-  background-color: #222;
+  background-color: $body-color;
 }
 
 /*

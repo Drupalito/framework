@@ -18,7 +18,7 @@
 
 * {
   background: transparent !important;
-  color: #222 !important;
+  color: $body-color !important;
   box-shadow: none !important;
   text-shadow: none !important;
   text-rendering: optimizeLegibility;
@@ -30,7 +30,7 @@ body {
   font-family: serif;
   font-size: 12pt;
   background: #fff !important;
-  color: #222 !important;
+  color: $body-color !important;
 }
 
 body,
