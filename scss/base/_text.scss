@@ -27,7 +27,10 @@
 /*doc
 ---
 title: Typography
-section: true
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Class CSS spécifiques pour gérer la typographie. Peut être utilisé pour le WYSIWYG.
@@ -92,7 +95,10 @@ Class CSS spécifiques pour gérer la typographie. Peut être utilisé pour le W
 /*doc
 ---
 title: Taille
-section: true
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Class CSS spécifiques pour gérer rapidement une taille.
@@ -135,7 +141,10 @@ Class CSS spécifiques pour gérer rapidement une taille.
 /*doc
 ---
 title: Text alignment
-section: true
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 La justification n'est pas disponible car interdite en accessibilité pour des questions de lisibilité. Ou alors, la justication doit être contrôlable par l'utilisateur.
@@ -184,7 +193,10 @@ Class CSS à utiliser:
 /*doc
 ---
 title: Blocs flottant
-section: true
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 * `.pull-left` : **Floattant à gauche.**\\
@@ -206,6 +218,10 @@ section: true
 ---
 title: Blocs incrustations
 category: Base - Typo
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Utiliser souvent par le WYSIWYG pour aligner les images à gauche, centrer, ou à droite. Les espacements seront effectués.
@@ -257,6 +273,10 @@ Utiliser souvent par le WYSIWYG pour aligner les images à gauche, centrer, ou �
 ---
 title: List reset
 category: Base - Typo
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 * Fonctionne avec `ul` et `ol`
@@ -280,6 +300,10 @@ category: Base - Typo
 ---
 title: List inline
 category: Base - Typo
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 `list-inline` ou `list-float`
@@ -304,6 +328,10 @@ category: Base - Typo
 ---
 title: List separate
 category: Base - Typo
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 * Fonctionne avec `ul` et `ol`
@@ -326,6 +354,10 @@ category: Base - Typo
 ---
 title: Definition
 category: Base - Typo
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Mettre en forme une liste de mot avec une description (exemple: clé / valeur.)
@@ -347,6 +379,10 @@ Mettre en forme une liste de mot avec une description (exemple: clé / valeur.)
 ---
 title: Definition horizontale
 category: Base - Typo
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Termes et des descriptions `<dl>` aligneés côte à côte. Se déplie horizontalement en version responsive xs.

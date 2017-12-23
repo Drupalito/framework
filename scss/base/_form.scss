@@ -216,6 +216,10 @@ inputinput[type="submit"]:-moz-focusring,
 ---
 title: Custom radio & Checkbox
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 */
@@ -290,6 +294,10 @@ input[type="radio"] + label:before {
 ---
 title: Field & Button
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Permet de coller un input et button (exemple pour la barre de search).
@@ -329,6 +337,10 @@ input + .btn {
 ---
 title: Field required
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Lorsqu'un champs est obligatoire, ajouter l'indication dans le label `field-required`. Ajouter également les attributs `required="true"` et `aria-required="true"` sur le input obligatoire.
@@ -352,6 +364,10 @@ Lorsqu'un champs est obligatoire, ajouter l'indication dans le label `field-requ
 ---
 title: Field static
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 ```html
@@ -394,6 +410,10 @@ category: Base - Forms
 ---
 title: Field Inline
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Add class `form-item--inline` on same `div.form-item`
@@ -441,6 +461,10 @@ Add class `form-item--inline` on same `div.form-item`
 show: false
 title: Fieldset + Legend
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Collapsed
@@ -512,6 +536,10 @@ fieldset {
 ---
 title: Action confirm
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Drupal example HTML
@@ -554,6 +582,10 @@ Drupal example HTML
 ---
 title: Password Confirm
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Drupal example HTML
@@ -616,6 +648,10 @@ div.password-confirm {
 ---
 title: All inputs
 category: Base - Forms
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 ```html
@@ -747,6 +783,10 @@ category: Base - Forms
 title: Placeholder
 category: Base - Forms
 show: false
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
 ---
 
 Couleurs de placeholder : ne pas fusionner les sélecteurs !
