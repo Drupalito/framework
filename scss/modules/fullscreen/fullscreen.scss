@@ -45,68 +45,64 @@ Default Style CSS
   min-height: 100%;
   height: 100%;
   width: 100%;
-}
 
-.fullscreen__table {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  height: 100%;
-}
+  &__table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+  }
 
-.fullscreen__inner {
-  padding: 2em 0;
-  position: relative;
-  display: table-cell;
-  vertical-align: middle;
-  z-index: 3;
-}
+  &__inner {
+    padding: 2em 0;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    z-index: 3;
+  }
 
-.fullscreen__image,
-.fullscreen__video {
-  position: absolute;
-  // top: 50%;
-  // left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 1;
-  // transform: translateX(-50%) translateY(-50%);
-  // transition: 1s opacity;
-  overflow: hidden;
-}
+  &__image,
+  &__video {
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    // transform: translateX(-50%) translateY(-50%);
+    // transition: 1s opacity;
+    overflow: hidden;
+  }
 
-.fullscreen__image {
-  top: 0;
-  left: 0;
--webkit-animation: kenburn 60s infinite;
-  -moz-animation: kenburn 60s infinite;
-  -ms-animation: kenburn 60s infinite;
-  -o-animation: kenburn 60s infinite;
-  animation: kenburn 60s infinite;
-}
+  &__image {
+    top: 0;
+    left: 0;
+    animation: kenburn 60s infinite;
+  }
 
-.fullscreen__video {
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  transition: 1s opacity;
-  // display: none;
-  max-width: none;
-  z-index: 2;
-}
+  &__video {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+    // display: none;
+    max-width: none;
+    z-index: 2;
+  }
 
-.fullscreen__title {
-  margin-top: 0;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  font-size: 500%;
-}
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 500%;
+  }
 
-.fullscreen__description {
-  font-weight: 700;
-  font-style: normal;
-  line-height: 1.2;
-  font-size: 150%;
+  &__description {
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2;
+    font-size: 150%;
+  }
 }
