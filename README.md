@@ -22,6 +22,10 @@ GULP est le gestionnaire de tâches proposés, [vous pouvez télécharger les fi
 
 Dossier spécifique dédié aux fonts.
 
+### Images/
+
+Dossier spécifique dédié aux images.
+
 ### Libraries/
 
 Dossier où placer les scripts externes. Afin de ne pas les mélanger avec les autres fichiers. Seront installés uniquement les librairies qui ne sont pas écrites par vous même.
