@@ -46,7 +46,7 @@ Le dossier `components/`. Il contient des éléments autonome pouvant être surc
 
 #### Helpers
 
-Le dossier `helpers/` rassemble toutes mixins et functions utilisés dans le projet. Ce dossier contient également tous les fichiers de configuration, préfixé `_config.FILENAME.scss`. Toutes les variables globales du projet s'y trouvent (tailles typographie, schémas de couleurs, grille et formulaire).
+Le dossier `helpers/` rassemble toutes les mixins et fonctions utilisés dans le projet. **Ce dossier contient également tous les fichiers de configuration, préfixé `_config.FILENAME.scss`.** Toutes les variables globales du projet s'y trouvent (tailles typographies, schémas de couleurs, grille et formulaire).
 
 #### Modules
 
