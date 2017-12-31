@@ -50,7 +50,7 @@ Le dossier `helpers/` rassemble toutes les mixins et fonctions utilisés dans le
 
 #### Modules
 
-Il s'agit de fonctionnalités spécifiques. Les modules contiennent des styles de micro-layouts.
+Il s'agit de fonctionnalités spécifiques. Un module embarque son propre fonctionnement.
 
 #### Themes
 
