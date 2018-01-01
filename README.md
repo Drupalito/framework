@@ -2,9 +2,9 @@
 
 ## Prérequis
 
-* NPM
-* Gulp
-* Sass
+* nodejs
+* GULP
+* Sass 3.4.23 Ruby
 
 ## Installation
 
