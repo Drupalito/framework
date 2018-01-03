@@ -49,7 +49,9 @@ var framework = {
   },
   navigation: function() {
     // Responsive menu use plugin
-    jQuery('.navigation').navigation();
+    if (jQuery.fn.navigation) {
+      jQuery('.navigation').navigation();
+    }
   },
   // Smooth counterUp.
   // @example framework.counterUp('.counter');
