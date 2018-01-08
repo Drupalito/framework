@@ -64,6 +64,10 @@ versionning:
   }
 }
 
+.row-xs-center {
+  align-self: flex-end;
+}
+
 .row-xs-eqheight {
   display: flex;
   flex-wrap: wrap;
@@ -98,6 +102,10 @@ versionning:
 @media (min-width: $screen-sm-min) {
   @include make-grid(sm);
 
+  .row-sm-center {
+    align-self: center;
+    justify-content: center;
+  }
   .row-sm-height {
     display: flex;
     align-items: center;
@@ -133,6 +141,10 @@ versionning:
 @media (min-width: $screen-md-min) {
   @include make-grid(md);
 
+  .row-md-center {
+    align-self: center;
+    justify-content: center;
+  }
   .row-md-height {
     display: flex;
     align-items: center;
@@ -168,6 +180,10 @@ versionning:
 @media (min-width: $screen-lg-min) {
   @include make-grid(lg);
 
+  .row-lg-center {
+    align-self: center;
+    justify-content: center;
+  }
   .row-lg-height {
     display: flex;
     align-items: center;
