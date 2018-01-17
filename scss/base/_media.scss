@@ -8,14 +8,19 @@ title: Image Responsive
 category: Base - Media Elements
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2018-01-27T10:00:00Z
   owner: Axel Roche
 ---
 
-La classe `.img-responsive` permet de rendre une image sur 100% de sa largeur pour s'adapter aux devices.
+La classe `.img-responsive` permet de rendre une image pour s'adapter aux devices.
+`.img-full` permet de rendre une image sur 100% de sa largeur.
 
 ```html
   <img class="img-responsive" src="http://lorempixel.com//825/400/animals/1" alt="" />
+
+  <img class="img-full" src="http://lorempixel.com//825/400/animals/1" alt="" />
+
+  <img class="img-responsive img-full" src="http://lorempixel.com//825/400/animals/1" alt="" />
 ```
 
 */
@@ -33,6 +38,16 @@ video {
 a img,
 iframe {
   border: 0; // bugfix IE8, FF3.6 (Supprime la bordure des images se trouvant dans un lien.)
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-full {
+  width: 100%;
 }
 
 /*doc
