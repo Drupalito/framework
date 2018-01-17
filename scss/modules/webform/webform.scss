@@ -150,7 +150,7 @@ title: Webform confirmation
 category: Module - Webform
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2018-01-27T10:00:00Z
   owner: Axel Roche
 ---
 
@@ -163,8 +163,7 @@ Page de confirmation après la soumission d'un formulaire.
       <p>Thank you, your submission has been received.<br/>
       We will process your request as soon as possible.</p>
     </div>
-
-    <div class="frame__action ">
+    <div class="frame__action">
       <a class="btn btn--secondary" href="#"><span class="fa fa-caret-left prs" aria-hidden="true"></span> Go back to the form</a>
     </div>
   </div>
@@ -198,11 +197,11 @@ title: Webform action buttons
 category: Module - Webform
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2018-01-27T10:00:00Z
   owner: Axel Roche
 ---
 
-Buttons côte à côte.
+Boutons côte à côte.
 
 ```html
 <div class="form-actions">
