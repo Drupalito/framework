@@ -117,11 +117,11 @@ title: Video Responsive
 category: Base - Media Elements
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2018-01-27T10:00:00Z
   owner: Axel Roche
 ---
 
-La classe `.wrapper-media` permet d'afficher une iframe, video en responsive. Il faudra ajouter une `div` global sur le composant à rendre responsive.
+La classe `.wrapper-media` permet d'afficher une iframe, video en responsive. Il faudra ajouter une `div` wrapper autour du composant à rendre responsive.
 
 ```html
   <div class="media-wrapper">
