@@ -214,7 +214,7 @@ Boutons côte à côte.
 
 .webform-next,
 .webform-previous + button {
-  float: right;
+  float: right; /* LTR */
 }
 
 .webform-previous {
