@@ -6,11 +6,30 @@
 ---
 title: Webform - RTL
 category: Module - Webform
+direction: rtl
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+Default Style CSS
+
+```html
+  <div class="webform-progressbar">
+    <div class="clearfix">
+      <ul class="list-none clearfix mvn">
+        <li class="webform-progressbar__item step current completed" style="width: 25%"><span class="webform-progressbar__label">Panel 1</span></li>
+        <li class="webform-progressbar__item step current completed" style="width: 25%"><span class="webform-progressbar__label">Panel 2</span></li>
+        <li class="webform-progressbar__item step current" style="width: 25%"><span class="webform-progressbar__label">Panel 3</span></li>
+        <li class="webform-progressbar__item" style="width: 25%"><span class="webform-progressbar__label">Complete</span></li>
+      </ul>
+    </div>
+    <div class="webform-progressbar-number">
+      <p class="bold">Page 2 of 4 <small class="webform-progressbar-percent">(33%)</small></p>
+    </div>
+  </div>
+```
 
 */
 
