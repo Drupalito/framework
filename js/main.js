@@ -47,10 +47,10 @@ var framework = {
       });
     }
   },
-  navigation: function() {
+  navigation: function(element) {
     // Responsive menu use plugin
     if (jQuery.fn.navigation) {
-      jQuery('.navigation').navigation();
+      jQuery(element).navigation();
     }
   },
   // Smooth counterUp.
@@ -64,21 +64,25 @@ var framework = {
       });
     }
   },
-  owlCarousel: function(element) {
-    jQuery(element).owlCarousel({
-      items: 3,
-      loop: true,
-      center: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      margin: 0,
-      dots: true,
-      nav: true,
-      navText: [
-        '<span aria-hidden="true" class="fa fa-angle-left"></span>',
-        '<span aria-hidden="true" class="fa fa-angle-right"></span>'
-      ],
-    });
+  owlCarousel: function(element, settings) {
+    if (jQuery.fn.owlCarousel) {
+      var defaults = {
+        items: 3,
+        loop: true,
+        center: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        margin: 0,
+        dots: true,
+        nav: true,
+        navText: [
+          '<span aria-hidden="true" class="fa fa-angle-left"></span>',
+          '<span aria-hidden="true" class="fa fa-angle-right"></span>'
+        ],
+      };
+      var settings = jQuery.extend({}, defaults, settings || {});
+      jQuery(element).owlCarousel(settings);
+    }
   },
   // Parallax Sections
   wowAnimation: function() {
