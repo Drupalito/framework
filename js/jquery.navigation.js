@@ -18,7 +18,7 @@
       type: 'inline', // inline|block
       expanded: {
         title: 'Open',
-        icon: '<span class="i i-arrow-down" aria-hidden="true"></span>'
+        icon: '<span class="fa fa-chevron-down" aria-hidden="true"></span>'
       }
     };
 
