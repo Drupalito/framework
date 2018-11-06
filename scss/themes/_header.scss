@@ -28,6 +28,13 @@ versionning:
 
 */
 
+.hamburger {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -25px;
+}
+
 .banner {
   background: coloriz(primary, base);
 

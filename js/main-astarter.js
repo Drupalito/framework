@@ -106,7 +106,7 @@ var framework = {
       complementaryToggle.forEach(function(complementary) {
         complementary.addEventListener('click', function() {
           this.classList.toggle('is-active');
-          var $block_inner = $(complementary).parent().find('.block__content');
+          var $block_inner = jQuery(complementary).parent().find('.block__content');
           jQuery($block_inner).toggleClass('is-opened');
         }, false);
       });

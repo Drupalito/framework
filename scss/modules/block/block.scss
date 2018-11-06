@@ -19,8 +19,9 @@ Default Style CSS
 */
 
 .block-region {
-  background: $highlight-mark-color;
   padding: 1em;
+  background: $highlight-mark-color;
+  color: $body-color;
 }
 
 .block-demo-backlink {
