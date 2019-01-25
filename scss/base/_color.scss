@@ -1,0 +1,38 @@
+
+// @file: _color.scss
+// Color class helpers.
+
+/*doc
+---
+title: Couleurs
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
+---
+
+Class CSS spécifiques pour gérer les couleurs.
+
+*/
+
+// Base colorz
+@each $name, $color in $colors {
+  .#{$name}-color { color: coloriz($name, base); }
+  .#{$name}-border { border-color: coloriz($name, base); }
+  .#{$name}-background {
+    background-color: coloriz($name, base);
+    color: #fff;
+  }
+  .#{$name}-background--lighter {
+    background-color: coloriz($name, lighter);
+    color: #fff;
+  }
+  .#{$name}-background--light {
+    background-color: coloriz($name, light);
+    color: #fff;
+  }
+  .#{$name}-background--dark {
+    background-color: coloriz($name, dark);
+    color: #fff;
+  }
+}
