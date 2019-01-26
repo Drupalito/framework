@@ -1,0 +1,113 @@
+
+
+// Import Variables / Helpers
+@import "../../import";
+
+/*doc
+---
+title: EU Cookie compilance
+category: Module - EU Cookie compilance
+versionning:
+- version: 1.0
+  update: 2018-10-12T10:00:00Z
+  owner: Axel Roche
+---
+
+Default Style CSS
+
+```html
+
+  <div id="sliding-popup" class="sliding-popup sliding-popup-bottom">
+    <div class="popup-content info">
+      <div id="popup-text">
+        <h2>Utilisation des cookies</h2>
+        <p>En poursuivant votre navigation sans modifier vos paramètres, vous acceptez l'utilisation des cookies ou technologies similaires pour disposer de services et d'offres adaptés à vos centres d'intérêts ainsi que pour la sécurisation des transactions sur notre site.</p>
+      </div>
+      <div id="popup-buttons">
+        <button type="button" class="btn btn--primary agree-button">J'accepte</button>
+        <button type="button" class="btn find-more-button">En savoir plus</button>
+      </div>
+    </div>
+  </div>
+
+```
+
+*/
+
+#sliding-popup {
+  display: block;
+  margin: 0;
+  padding: 20px 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 99999;
+  background: coloriz(default, base);
+}
+.sliding-popup-bottom {
+  position: fixed;
+}
+
+.sliding-popup-top {
+  position: relative;
+}
+
+#sliding-popup .popup-content {
+  border: 0 none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 80%;
+}
+#sliding-popup .popup-content h2,
+#sliding-popup .popup-content p {
+  color: #fff;
+}
+
+#sliding-popup .popup-content #popup-buttons {
+  float: right;
+  margin-top: 1em;
+  max-width: 40%;
+}
+
+#sliding-popup .popup-content #popup-text {
+  float: left;
+  margin: 5px 0;
+  text-align: left;
+  max-width: 60%;
+}
+
+#sliding-popup .popup-content #popup-text h2,
+#sliding-popup .popup-content #popup-text p {
+  color: #fff;
+  display: block;
+  // font-size: 16px;
+  font-weight: bold;
+  // line-height: 1.4;
+  margin: 0 0 5px 0;
+}
+
+#sliding-popup .popup-content #popup-text p {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  #sliding-popup .popup-content {
+    max-width: 95%;
+  }
+
+  #sliding-popup .popup-content #popup-text {
+    max-width: 100%;
+  }
+
+  #sliding-popup .popup-content #popup-buttons {
+    float: none;
+    margin: 5px 0;
+    max-width: 100%;
+  }
+  #sliding-popup .popup-content #popup-buttons button {
+    margin-bottom: 1em;
+  }
+}
