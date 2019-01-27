@@ -1,0 +1,38 @@
+
+// Import Variables / Helpers
+@import "../../import";
+
+/*doc
+---
+title: Media wysiwyg
+category: Module - Media wysiwyg
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
+---
+
+Styles to apply to all user-facing pages for alignment support.
+
+Default Style CSS
+
+*/
+.media-wysiwyg-align-left,
+.media-float-left {
+  float: left;
+  margin-left: 0;
+  margin-right: $grid-gutter-width;
+}
+.media-wysiwyg-align-right,
+.media-float-right {
+  float: right;
+  margin-left: $grid-gutter-width;
+  margin-right: 0;
+}
+.media-wysiwyg-align-center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: -moz-center;
+  text-align: -webkit-center;
+  text-align: center;
+}
