@@ -1,0 +1,66 @@
+
+// Import Variables / Helpers
+@import "../../import";
+
+/*
+ * All messages require relative positioning
+ * for the Dismiss button to be placed properly
+ */
+.messages {
+  position: relative;
+  padding-right: 1.5em;
+}
+
+/*
+ * Dismiss button
+ */
+.dismiss {
+  display: block;
+  position: absolute;
+  top: .4em;
+  right: .4em;
+  width: 1.8em;
+  border: 0;
+  color: #fff;
+
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+
+  opacity: .5;
+
+  -webkit-transition: .1s opacity linear;
+     -moz-transition: .1s opacity linear;
+      -ms-transition: .1s opacity linear;
+       -o-transition: .1s opacity linear;
+          transition: .1s opacity linear;
+}
+
+.dismiss:before {
+  content: '\2715';
+}
+
+@each $name, $values in $message {
+  $hexa: message($name, base);
+
+  .messages--#{$name} .dismiss {
+    background: message($name, base);
+    // @if ($name != 'error') {
+    //   color: $body-color;
+    // }
+  }
+}
+
+/*
+ * When the user mouses over the message box, make the button more prominent
+ */
+.messages:hover .dismiss {
+  opacity: 1;
+}
+
+/*
+ * Change states when users mouseover
+ */
+.dismiss:hover {
+  color: #fff
+}
