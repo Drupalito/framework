@@ -26,7 +26,6 @@ versionning:
 */
 
 .btn {
-  @include bold;
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -36,6 +35,8 @@ versionning:
   border: 0;
   text-decoration: none;
   text-align: center;
+  font-weight: 300;
+  font-style: normal;
   font-size: 1em;
   font-family: sans-serif;
   line-height: normal;
@@ -43,7 +44,7 @@ versionning:
   background-color: $color-grey-lightest;
   color: $body-color;
   border-radius: 0;
-  white-space: nowrap;
+  // white-space: nowrap;
   cursor: pointer;
   outline: none;
   transition-timing-function: ease-in;
@@ -139,6 +140,61 @@ Couleurs disponibles.
 
 /*doc
 ---
+title: Buttons Outline Colorz
+category: Components - Buttons
+versionning:
+- version: 1.0
+  update: 2018-12-23T10:00:00Z
+  owner: Axel Roche
+---
+
+Couleurs disponibles.
+
+* `.btn` - Bouton de base
+* `.btn--outline--default` - Couleur défault
+* `.btn--outline--primary` - Couleur primaire
+* `.btn--outline--secondary` - Couleur secondaire
+
+  <div class="background--primary">
+    <button class="btn btn--outline--white">btn--outline--white</button>
+    <span class="btn btn--outline--white">btn--outline--white</span>
+    <a href="#" class="btn btn--outline--white">btn--outline--white</a>
+    <input id="submit" name="submit" class="btn btn--outline--white" type="submit" value="btn--outline--white" />
+  </div>
+  <br />
+
+  <button class="btn btn--outline--default">btn--outline--default</button>
+  <span class="btn btn--outline--default">btn--outline--default</span>
+  <a href="#" class="btn btn--outline--default">btn--outline--default</a>
+  <input id="submit" name="submit" class="btn btn--outline--default" type="submit" value="btn--outline--default" />
+  <br />
+
+  <button class="btn btn--outline--primary">btn--outline--primary</button>
+  <span class="btn btn--outline--primary">btn--outline--primary</span>
+  <a href="#" class="btn btn--outline--primary">btn--outline--primary</a>
+  <input id="submit" name="submit" class="btn btn--outline--primary" type="submit" value="btn--outline--primary" />
+  <br />
+
+  <button class="btn btn--outline--secondary">btn--outline--secondary</button>
+  <span class="btn btn--outline--secondary">btn--outline--secondary</span>
+  <a href="#" class="btn btn--outline--secondary">btn--secondary</a>
+  <input id="submit" name="submit" class="btn btn--outline--secondary" type="submit" value="btn--secondary" />
+
+*/
+@each $name, $color in $colors {
+  $hexa: coloriz($name, base);
+  .btn--outline--#{$name} {
+    @include btn-outline($hexa);
+  }
+}
+
+.btn--outline--white {
+  @include btn-outline(#fff);
+}
+
+
+/*doc
+---
 title: Button actif
 category: Components - Buttons
 versionning:
@@ -151,9 +207,9 @@ versionning:
 
 ```html
   <button class="btn active">btn</button>
-  <input id="submit" name="submit" class="btn active" type="submit" value="btn" />
   <span class="btn active">btn</span>
   <a href="#" class="btn active">btn</a>
+  <input id="submit" name="submit" class="btn active" type="submit" value="btn" />
   <br />
 
   <button class="btn btn--default active">btn--default</button>
