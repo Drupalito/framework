@@ -187,32 +187,34 @@ Modifier `.messages--warning` && `.messages--icon`
     position: relative;
   }
 
-  &--icon {
+  @include mq("small") {
+    &--icon {
 
-    // scss-lint:disable SelectorFormat
-    .messages__content {
-      position: relative;
-      padding-left: 4.5em; /* LTR */
+      // scss-lint:disable SelectorFormat
+      .messages__content {
+        position: relative;
+        padding-left: 4.5em; /* LTR */
 
-      &:before {
+        &:before {
 
-        display: inline-block;
-        vertical-align: middle;
-        font-family: "FontAwesome";
-        font-weight: normal;
-        font-style: normal;
-        line-height: 1;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+          display: inline-block;
+          vertical-align: middle;
+          font-family: "FontAwesome";
+          font-weight: normal;
+          font-style: normal;
+          line-height: 1;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
 
-        position: absolute;
-        top: 0;
-        left: 0; /* LTR */
-        font-size: 3em;
+          position: absolute;
+          top: 0;
+          left: 0; /* LTR */
+          font-size: 3em;
+        }
       }
+      // scss-lint:enable SelectorFormat
     }
-    // scss-lint:enable SelectorFormat
   }
 
   @each $name, $values in $message {
@@ -232,14 +234,16 @@ Modifier `.messages--warning` && `.messages--icon`
         outline-offset: 2px;
       }
 
-      // scss-lint:disable SelectorFormat
-      &.messages--icon .messages__content {
-        &:before {
-          content: message($name, icon);
-          color: $hexa;
+      @include mq("small") {
+        // scss-lint:disable SelectorFormat
+        &.messages--icon .messages__content {
+          &:before {
+            content: message($name, icon);
+            color: $hexa;
+          }
         }
+        // scss-lint:enable SelectorFormat
       }
-      // scss-lint:enable SelectorFormat
     }
   }
 }
