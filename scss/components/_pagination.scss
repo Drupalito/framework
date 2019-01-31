@@ -63,8 +63,11 @@ Le titre peut être caché avec `.a11y`
 */
 
 .pagination {
-  &__link,
+  margin-top: 1.5em;
+
+  a,
   &--current strong {
+    white-space: nowrap;
     border: 1px solid;
     border-radius: 0.2rem;
     text-decoration: none;
@@ -81,7 +84,7 @@ Le titre peut être caché avec `.a11y`
     color: #fff;
   }
 
-  &__link {
+  a {
     &:hover,
     &:focus {
       text-decoration: none;
