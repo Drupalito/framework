@@ -30,5 +30,7 @@
 @import "helpers/debug-grid";
 
 // scss-lint:disable QualifyingElement SelectorFormat
+body.cke_editable,
 body.cke_show_borders { padding: 10px; }
+.cke_contents { padding: 10px 10px 20px; }
 // scss-lint:enable QualifyingElement SelectorFormat
