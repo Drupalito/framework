@@ -29,6 +29,8 @@ button,
 input,
 select,
 textarea {
+  border-radius: 0;
+  appearance: none;
   vertical-align: baseline;
   font-family: inherit;
   font-size: 100%;
@@ -114,7 +116,7 @@ input[type="submit"] {
 [type="url"],
 select,
 textarea {
-  // width: 100%;
+  width: 100%;
   transition: background-color .3s ease;
 
   &:focus {
@@ -133,12 +135,12 @@ textarea,
 [type="file"] {
   display: inline-block;
   line-height: 1;
-  height: 32px;
+  height: pem($input-height);
   font-size: 80%;
   line-height: 0;
 }
 
-inputinput[type="submit"] {
+input[type="submit"] {
   padding: 0 10px;
 }
 
@@ -157,8 +159,8 @@ input[type="submit"],
 }
 
 select {
-  width: auto;
-  max-width: 100%;
+  //width: auto;
+  //max-width: 100%;
   padding: 0 30px 0 5px; /* LTR */
   border-radius: 0;
   text-indent: 0.01px;
@@ -181,7 +183,9 @@ select::-ms-expand {
 // 3. Removes inner padding and search cancel button in Safari 5 and Chrome on OS X.
 [type="search"] {
   // box-sizing: content-box; // 2
-  -webkit-appearance: textfield; // 1
+  -webkit-appearance: none; // 1
+  border-radius: 0;
+  width: auto;
   &::-webkit-search-cancel-button,
   &::-webkit-search-decoration {
     -webkit-appearance: none; // 3
@@ -327,9 +331,9 @@ input + .btn {
     font-size: 0;
     line-height: 1;
 
-    .fa {
-      font-size: 1rem;
-    }
+    // .fa {
+    //   font-size: 1rem;
+    // }
   }
 }
 
