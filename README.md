@@ -48,10 +48,14 @@ Le dossier `components/`. Il contient des éléments autonome pouvant être surc
 
 Le dossier `helpers/` rassemble toutes les mixins et fonctions utilisés dans le projet. **Ce dossier contient également tous les fichiers de configuration, préfixé `_config.FILENAME.scss`.** Toutes les variables globales du projet s'y trouvent (tailles typographies, schémas de couleurs, grille et formulaire).
 
+#### Libraries
+
+Ce dossier permet d'overrider les feuilles de styles des différentes `Libraries`.\\
+Ce dossier regroupe les overrides des CSS, des libraries Drupal.
+
 #### Modules
 
-Il s'agit de fonctionnalités spécifiques. Un module embarque son propre fonctionnement.
-
+Il s'agit de fonctionnalités spécifiques. Un module embarque son propre fonctionnement.\\
 Ce dossier regroupe les overrides des CSS, des modules Drupal.
 
 #### Themes
