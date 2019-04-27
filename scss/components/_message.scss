@@ -17,24 +17,24 @@ Message d'avertissement délivré par Drupal.
   <div role="alert" class="messages messages--info messages--icon clearfix">
     <h2 class="messages__title hide">Message</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
-      <ul class="messages__list">
-        <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
-        <li class="messages__item">Le champ Mot de passe est requis.</li>
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
       </ul>
-      <p class="mtm"><a href="#" class="btn btn--info">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-info">Demo button</a></p>
     </div>
   </div>
 
   <div role="alert" class="messages messages--info clearfix">
     <h2 class="messages__title hide">Message</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
-      <ul class="messages__list">
-        <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
-        <li class="messages__item">Le champ Mot de passe est requis.</li>
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
       </ul>
-      <p class="mtm"><a href="#" class="btn btn--info">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-info">Demo button</a></p>
     </div>
   </div>
 
@@ -55,18 +55,18 @@ Modifier `.messages--error` && `.messages--icon`
   <div role="alert" class="messages messages--error messages--icon clearfix">
     <h2 class="messages__title hide">Message d'erreur</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a><br />
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a><br />
       Nous vous recommadons de vérifier les données.</p>
-      <p class="mtm"><a href="#" class="btn btn--error">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-error">Demo button</a></p>
     </div>
   </div>
 
   <div role="alert" class="messages messages--error clearfix">
     <h2 class="messages__title hide">Message d'erreur</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a><br />
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a><br />
       Nous vous recommadons de vérifier les données.</p>
-      <p class="mtm"><a href="#" class="btn btn--error">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-error">Demo button</a></p>
     </div>
   </div>
 
@@ -87,24 +87,24 @@ Modifier `.messages--status` && `.messages--icon`
   <div role="alert" class="messages messages--status messages--icon clearfix">
     <h2 class="messages__title hide">Message succès</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
-      <ul class="messages__list">
-        <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
-        <li class="messages__item">Le champ Mot de passe est requis.</li>
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
       </ul>
-      <p class="mtm"><a href="#" class="btn btn--status">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-status">Demo button</a></p>
     </div>
   </div>
 
   <div role="alert" class="messages messages--status clearfix">
     <h2 class="messages__title hide">Message succès</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
-      <ul class="messages__list">
-        <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
-        <li class="messages__item">Le champ Mot de passe est requis.</li>
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
       </ul>
-      <p class="mtm"><a href="#" class="btn btn--status">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-status">Demo button</a></p>
     </div>
   </div>
 
@@ -126,24 +126,24 @@ Modifier `.messages--warning` && `.messages--icon`
   <div role="alert" class="messages messages--warning messages--icon clearfix">
     <h2 class="messages__title hide">Message d'alerte</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
-      <ul class="messages__list">
-        <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
-        <li class="messages__item">Le champ Mot de passe est requis.</li>
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
       </ul>
-      <p class="mtm"><a href="#" class="btn btn--warning">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-warning">Demo button</a></p>
     </div>
   </div>
 
   <div role="alert" class="messages messages--warning clearfix">
     <h2 class="messages__title hide">Message d'alerte</h2>
     <div class="messages__content">
-      <p class="messages__description">Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
-      <ul class="messages__list">
-        <li class="messages__item">Le champ Nom d'utilisateur est requis.</li>
-        <li class="messages__item">Le champ Mot de passe est requis.</li>
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
       </ul>
-      <p class="mtm"><a href="#" class="btn btn--warning">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-warning">Demo button</a></p>
     </div>
   </div>
 ```
@@ -179,7 +179,7 @@ Modifier `.messages--warning` && `.messages--icon`
   }
 
   &__title,
-  &__list {
+  ul {
     margin: 0;
   }
 
@@ -260,10 +260,10 @@ versionning:
 
 ```html
   <p class="mvs">
-    <button class="btn btn--status">Success</button>
-    <button class="btn btn--error">Error</button>
-    <button class="btn btn--warning">Warning</button>
-    <button class="btn btn--info">Announcement</button>
+    <button class="btn btn-status">Success</button>
+    <button class="btn btn-error">Error</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-info">Announcement</button>
     <button class="btn pull-right">Reset</button>
   </p>
 ```
@@ -413,7 +413,7 @@ Affichager les erreurs d'un formulaire.
   }
 
   // Generated btn message
-  .btn--#{$name} {
+  .btn-#{$name} {
     background-color: $hexa;
     color: #fff;
 
