@@ -2,18 +2,45 @@
 // Import Variables / Helpers
 @import "../../import";
 
-/*
- * All messages require relative positioning
- * for the Dismiss button to be placed properly
- */
-.messages {
-  position: relative;
-  padding-right: 1.5em;
-}
+/*doc
+---
+title: Message Dismiss
+category: Components
+versionning:
+- version: 1.0
+  update: 2019-04-25T10:00:00Z
+  owner: Axel Roche
+---
 
-/*
- * Dismiss button
- */
+All messages require relative positioning for the Dismiss button to be placed properly.
+
+  <div role="alert" class="messages messages--info clearfix">
+    <button class="dismiss"><span class="element-invisible">Close this message</span></button>
+    <h2 class="messages__title element-invisible">Message</h2>
+    <div class="messages__content">
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
+      </ul>
+      <p class="mtm"><a href="#" class="btn btn-info">Demo button</a></p>
+    </div>
+  </div>
+
+  <div role="alert" class="messages messages--info clearfix">
+    <button class="dismiss"><span class="element-invisible">Close this message</span></button>
+    <h2 class="messages__title element-invisible">Message</h2>
+    <div class="messages__content">
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
+      </ul>
+      <p class="mtm"><a href="#" class="btn btn-info">Demo button</a></p>
+    </div>
+  </div>
+
+*/
 .dismiss {
   display: block;
   position: absolute;
@@ -28,39 +55,28 @@
   text-decoration: none;
 
   opacity: .5;
+  transition: .1s opacity linear;
 
-  -webkit-transition: .1s opacity linear;
-     -moz-transition: .1s opacity linear;
-      -ms-transition: .1s opacity linear;
-       -o-transition: .1s opacity linear;
-          transition: .1s opacity linear;
-}
-
-.dismiss:before {
-  content: '\2715';
-}
-
-@each $name, $values in $message {
-  $hexa: message($name, base);
-
-  .messages--#{$name} .dismiss {
-    background: message($name, base);
-    // @if ($name != 'error') {
-    //   color: $body-color;
-    // }
+  &:before {
+    content: '\2715';
   }
-}
 
-/*
- * When the user mouses over the message box, make the button more prominent
- */
-.messages:hover .dismiss {
-  opacity: 1;
-}
+  @each $name, $values in $message {
+    $hexa: message($name, base);
 
-/*
- * Change states when users mouseover
- */
-.dismiss:hover {
-  color: #fff
+    .messages--#{$name} & {
+      background: message($name, base);
+    }
+  }
+
+  // When the user mouses over the message box, make the button more prominent
+  .messages:hover & {
+    opacity: 1;
+  }
+
+  // Change states when users mouseover
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
 }
