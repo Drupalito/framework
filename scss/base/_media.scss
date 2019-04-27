@@ -16,11 +16,11 @@ La classe `.img-responsive` permet de rendre une image pour s'adapter aux device
 `.img-full` permet de rendre une image sur 100% de sa largeur.
 
 ```html
-  <img class="img-responsive" src="http://lorempixel.com//825/400/animals/1" alt="" />
+  <img alt="" class="img-responsive" src="http://lorempixel.com//825/400/animals/1" />
 
-  <img class="img-full" src="http://lorempixel.com//825/400/animals/1" alt="" />
+  <img alt="" class="img-full" src="http://lorempixel.com//825/400/animals/1" />
 
-  <img class="img-responsive img-full" src="http://lorempixel.com//825/400/animals/1" alt="" />
+  <img alt="" class="img-responsive img-full" src="http://lorempixel.com//825/400/animals/1" />
 ```
 
 */
@@ -65,11 +65,17 @@ versionning:
     <img src="http://lorempixel.com//825/400/animals/2" alt="Some animals image" />
     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
   </figure>
+
+  <div>
+    <img src="http://lorempixel.com//825/400/animals/2" alt="Some animals image" />
+    <div class="legend">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+  </div>
 ```
 
 */
 
-figcaption {
+figcaption,
+.legende {
   @include italic;
   font-size: 0.85em;
 }
@@ -88,22 +94,22 @@ versionning:
   <div class="row">
     <div class="col-xs-6 col-md-3">
       <a href="#" class="thumbnail">
-        <img src="http://lorempixel.com/300/300/animals/3" alt="" />
+        <img alt="" src="http://lorempixel.com/300/300/animals/3" />
       </a>
     </div>
     <div class="col-xs-6 col-md-3">
       <a href="#" class="thumbnail">
-        <img src="http://lorempixel.com/300/300/animals/4" alt="" />
+        <img alt="" src="http://lorempixel.com/300/300/animals/4" />
       </a>
     </div>
     <div class="col-xs-6 col-md-3">
       <a href="#" class="thumbnail">
-        <img src="http://lorempixel.com/300/300/animals/5" alt="" />
+        <img alt="" src="http://lorempixel.com/300/300/animals/5" />
       </a>
     </div>
     <div class="col-xs-6 col-md-3">
       <a href="#" class="thumbnail">
-        <img src="http://lorempixel.com/300/300/animals/6" alt="" />
+        <img alt="" src="http://lorempixel.com/300/300/animals/6" />
       </a>
     </div>
   </div>
