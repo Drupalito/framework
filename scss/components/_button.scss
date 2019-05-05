@@ -5,10 +5,10 @@
 /*doc
 ---
 title: Button
-category: Components - Buttons
+category: Components
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
@@ -17,10 +17,17 @@ versionning:
 * Use `a` or `button` tag.
 
 ```html
+  <!-- HTML Button -->
   <button class="btn">Submit</button>
+
+  <!-- HTML Fake button -->
   <span class="btn">Submit</span>
+
+  <!-- HTML Hyperlink -->
   <a href="#" class="btn">Submit</a>
-  <input id="submit" name="submit" class="btn" type="submit" value="Submit" />
+
+  <!-- HTML Input submit -->
+  <input name="submit" class="btn" type="submit" value="Submit" />
 ```
 
 */
@@ -30,7 +37,8 @@ versionning:
   vertical-align: middle;
   position: relative;
   overflow: visible;
-  padding: rhythm(.5) rhythm(1);
+  height: auto !important;
+  padding: rhythm(.25) rhythm(.5) !important;
   margin: 0;
   border: 0;
   text-decoration: none;
@@ -41,15 +49,18 @@ versionning:
   font-family: sans-serif;
   line-height: normal;
   background-clip: padding-box;
-  background-color: $color-grey-lightest;
+  background-color: $color-grey-lighter;
   color: $body-color;
-  border-radius: 0;
+  border-radius: .25rem;
   // white-space: nowrap;
   cursor: pointer;
+  
   outline: none;
   transition-timing-function: ease-in;
-  transition-property: background-color;
+  transition-property: background-color, border;
   transition-duration: .250s;
+
+  -webkit-appearance: none;
   appearance: none;
 
   &:hover,
@@ -57,7 +68,7 @@ versionning:
   &:active,
   &.active {
     text-decoration: none;
-    background-color: $color-grey-lighter;
+    background-color: $body-color;
     color: #fff;
   }
 
@@ -67,15 +78,19 @@ versionning:
     padding: 0;
     border: 0;
   }
+
+  @include mq("small") {
+    padding: rhythm(.5) rhythm(.75) !important;
+  }
 }
 
 /*doc
 ---
 title: Buttons Colorz
-category: Components - Buttons
+category: Components
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
@@ -86,28 +101,22 @@ Couleurs disponibles.
 * `.btn--primary` - Couleur primaire
 * `.btn--secondary` - Couleur secondaire
 
-  <button class="btn">btn</button>
-  <span class="btn">btn</span>
-  <a href="#" class="btn">btn</a>
-  <input id="submit" name="submit" class="btn" type="submit" value="btn" />
-  <br />
-
   <button class="btn btn--default">btn--default</button>
   <span class="btn btn--default">btn--default</span>
   <a href="#" class="btn btn--default">btn--default</a>
-  <input id="submit" name="submit" class="btn btn--default" type="submit" value="btn--default" />
+  <input name="submit" class="btn btn--default" type="submit" value="btn--default" />
   <br />
 
   <button class="btn btn--primary">btn--primary</button>
   <span class="btn btn--primary">btn--primary</span>
   <a href="#" class="btn btn--primary">btn--primary</a>
-  <input id="submit" name="submit" class="btn btn--primary" type="submit" value="btn--primary" />
+  <input name="submit" class="btn btn--primary" type="submit" value="btn--primary" />
   <br />
 
   <button class="btn btn--secondary">btn--secondary</button>
   <span class="btn btn--secondary">btn--secondary</span>
   <a href="#" class="btn btn--secondary">btn--secondary</a>
-  <input id="submit" name="submit" class="btn btn--secondary" type="submit" value="btn--secondary" />
+  <input name="submit" class="btn btn--secondary" type="submit" value="btn--secondary" />
 
 */
 
@@ -141,7 +150,7 @@ Couleurs disponibles.
 /*doc
 ---
 title: Buttons Outline Colorz
-category: Components - Buttons
+category: Components
 versionning:
 - version: 1.0
   update: 2018-12-23T10:00:00Z
@@ -155,30 +164,29 @@ Couleurs disponibles.
 * `.btn--outline--primary` - Couleur primaire
 * `.btn--outline--secondary` - Couleur secondaire
 
-  <div class="background--primary">
-    <button class="btn btn--outline--white">btn--outline--white</button>
-    <span class="btn btn--outline--white">btn--outline--white</span>
-    <a href="#" class="btn btn--outline--white">btn--outline--white</a>
-    <input id="submit" name="submit" class="btn btn--outline--white" type="submit" value="btn--outline--white" />
+  <div class="primary-background pal mvl">
+    <button class="btn btn--outline--light">btn--outline--light</button>
+    <span class="btn btn--outline--light">btn--outline--light</span>
+    <a href="#" class="btn btn--outline--light">btn--outline--light</a>
+    <input name="submit" class="btn btn--outline--light" type="submit" value="btn--outline--light" />
   </div>
-  <br />
 
   <button class="btn btn--outline--default">btn--outline--default</button>
   <span class="btn btn--outline--default">btn--outline--default</span>
   <a href="#" class="btn btn--outline--default">btn--outline--default</a>
-  <input id="submit" name="submit" class="btn btn--outline--default" type="submit" value="btn--outline--default" />
+  <input name="submit" class="btn btn--outline--default" type="submit" value="btn--outline--default" />
   <br />
 
   <button class="btn btn--outline--primary">btn--outline--primary</button>
   <span class="btn btn--outline--primary">btn--outline--primary</span>
   <a href="#" class="btn btn--outline--primary">btn--outline--primary</a>
-  <input id="submit" name="submit" class="btn btn--outline--primary" type="submit" value="btn--outline--primary" />
+  <input name="submit" class="btn btn--outline--primary" type="submit" value="btn--outline--primary" />
   <br />
 
   <button class="btn btn--outline--secondary">btn--outline--secondary</button>
   <span class="btn btn--outline--secondary">btn--outline--secondary</span>
   <a href="#" class="btn btn--outline--secondary">btn--secondary</a>
-  <input id="submit" name="submit" class="btn btn--outline--secondary" type="submit" value="btn--secondary" />
+  <input name="submit" class="btn btn--outline--secondary" type="submit" value="btn--secondary" />
 
 */
 @each $name, $color in $colors {
@@ -188,18 +196,18 @@ Couleurs disponibles.
   }
 }
 
-.btn--outline--white {
-  @include btn-outline(#fff);
+.btn--outline--light {
+  @include btn-outline(#fff, 'light');
 }
 
 
 /*doc
 ---
 title: Button actif
-category: Components - Buttons
+category: Components
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
@@ -209,25 +217,25 @@ versionning:
   <button class="btn active">btn</button>
   <span class="btn active">btn</span>
   <a href="#" class="btn active">btn</a>
-  <input id="submit" name="submit" class="btn active" type="submit" value="btn" />
+  <input name="submit" class="btn active" type="submit" value="btn" />
   <br />
 
   <button class="btn btn--default active">btn--default</button>
   <span class="btn btn--default active">btn--default</span>
   <a href="#" class="btn btn--default active">btn--default</a>
-  <input id="submit" name="submit" class="btn btn--default active" type="submit" value="btn--default" />
+  <input name="submit" class="btn btn--default active" type="submit" value="btn--default" />
   <br />
 
   <button class="btn btn--primary active">btn--primary</button>
   <span class="btn btn--primary active">btn--primary</span>
   <a href="#" class="btn btn--primary active">btn--primary</a>
-  <input id="submit" name="submit" class="btn btn--primary active" type="submit" value="btn--primary" />
+  <input name="submit" class="btn btn--primary active" type="submit" value="btn--primary" />
   <br />
 
   <button class="btn btn--secondary active">btn--secondary</button>
   <span class="btn btn--secondary active">btn--secondary</span>
   <a href="#" class="btn btn--secondary active">btn--secondary</a>
-  <input id="submit" name="submit" class="btn btn--secondary active" type="submit" value="btn--secondary" />
+  <input name="submit" class="btn btn--secondary active" type="submit" value="btn--secondary" />
 ```
 
 */
@@ -235,10 +243,10 @@ versionning:
 /*doc
 ---
 title: Button désactivé
-category: Components - Buttons
+category: Components
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
@@ -248,25 +256,25 @@ versionning:
   <button class="btn btn--disabled">btn</button>
   <span class="btn btn--disabled">btn</span>
   <a href="#" class="btn btn--disabled">btn</a>
-  <input id="submit" name="submit" class="btn btn--disabled" type="submit" value="btn" />
+  <input name="submit" class="btn btn--disabled" type="submit" value="btn" />
   <br />
 
   <button class="btn btn--default btn--disabled">btn--default</button>
   <span class="btn btn--default btn--disabled">btn--default</span>
   <a href="#" class="btn btn--default btn--disabled">btn--default</a>
-  <input id="submit" name="submit" class="btn btn--default btn--disabled" type="submit" value="btn--default" />
+  <input name="submit" class="btn btn--default btn--disabled" type="submit" value="btn--default" />
   <br />
 
   <button class="btn btn--primary btn--disabled">btn--primary</button>
   <span class="btn btn--primary btn--disabled">btn--primary</span>
   <a href="#" class="btn btn--primary btn--disabled">btn--primary</a>
-  <input id="submit" name="submit" class="btn btn--primary btn--disabled" type="submit" value="btn--primary" />
+  <input name="submit" class="btn btn--primary btn--disabled" type="submit" value="btn--primary" />
   <br />
 
   <button class="btn btn--secondary btn--disabled">btn--secondary</button>
   <span class="btn btn--secondary btn--disabled">btn--secondary</span>
   <a href="#" class="btn btn--secondary btn--disabled">btn--secondary</a>
-  <input id="submit" name="submit" class="btn btn--secondary btn--disabled" type="submit" value="btn--secondary" />
+  <input name="submit" class="btn btn--secondary btn--disabled" type="submit" value="btn--secondary" />
 ```
 
 */
@@ -282,6 +290,29 @@ versionning:
   white-space: normal;
 }
 
+/*doc
+---
+title: Button bloc
+category: Components
+versionning:
+- version: 1.0
+  update: 2019-05-01T10:00:00Z
+  owner: Axel Roche
+---
+
+* `.btn--block` - Bouton block
+
+```html
+  <button class="btn btn--block">btn</button>
+
+  <button class="btn btn--default btn--block">btn--default</button>
+
+  <button class="btn btn--primary btn--block">btn--primary</button>
+
+  <button class="btn btn--secondary btn--block">btn--secondary</button>
+```
+
+*/
 .btn--block {
   display: block;
   width: 100%;
