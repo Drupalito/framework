@@ -151,10 +151,11 @@ Modifier `.messages--warning` && `.messages--icon`
 */
 
 .messages {
+  position: relative;
   min-height: $base-line-height * 4;
   padding: 1.5em;
-  margin: 0 0 rhythm(1); /* LTR */
-  border-left: 1.5em solid; /* LTR */
+  margin-top: rhythm(1); /* LTR */
+  border-left: .5em solid; /* LTR */
   background: $color-grey-lighter;
 
   p,
@@ -188,6 +189,8 @@ Modifier `.messages--warning` && `.messages--icon`
   }
 
   @include mq("small") {
+    border-left-width: 1em; /* LTR */
+
     &--icon {
 
       // scss-lint:disable SelectorFormat

@@ -8,15 +8,24 @@ title: Message Dismiss
 category: Components
 versionning:
 - version: 1.0
-  update: 2019-04-25T10:00:00Z
+  update: 2019-05-10T10:00:00Z
   owner: Axel Roche
 ---
 
-All messages require relative positioning for the Dismiss button to be placed properly.
+Ajoute une option afin de permettre la disparition du bloc message.\\
+L'ajout de cette option se fait via un script Javascript.
+
+Le code HTML ajouté est:
+
+```html
+  <button class="dismiss">
+    <span class="element-invisible">Fermer le message</span>
+  </button>
+```
 
   <div role="alert" class="messages messages--info clearfix">
-    <button class="dismiss"><span class="element-invisible">Close this message</span></button>
-    <h2 class="messages__title element-invisible">Message</h2>
+    <button class="dismiss"><span class="element-invisible">Fermer ce message</span></button>
+    <h2 class="messages__title element-invisible">Titre du message</h2>
     <div class="messages__content">
       <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
       <ul>
@@ -27,16 +36,42 @@ All messages require relative positioning for the Dismiss button to be placed pr
     </div>
   </div>
 
-  <div role="alert" class="messages messages--info clearfix">
-    <button class="dismiss"><span class="element-invisible">Close this message</span></button>
-    <h2 class="messages__title element-invisible">Message</h2>
+  <div role="alert" class="messages messages--warning clearfix">
+    <button class="dismiss"><span class="element-invisible">Fermer ce message</span></button>
+    <h2 class="messages__title element-invisible">Titre du message</h2>
     <div class="messages__content">
       <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
       <ul>
         <li>Le champ Nom d'utilisateur est requis.</li>
         <li>Le champ Mot de passe est requis.</li>
       </ul>
-      <p class="mtm"><a href="#" class="btn btn-info">Demo button</a></p>
+      <p class="mtm"><a href="#" class="btn btn-warning">Demo button</a></p>
+    </div>
+  </div>
+
+  <div role="alert" class="messages messages--status clearfix">
+    <button class="dismiss"><span class="element-invisible">Close this message</span></button>
+    <h2 class="messages__title element-invisible">Titre du message</h2>
+    <div class="messages__content">
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
+      </ul>
+      <p class="mtm"><a href="#" class="btn btn-status">Demo button</a></p>
+    </div>
+  </div>
+
+  <div role="alert" class="messages messages--error clearfix">
+    <button class="dismiss"><span class="element-invisible">Close this message</span></button>
+    <h2 class="messages__title element-invisible">Titre du message</h2>
+    <div class="messages__content">
+      <p>Nous avons trouver des erreurs, <a href="#">lien texte</a></p>
+      <ul>
+        <li>Le champ Nom d'utilisateur est requis.</li>
+        <li>Le champ Mot de passe est requis.</li>
+      </ul>
+      <p class="mtm"><a href="#" class="btn btn-error">Demo button</a></p>
     </div>
   </div>
 
@@ -44,15 +79,15 @@ All messages require relative positioning for the Dismiss button to be placed pr
 .dismiss {
   display: block;
   position: absolute;
-  top: .4em;
-  right: .4em;
-  width: 1.8em;
+  top: .75em;
+  right: .75em;
+  width: 1.75em;
   border: 0;
-  color: #fff;
-
   font-weight: 900;
   text-align: center;
   text-decoration: none;
+  background: $body-color;
+  color: #fff;
 
   opacity: .5;
   transition: .1s opacity linear;
@@ -61,22 +96,20 @@ All messages require relative positioning for the Dismiss button to be placed pr
     content: '\2715';
   }
 
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+  
+  .messages:hover & {
+    opacity: 1;
+  }
+
   @each $name, $values in $message {
     $hexa: message($name, base);
 
     .messages--#{$name} & {
       background: message($name, base);
     }
-  }
-
-  // When the user mouses over the message box, make the button more prominent
-  .messages:hover & {
-    opacity: 1;
-  }
-
-  // Change states when users mouseover
-  &:hover,
-  &:focus {
-    color: #fff;
   }
 }
