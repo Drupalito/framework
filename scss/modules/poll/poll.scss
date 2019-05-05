@@ -45,6 +45,7 @@ Default Style CSS
 .poll {
   &-bars__bar,
   &-results {
+    border-radius: .25rem;
     border: 1px solid $color-grey-lighter;
     background: #fff;
   }
@@ -58,6 +59,7 @@ Default Style CSS
 
     .foreground {
       height: 1em;
+      border-radius: .25rem 0 0 .25rem;
       background: coloriz(default, base);
     }
   }

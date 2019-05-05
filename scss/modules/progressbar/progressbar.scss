@@ -29,6 +29,7 @@ versionning:
 .progress {
 
   .bar {
+    border-radius: .25rem;
     border: 1px solid $color-grey-lighter;
     background: #fff;
   }
@@ -36,6 +37,7 @@ versionning:
   .filled {
     height: 1.5em;
     width: 5px;
+    border-radius: .25rem 0 0 .25rem;
     background: coloriz(default, base);
   }
 
