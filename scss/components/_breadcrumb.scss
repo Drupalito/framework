@@ -6,6 +6,10 @@
 ---
 title: Fil d'Ariane
 category: Components - Breadcrumb
+notes: 
+  - ([RGAA - Critère 12.8 [AAA] Dans chaque page web, un fil d'Ariane est-il présent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-8))
+  - ([RGAA - Critère 12.9 [AAA] Dans chaque page web, le fil d'Ariane est-il pertinent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-9))
+  - ([OPQUAST - SEO - N°66 - Le site propose un fil d'Ariane.](https://checklists.opquast.com/seo/criteria/le-site-propose-un-fil-dariane))
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -13,10 +17,6 @@ versionning:
 ---
 
 Aide à la navigation, permet à l'utilisateur de connaitre de l'emplacement de la pages en cours.
-
-* [RGAA - Critère 12.8 [AAA] Dans chaque page web, un fil d'Ariane est-il présent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-8)
-* [RGAA - Critère 12.9 [AAA] Dans chaque page web, le fil d'Ariane est-il pertinent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-9)
-* [OPQUAST - SEO - N°66 - Le site propose un fil d'Ariane.](https://checklists.opquast.com/seo/criteria/le-site-propose-un-fil-dariane)
 
 ```html
   <div class="breadcrumb clearfix" id="breadcrumb">
@@ -39,19 +39,18 @@ Aide à la navigation, permet à l'utilisateur de connaitre de l'emplacement de 
 ---
 title: Skiplinks
 category: Components - Skiplinks
+notes: 
+  - ([ACCEDE-WEB - Mettre en place des liens d’évitement](https://www.accede-web.com/notices/html-css-javascript/12-navigation-clavier/12-2-liens-evitement/))
+  - ([RGAA - Critère 12.11 [A] Dans chaque page web, des liens d'évitement ou d'accès rapide aux groupes de liens importants et à la zone de contenu sont-ils présents (hors cas particuliers) ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-11))
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
 
-Les liens d'évitement facilitent la navigation au clavier, ils sont visibles lorsque la touche `tab` est utilisée. **Ils sont obligatoire.**
+Les liens d'évitement facilitent la navigation au clavier, ils sont visibles lorsque la touche <kbd>tab</kbd> est utilisée. **Ils sont obligatoire.**
 
-Le code HTML doit être inséré juste après le `<body>`.
-
-* [ACCEDE-WEB - Mettre en place des liens d’évitement](https://www.accede-web.com/notices/html-css-javascript/12-navigation-clavier/12-2-liens-evitement/)
-
-* [RGAA - Critère 12.11 [A] Dans chaque page web, des liens d'évitement ou d'accès rapide aux groupes de liens importants et à la zone de contenu sont-ils présents (hors cas particuliers) ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-11)
+Le code HTML doit être inséré juste après le `<body>` pour être efficace.
 
 ```html
   <p class="skiplinks" id="skiplinks">
