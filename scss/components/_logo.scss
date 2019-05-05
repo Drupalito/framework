@@ -15,7 +15,7 @@ versionning:
 Default markup. (`title` = `alt`)
 
 ```html
-  <div class="logo mtl">
+  <div class="logo">
     <p class="logo__inner">
       <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link nounderline">
         <img class="logo__image" src="http://placehold.it/100x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
@@ -28,7 +28,7 @@ Default markup. (`title` = `alt`)
   </div>
 ```
 
-  <div class="logo mtl">
+  <div class="logo">
     <p class="logo__inner">
       <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link nounderline">
         <img class="logo__image" src="http://placehold.it/100x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
@@ -36,7 +36,7 @@ Default markup. (`title` = `alt`)
     </p>
   </div>
 
-  <div class="logo mtl">
+  <div class="logo">
     <p class="logo__inner">
       <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link nounderline">
         <img class="logo__image" src="http://placehold.it/100x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
@@ -47,7 +47,7 @@ Default markup. (`title` = `alt`)
     </p>
   </div>
 
-  <div class="logo mtl">
+  <div class="logo">
     <p class="logo__inner">
       <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link">
         <span class="logo__content">
@@ -74,12 +74,29 @@ Default markup. (`title` = `alt`)
   }
 
   &__link {
+    display: inline-block;
     border-bottom: 0;
+    position: relative;
+    padding: .5em;
+    left: -.5em;
+
+    &:hover,
+    &:focus {
+      outline: 1px solid #fff;
+    }
   }
 
   @include mq("smaller") {
-    &__content {
+    
+    &__link {
       margin-top: 1em;
+    }
+
+    &__image {
+      margin-bottom: .5em;
+    }
+    
+    &__content {
       display: block;
     }
   }
