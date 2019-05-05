@@ -29,7 +29,7 @@ $font-unit: if($relative-font-sizing, 1em, $base-font-size);
 ///   @include mq("large") { ... }
 @mixin mq($keyword) {
   @if $keyword == smaller {
-    @media (max-width: $screen-sm-min) { @content; }
+    @media (max-width: $screen-xs-max) { @content; }
   }
   @if $keyword == small {
     @media (min-width: $screen-sm-min) { @content; }
