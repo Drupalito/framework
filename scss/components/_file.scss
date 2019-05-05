@@ -1,0 +1,121 @@
+
+// @file: _file.scss
+// Format fichier par défault.
+
+/*doc
+---
+title: File display
+category: Components
+versionning:
+- version: 1.0
+  update: 2019-05-01T10:00:00Z
+  owner: Axel Roche
+---
+
+```html
+<p class="mtl">
+  <a href="#" class="media-element file--entity file--pdf">
+    <span class="file__icon"><span class="fa fas fa-file-pdf-o" aria-hidden="true"></span></span>
+    <span class="file__content">
+      <span class="file__title h4 mvn">File PDF title</span><br>
+      <small class="file__meta default-color">07/01/2019 - 82.7 Ko - PDF</small>
+    </span>
+  </a>
+</p>
+```
+
+  <p>
+    <a href="#" class="media-element file--entity file--excel">
+      <span class="file__icon"><span class="fa fas fa-file-excel-o" aria-hidden="true"></span></span>
+      <span class="file__content">
+        <span class="file__title h4 mvn">File Execl title</span><br>
+        <small class="file__meta default-color">07/01/2019 - 82.7 Ko - Execl</small>
+      </span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="media-element file--entity file--word">
+      <span class="file__icon"><span class="fa fas fa-file-word-o" aria-hidden="true"></span></span>
+      <span class="file__content">
+        <span class="file__title h4 mvn">File Word title</span><br>
+        <small class="file__meta default-color">07/01/2019 - 82.7 Ko - Word</small>
+      </span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="media-element file--entity file--text">
+      <span class="file__icon"><span class="fa fas fa-file-text-o" aria-hidden="true"></span></span>
+      <span class="file__content">
+        <span class="file__title h4 mvn">File text title</span><br>
+        <small class="file__meta default-color">07/01/2019 - 82.7 Ko - TXT</small>
+      </span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="media-element file--entity file--audio">
+      <span class="file__icon"><span class="fa fas fa-file-audio-o" aria-hidden="true"></span></span>
+      <span class="file__content">
+        <span class="file__title h4 mvn">File audio title</span><br>
+        <small class="file__meta default-color">07/01/2019 - 82.7 Ko - Audio</small>
+      </span>
+    </a>
+  </p>
+
+  <p>
+    <a href="#" class="media-element file--entity file--video">
+      <span class="file__icon"><span class="fa fas fa-file-video-o" aria-hidden="true"></span></span>
+      <span class="file__content">
+        <span class="file__title h4 mvn">File video title</span><br>
+        <small class="file__meta default-color">07/01/2019 - 82.7 Ko - Video</small>
+      </span>
+    </a>
+  </p>
+
+*/
+.media-element {
+  border-bottom: 0;
+  line-height: 1.5;
+  align-items: center;
+  display: flex;
+
+  .file__icon {
+    margin-right: 1em;
+    position: relative;
+    left: 0;
+
+    transition-timing-function: ease-in;
+    transition-property: left;
+    transition-duration: .25s;
+  }
+
+  .fa {
+    font-size: 3em;
+    color: $body-color;
+  }
+
+  .file__content {
+    span:first-child {
+      position: relative;
+      border-bottom: 1px dashed;
+      color: $body-color;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    .file__icon {
+      left: .25em;
+    }
+
+    .fa {
+      color: coloriz(default, base);
+    }
+
+    .file__content span:first-child {
+      border-bottom: 0;
+    }
+  }
+}
