@@ -121,11 +121,12 @@ Class CSS spécifiques pour gérer rapidement une taille.
 title: Text alignment
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
-La justification n'est pas disponible car interdite en accessibilité pour des questions de lisibilité. Ou alors, la justication doit être contrôlable par l'utilisateur.
+La justification n'est pas disponible car interdite en accessibilité pour des questions de lisibilité.\\
+Ou alors, la justication doit être contrôlable par l'utilisateur.
 
 * [RGAA - Critère 10.9 [AAA] Pour chaque page web, le texte ne doit pas être justifié.](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-10-9)
 * [OPQUAST - QUALITÉ - N°183 - Les styles ne justifient pas le texte.](https://checklists.opquast.com/oqs-v3/criteria/les-styles-ne-justifient-pas-le-texte)
@@ -134,19 +135,19 @@ Class CSS à utiliser:
 
 * `.text-left` : **Aligner un texte à gauche.**\\
   Peut être décliné en mode responsive avec les préfixes `xs-`, `sm-` `md-` et `lg-`.\\
-  _Exemple: `.sm-text-left`_
+  _Exemple: `.text-sm-left`_
 
 * `.text-right` : **Aligner un texte à droite.**\\
   Peut être décliné en mode responsive avec les préfixes `xs-`, `sm-` `md-` et `lg-`.\\
-  _Exemple: `.md-text-right`_
+  _Exemple: `.text-md-right`_
 
 * `.text-center` : **Centrer un texte.**\\
   Peut être décliné en mode responsive avec les préfixes `xs-`, `sm-` `md-` et `lg-`.\\
-  _Exemple: `.xs-text-center`_
+  _Exemple: `.text-xs-center`_
 
 * `.text-justify` : **Justifier un texte.**\\
   Peut être décliné en mode responsive avec les préfixes `xs-`, `sm-` `md-` et `lg-`.\\
-  _Exemple: `.xs-text-justify`_
+  _Exemple: `.text-xs-justify`_
 
 */
 
@@ -155,32 +156,32 @@ Class CSS à utiliser:
 .text-center { text-align: center; }
 .text-justify { text-align: justify; }
 
-@media (max-width: $screen-xs-max) {
-  .xs-text-left { text-align: left; }
-  .xs-text-right { text-align: right; }
-  .xs-text-center { text-align: center; }
-  .xs-text-justify { text-align: justify; }
+@include mq("smaller") {
+  .text-xs-left { text-align: left; }
+  .text-xs-right { text-align: right; }
+  .text-xs-center { text-align: center; }
+  .text-xs-justify { text-align: justify; }
 }
 
-@media (min-width: $screen-sm-min) {
-  .sm-text-left { text-align: left; }
-  .sm-text-right { text-align: right; }
-  .sm-text-center { text-align: center; }
-  .sm-text-justify { text-align: justify; }
+@include mq("small") {
+  .text-sm-left { text-align: left; }
+  .text-sm-right { text-align: right; }
+  .text-sm-center { text-align: center; }
+  .text-sm-justify { text-align: justify; }
 }
 
-@media (min-width: $screen-md-min) {
-  .md-text-left { text-align: left; }
-  .md-text-right { text-align: right; }
-  .md-text-center { text-align: center; }
-  .md-text-justify { text-align: justify; }
+@include mq("medium") {
+  .text-md-left { text-align: left; }
+  .text-md-right { text-align: right; }
+  .text-md-center { text-align: center; }
+  .text-md-justify { text-align: justify; }
 }
 
-@media (min-width: $screen-lg-min) {
-  .lg-text-left { text-align: left; }
-  .lg-text-right { text-align: right; }
-  .lg-text-center { text-align: center; }
-  .lg-text-justify { text-align: justify; }
+@include mq("large") {
+  .text-lg-left { text-align: left; }
+  .text-lg-right { text-align: right; }
+  .text-lg-center { text-align: center; }
+  .text-lg-justify { text-align: justify; }
 }
 
 /*doc
@@ -392,6 +393,9 @@ Termes et des descriptions `<dl>` aligneés côte à côte. Se déplie horizonta
 ```
 
 */
-.definition-inline {
-  @include definition-inline;
+
+@include mq("small") {
+  .definition-inline {
+    @include definition-inline;
+  }
 }

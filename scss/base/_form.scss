@@ -327,14 +327,14 @@ input + .btn {
   }
 
   &--icon {
-    height: 2.625rem;
+    height: 2.625rem !important;
     width: 2.625rem;
     font-size: 0;
     line-height: 1;
 
-    // .fa {
-    //   font-size: 1rem;
-    // }
+    .fa {
+      font-size: 1.25rem;
+    }
   }
 }
 
