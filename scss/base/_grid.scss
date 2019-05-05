@@ -22,9 +22,9 @@ versionning:
 .container {
   @include container-fixed();
 
-  @media (min-width: $screen-md-min) {
-    width: $container-md;
-  }
+  // @media (min-width: $screen-md-min) {
+  //   width: $container-md;
+  // }
 
   @media (min-width: $screen-lg-min) {
     width: $container-lg;
@@ -77,6 +77,16 @@ versionning:
   }
 }
 
+.justify-content-xs-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.justify-content-xs-center {
+  display: flex;
+  justify-content: center;
+}
+
 .col-top {
   align-self: flex-start;
 }
@@ -105,6 +115,16 @@ versionning:
   .row-sm-height {
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .justify-content-sm-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .justify-content-sm-center {
+    display: flex;
     justify-content: center;
   }
 
@@ -147,6 +167,16 @@ versionning:
     justify-content: center;
   }
 
+  .justify-content-md-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .justify-content-md-center {
+    display: flex;
+    justify-content: center;
+  }
+
   .row-md-noborder {
     margin-left: 0;
     margin-right: 0;
@@ -183,6 +213,16 @@ versionning:
   .row-lg-height {
     display: flex;
     align-items: center;
+    justify-content: center;
+  }
+
+  .justify-content-lg-space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .justify-content-lg-center {
+    display: flex;
     justify-content: center;
   }
 
