@@ -5,78 +5,113 @@
 /*doc
 ---
 title: Pagination
-category: Components - Pagination
+category: Components
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
-* `.text-center` : align center
-* `.text-right` : align right
+* Difficile à manquer ;
+* Facilement évolutif ;
+* Fournit de grandes zones de clic ;
+* Le titre peut être masqué avec les classe css `.a11y`.
 
-Simple pagination. The large block is hard to miss, easily scalable, and provides large click areas.
+*/
 
-Le titre peut être caché avec `.a11y`
+/*doc
+---
+title: Pagination complète
+category: Components
+versionning:
+- version: 1.0
+  update: 2019-05-01T10:00:00Z
+  owner: Axel Roche
+---
 
 ```html
-  <div class="pagination clearfix">
-    <h2 class="pagination__title h5 mvn">Page 2 of 5</h2>
+  <div class="pagination mtl clearfix">
+    <h2 class="pagination__title h5 mvn">Page 2 sur 5</h2>
     <ul class="pagination__list list-inline mvn">
-      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span aria-hidden="true" class="fa fa-chevron-left"></span> Prev</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 1 of 5">1</a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Aller à la page précédente (1 sur 5)"><span aria-hidden="true" class="mrs fa fa-chevron-left"></span> Précédente</a></li>
+      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Aller à la page 1 sur 5">1</a></li>
       <li class="pagination__item pagination--current"><strong>2</strong></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 3 of 5">3</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 4 of 5">4</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 5 of 5">5</a></li>
-      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span aria-hidden="true" class="fa fa-chevron-right"></span></a></li>
-    </ul>
-  </div>
-
-  <div class="pagination text-center mtl clearfix">
-    <h2 class="pagination__title h5 mvn">Page 2 of 5</h2>
-    <ul class="pagination__list list-inline mvn">
-      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span aria-hidden="true" class="fa fa-chevron-left"></span> Prev</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 1 of 5">1</a></li>
-      <li class="pagination__item pagination--current"><strong>2</strong></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 3 of 5">3</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 4 of 5">4</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 5 of 5">5</a></li>
-      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span aria-hidden="true" class="fa fa-chevron-right"></span></a></li>
-    </ul>
-  </div>
-
-  <div class="pagination text-right mtl clearfix">
-    <h2 class="pagination__title h5 mvn">Page 2 of 5</h2>
-    <ul class="pagination__list list-inline mvn">
-      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Go to prev page (1 of 5)"><span aria-hidden="true" class="fa fa-chevron-left"></span> Prev</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 1 of 5">1</a></li>
-      <li class="pagination__item pagination--current"><strong>2</strong></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 3 of 5">3</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 4 of 5">4</a></li>
-      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Go to page 5 of 5">5</a></li>
-      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Go to next page (3 of 5)">Next <span aria-hidden="true" class="fa fa-chevron-right"></span></a></li>
+      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Aller à la page 3 sur 5">3</a></li>
+      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Aller à la page 4 sur 5">4</a></li>
+      <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Aller à la page 5 sur 5">5</a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Aller à la page suivante (3 sur 5)">Suivante <span aria-hidden="true" class="mls fa fa-chevron-right"></span></a></li>
     </ul>
   </div>
 ```
 
 */
 
+/*doc
+---
+title: Pagination réduite
+category: Components
+versionning:
+- version: 1.0
+  update: 2019-05-01T10:00:00Z
+  owner: Axel Roche
+---
+
+```html
+  <div class="pagination pagination--small mtl clearfix">
+    <h2 class="pagination__title h5 mvn">Page 2 sur 5</h2>
+    <ul class="pagination__list list-inline mvn">
+      <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Aller à la page précédente (1 sur 5)"><span aria-hidden="true" class="mrs fa fa-chevron-left"></span> Précédente</a></li>
+      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Aller à la page suivante (3 sur 5)">Suivante <span aria-hidden="true" class="mls fa fa-chevron-right"></span></a></li>
+    </ul>
+  </div>
+```
+
+  <div class="pagination pagination--small mtl clearfix">
+    <h2 class="pagination__title h5 mvn">Page 1 sur 5</h2>
+    <ul class="pagination__list list-inline mvn">
+      <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Aller à la page suivante (2 sur 5)">Suivante <span aria-hidden="true" class="mls fa fa-chevron-right"></span></a></li>
+    </ul>
+  </div>
+
+*/
+
 .pagination {
   margin-top: 1.5em;
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    margin-left: .5em;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .fa {
+    font-size: 80%;
+  }
 
   a,
   &--current strong {
     white-space: nowrap;
     border: 1px solid;
-    border-radius: 0.2rem;
+    border-radius: .25rem;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block;
+    display: block;
     text-align: center;
     padding: .25em .5em;
     font-size: 90%;
     color: $body-color;
+
+    transition-timing-function: ease-in;
+    transition-property: background-color, border;
+    transition-duration: .250s;
   }
 
   &--current strong {
@@ -88,8 +123,20 @@ Le titre peut être caché avec `.a11y`
     &:hover,
     &:focus {
       text-decoration: none;
+      border-color: coloriz(default, base);
       background: coloriz(default, base);
       color: #fff;
+    }
+  }
+
+  @include mq("smaller") {
+    li {
+      display: none;
+
+      &:first-child,
+      &:last-child {
+        display: block;
+      }
     }
   }
 }
