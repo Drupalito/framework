@@ -164,19 +164,22 @@ versionning:
 .block__content ul.primary li.expanded>a:before {
   right: 1em;
 }
-.block__content ul.primary a:hover {
-  // border-left: 1px solid $color-grey-lighter;
+.block__content ul.primary a:hover,
+.block__content ul.primary a:focus,
+.block__content ul.primary a.active {
+  border-left: 1px solid transparent;
   background: coloriz(default, lighter);
 }
-.block__content ul.primary a:focus {
-  outline: 0;
-  border-left: 1px dotted coloriz(default, base);
-  background: coloriz(default, lighter);
+.block__content ul.primary a:hover,
+.block__content ul.primary a:focus,
+.block__content ul.primary a:active {
+  border-left-color: coloriz(default, base);
+  outline: 1px dotted coloriz(default, base);
 }
 .block__content ul.primary a.active,
 .block__content ul.primary a.active:hover {
-  border-left: 2px solid coloriz(default, base);
-  background: coloriz(default, lighter);
+  border-left-width: 2px;
+  border-left-color: coloriz(default, base);
   color: $body-color;
 }
 

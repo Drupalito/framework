@@ -5,28 +5,58 @@
 /*doc
 ---
 title: Logo
-category: Layout - Layer
+category: Components
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
 Default markup. (`title` = `alt`)
 
 ```html
-  <div class="logo">
+  <div class="logo mtl">
     <p class="logo__inner">
       <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link nounderline">
-        <img class="logo__image" src="http://placehold.it/250x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
-        <span class="logo__content inbl amiddle pls">
-          <span class="logo__name h4 caps show mvn">{{ site.SITE_NAME }}</span>
-          <span class="logo__slogan show">{{ site.SITE_SLOGAN }}</span>
+        <img class="logo__image" src="http://placehold.it/100x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
+        <span class="logo__content">
+          <span class="logo__name">{{ site.SITE_NAME }}</span>
+          <span class="logo__slogan">{{ site.SITE_SLOGAN }}</span>
         </span>
       </a>
     </p>
   </div>
 ```
+
+  <div class="logo mtl">
+    <p class="logo__inner">
+      <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link nounderline">
+        <img class="logo__image" src="http://placehold.it/100x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
+      </a>
+    </p>
+  </div>
+
+  <div class="logo mtl">
+    <p class="logo__inner">
+      <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link nounderline">
+        <img class="logo__image" src="http://placehold.it/100x72" alt="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)">
+        <span class="logo__content">
+          <span class="logo__name">{{ site.SITE_NAME }}</span>
+        </span>
+      </a>
+    </p>
+  </div>
+
+  <div class="logo mtl">
+    <p class="logo__inner">
+      <a href="/" title="{{ site.SITE_NAME }}, {{ site.SITE_SLOGAN }} (Home)" rel="home" class="logo__link">
+        <span class="logo__content">
+          <span class="logo__name">{{ site.SITE_NAME }}</span>
+          <span class="logo__slogan">{{ site.SITE_SLOGAN }}</span>
+        </span>
+      </a>
+    </p>
+  </div>
 
 */
 
@@ -43,10 +73,6 @@ Default markup. (`title` = `alt`)
     display: block;
   }
 
-  // &__image {
-  //   width: 55px;
-  // }
-
   &__link {
     border-bottom: 0;
   }
@@ -60,12 +86,8 @@ Default markup. (`title` = `alt`)
 
   @include mq("small") {
     &__link {
-      display: table;
-    }
-
-    &__content {
-      display: table-cell;
-      vertical-align: middle;
+      display: flex;
+      align-items: center;
     }
 
     &__image + &__content {

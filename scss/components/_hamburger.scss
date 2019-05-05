@@ -5,15 +5,14 @@
 /*doc
 ---
 title: Hamburger
-category: Components - Hamburger
+category: Components
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
 
-Le code du `button` hamburger provient de [Jonathan Suh](https://jonsuh.com/hamburgers/)
-
+Le code du `button` hamburger provient de [Jonathan Suh](https://jonsuh.com/hamburgers/){:rel="external"}\\
 Le code implanté ici peut être étendu.
 
 ```html
@@ -23,21 +22,21 @@ Le code implanté ici peut être étendu.
   </button>
 
 
-  <button class="hamburger hamburger--collapse hamburger--accessible" type="button"
+  <button class="hamburger hamburger--collapse" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
     <span class="hamburger-label">Menu</span>
   </button>
 
 
-  <button class="hamburger hamburger--arrowalt hamburger--accessible" type="button"
+  <button class="hamburger hamburger--arrowalt" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
     <span class="hamburger-label">Menu</span>
   </button>
 
 
-  <button class="hamburger hamburger--arrowalt-r hamburger--accessible" type="button"
+  <button class="hamburger hamburger--arrowalt-r" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-label">Menu</span>
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
@@ -67,6 +66,7 @@ Le code implanté ici peut être étendu.
   width: 40px;
   height: 24px;
   display: inline-block;
+  vertical-align: middle;
   position: relative; }
 
 .hamburger-inner {
@@ -96,18 +96,6 @@ Le code implanté ici peut être étendu.
   margin-left: 5px;
   vertical-align: middle;
   text-transform: uppercase;
-}
-.hamburger--accessible {
-  display: inline-block;
-}
-.hamburger--accessible .hamburger-box {
-  display: inline-block;
-  vertical-align: middle;
-}
-.hamburger--accessible .hamburger-inner,
-.hamburger--accessible .hamburger-inner:after,
-.hamburger--accessible .hamburger-inner:before {
-  background-color: $body-color;
 }
 
 /*
