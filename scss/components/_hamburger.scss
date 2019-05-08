@@ -12,30 +12,31 @@ versionning:
   owner: Axel Roche
 ---
 
-Le code du `button` hamburger provient de [Jonathan Suh](https://jonsuh.com/hamburgers/){:rel="external"}\\
+Le code du `button` hamburger provient de [Jonathan Suh](https://jonsuh.com/hamburgers/){:rel="external"}  
 Le code implanté ici peut être étendu.
 
 ```html
+  <!-- .hamburger--collapse -->
   <button class="hamburger hamburger--collapse" type="button" tabindex="0"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
   </button>
 
-
+  <!-- .hamburger--collapse -->
   <button class="hamburger hamburger--collapse" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
     <span class="hamburger-label">Menu</span>
   </button>
 
-
+  <!-- .hamburger--arrowalt -->
   <button class="hamburger hamburger--arrowalt" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
     <span class="hamburger-label">Menu</span>
   </button>
 
-
+  <!-- .hamburger--arrowalt-r -->
   <button class="hamburger hamburger--arrowalt-r" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-label">Menu</span>

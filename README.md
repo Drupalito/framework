@@ -50,12 +50,12 @@ Le dossier `helpers/` rassemble toutes les mixins et fonctions utilisés dans le
 
 #### Libraries
 
-Ce dossier permet d'overrider les feuilles de styles des différentes `Libraries`.\\
+Ce dossier permet d'overrider les feuilles de styles des différentes `Libraries`.  
 Ce dossier regroupe les overrides des CSS, des libraries Drupal.
 
 #### Modules
 
-Il s'agit de fonctionnalités spécifiques. Un module embarque son propre fonctionnement.\\
+Il s'agit de fonctionnalités spécifiques. Un module embarque son propre fonctionnement.  
 Ce dossier regroupe les overrides des CSS, des modules Drupal.
 
 #### Themes
