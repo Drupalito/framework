@@ -5,14 +5,48 @@
 /*doc
 ---
 title: Table
-category: Base - Table
+category: Table
+notes:
+  - ([RGAA - Critère 5.1 [A] Chaque tableau de données complexe a-t-il un résumé ?](https://references.modernisation.gouv.fr/critere-51-chaque-tableau-de-donnees-complexe-t-il-un-resume-0))
+  - ([RGAA - Critère 5.3 [A] Pour chaque tableau de mise en forme, le contenu linéarisé reste-t-il compréhensible (hors cas particuliers) ?](https://references.modernisation.gouv.fr/critere-53-pour-chaque-tableau-de-mise-en-forme-le-contenu-linearise-reste-t-il-comprehensible-0))
+  - ([RGAA - Critère 5.4 [A] Chaque tableau de données a-t-il un titre ?](http://references.modernisation.gouv.fr/critere-54-chaque-tableau-de-donnees-t-il-un-titre-0))
+  - ([RGAA - Critère 5.5 [A] Pour chaque tableau de données ayant un titre, celui-ci est-il pertinent ?](https://references.modernisation.gouv.fr/critere-55-pour-chaque-tableau-de-donnees-ayant-un-titre-celui-ci-est-il-pertinent-0))
+  - ([RGAA - Critère 5.6 [A] Pour chaque tableau de données, chaque en-tête de colonnes et chaque en-tête de lignes sont-ils correctement déclarés ?](https://references.modernisation.gouv.fr/critere-56-pour-chaque-tableau-de-donnees-chaque-en-tete-de-colonnes-et-chaque-en-tete-de-lignes-0))
+  - ([RGAA - Critère 5.7 [A] Pour chaque tableau de données, la technique appropriée permettant d'associer chaque cellule avec ses en-têtes est-elle utilisée ?](https://references.modernisation.gouv.fr/critere-57-pour-chaque-tableau-de-donnees-la-technique-appropriee-permettant-dassocier-chaque-0))
+  - ([RGAA - Critère 5.8 [A] Chaque tableau de mise en forme ne doit pas utiliser d'éléments propres aux tableaux de données. Cette règle est-elle respectée ?](https://references.modernisation.gouv.fr/critere-58-chaque-tableau-de-mise-en-forme-ne-doit-pas-utiliser-delements-propres-aux-tableaux-de-0))
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
-Mise en forme par défault d'une tableau.
+**Un tableau peut être contenu dans un élément portant le rôle "table".**
+
+```
+  <div role="table">
+    <table></table>
+  </div>
+```
+
+Donner à chaque tableau de données complexe, **un résumé et un titre pertinent (`caption`)**,
+
+* Identifier les cellules d'en-tête avec les balises `<thead></thead>` et `<th>` pour les cellules.
+* Utiliser un mécanisme pertinent pour lier les cellules de données aux cellules d'en-tête.
+* Pour chaque tableau de mise en forme, veiller à sa bonne linéarisation.
+
+*/
+
+/*doc
+---
+title: Table
+category: Table
+versionning:
+- version: 1.0
+  update: 2019-05-01T10:00:00Z
+  owner: Axel Roche
+---
+
+Mise en forme par défault d'une tableau de données.
 
 ```html
   <table>
@@ -61,10 +95,10 @@ Mise en forme par défault d'une tableau.
 /*doc
 ---
 title: Table Responsive
-category: Base - Table
+category: Table
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
@@ -83,10 +117,10 @@ Faire une table responsive, ajouter un wrapper autour de l'élément `<table>`.
 /*doc
 ---
 title: Table Striped
-category: Base - Table
+category: Table
 versionning:
 - version: 1.0
-  update: 2017-12-23T10:00:00Z
+  update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
 
@@ -278,3 +312,5 @@ td.active {
     }
   }
 }
+
+/*end */
