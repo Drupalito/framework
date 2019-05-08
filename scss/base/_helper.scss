@@ -5,21 +5,23 @@
 /*doc
 ---
 title: Clearfix
-category: Base - Helpers
+category: Helpers
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
 
-Micro Clearfix to clear floats. [http://nicolasgallagher.com/micro-clearfix-hack/](http://nicolasgallagher.com/micro-clearfix-hack/)
+Micro Clearfix to clear floats. [http://nicolasgallagher.com/micro-clearfix-hack/](http://nicolasgallagher.com/micro-clearfix-hack/){:rel="external"}
 
-Les divs interieurs contient sont des float.
-
+Les divs interieurs contient sont des float.  
 Deux moyens pour l'utiliser
 
-* CSS: `.clearfix`
-* SCSS: `@extend %clearfix`
+| Exemple    | CSS          |
+| ---------- | ------------ |
+| HTML       | <div class="clearfix"></div> |
+| HTML Emmet | div.clearfix |
+| SCSS       |.custom {<br/>&nbsp;&nbsp;@extend %clearfix;<br/> } |
 
 ```html
   <div class="clearfix">
@@ -50,16 +52,25 @@ Deux moyens pour l'utiliser
 /*doc
 ---
 title: A11Y
-category: Base - Helpers
+category: Helpers
+notes:
+  - ([RGAA - Critère 10.13 [A] Pour chaque page web, les textes cachés sont-ils correctement affichés pour être restitués par les technologies d'assistance ?](https://references.modernisation.gouv.fr/critere-1013-pour-chaque-page-web-les-textes-caches-sont-ils-correctement-affiches-pour-etre-0))
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
 
-La classe CSS `.a11y` ou `.element-invisible` permet de cacher un texte de manière accessible.
+La classe CSS `.a11y` ou `.element-invisible` permet de cacher un texte de manière accessible.  
+Le contenu reste visible pour les robots et assistants.
 
-Conforme avec le référentiel d'accessibilité RGAA.
+**Conforme avec le référentiel d'accessibilité RGAA.**
+
+```html
+  <div class="a11y">
+    <p>Texte caché</p>
+  </div>
+````
 
 */
 
@@ -81,7 +92,7 @@ Conforme avec le référentiel d'accessibilité RGAA.
 ---
 show: false
 title: Inline-block (Elements)
-category: Base - Helpers
+category: Helpers
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -102,34 +113,11 @@ versionning:
 .abottom { vertical-align: bottom; }
 .amiddle { vertical-align: middle; }
 
-
-.frame {
-  border: 1px solid $color-grey-lighter;
-  margin-bottom: 1.5em;
-  padding: 1em;
-
-  p,
-  h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  &__action a {
-    margin-top: .5em;
-  }
-
-  @include mq("smaller") {
-    &__action a + a {
-      margin-lef: .5em;
-    }
-  }
-}
-
 /*doc
 ---
 show: false
 title: Hide Elements
-category: Base - Helpers
+category: Helpers
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -156,7 +144,7 @@ versionning:
 /*doc
 ---
 title: Espacements
-category: Base - Helpers
+category: Helpers
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
