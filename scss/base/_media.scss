@@ -68,7 +68,7 @@ versionning:
 
   <div>
     <img src="http://lorempixel.com//825/400/animals/2" alt="Some animals image" />
-    <div class="legende">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    <div class="legend">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
   </div>
 ```
 
@@ -119,7 +119,7 @@ versionning:
 
 /*doc
 ---
-title: Video Responsive
+title: Embed Responsive
 category: Base
 versionning:
 - version: 1.0
@@ -127,7 +127,8 @@ versionning:
   owner: Axel Roche
 ---
 
-La classe `.wrapper-media` permet d'afficher une iframe, video en responsive. Il faudra ajouter une `div` wrapper autour du composant à rendre responsive.
+La classe `.wrapper-media` permet d'afficher une iframe, video en responsive.  
+Il faudra ajouter une `div` wrapper autour du composant à rendre responsive.
 
 ```html
   <div class="media-wrapper">
