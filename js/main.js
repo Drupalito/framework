@@ -99,10 +99,10 @@ var framework = {
       });
     }
   },
-  complementary: function() {
-    var selector = '.complementary .block__title';
-    var complementaryToggle = document.querySelectorAll(selector);
-    if (complementaryToggle.length > 0) {
+  titleCollapse: function(element) {
+    var selector = element + ' .block__title';
+    var titleCollapseToggle = document.querySelectorAll(selector);
+    if (titleCollapseToggle.length > 0) {
       complementaryToggle.forEach(function(complementary) {
         complementary.addEventListener('click', function() {
           this.classList.toggle('is-active');
@@ -119,7 +119,7 @@ var framework = {
   $(document).on('ready', function () {
 
     framework.init();
-    framework.complementary();
+    framework.titleCollapse('.complementary');
   });
 
   // $(window).on(
