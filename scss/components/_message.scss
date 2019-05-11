@@ -447,11 +447,11 @@ versionning:
 ---
 
 ```html
-  <p class="text text--muted mvn">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, magni voluptatum, earum porro asperiores, quam quos dolorum quia quae quod laborum consequuntur. Laboriosam voluptates ex minus quidem a non officiis.</p>
-  <p class="text text--info mvn">Lorem ipsum dolor sit amet.</p>
-  <p class="text text--error mvn">Lorem ipsum dolor sit amet.</p>
-  <p class="text text--warning mvn">Lorem ipsum dolor sit amet.</p>
-  <p class="text text--status mvn">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--muted my-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, magni voluptatum, earum porro asperiores, quam quos dolorum quia quae quod laborum consequuntur. Laboriosam voluptates ex minus quidem a non officiis.</p>
+  <p class="text text--info my-0">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--error my-0">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--warning my-0">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--status my-0">Lorem ipsum dolor sit amet.</p>
 ```
 */
 
@@ -468,11 +468,11 @@ versionning:
 Combine `.text` with `.text--icon` and icon `.i-info`
 
 ```html
-  <p class="text text--muted mvn text--icon i-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, magni voluptatum, earum porro asperiores, quam quos dolorum quia quae quod laborum consequuntur. Laboriosam voluptates ex minus quidem a non officiis.</p>
-  <p class="text text--info mvn text--icon i-info">Lorem ipsum dolor sit amet.</p>
-  <p class="text text--error mvn text--icon i-error">Lorem ipsum dolor sit amet.</p>
-  <p class="text text--warning mvn text--icon i-warning">Lorem ipsum dolor sit amet.</p>
-  <p class="text text--status mvn text--icon i-check">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--muted my-0 text--icon i-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, magni voluptatum, earum porro asperiores, quam quos dolorum quia quae quod laborum consequuntur. Laboriosam voluptates ex minus quidem a non officiis.</p>
+  <p class="text text--info my-0 text--icon i-info">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--error my-0 text--icon i-error">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--warning my-0 text--icon i-warning">Lorem ipsum dolor sit amet.</p>
+  <p class="text text--status my-0 text--icon i-check">Lorem ipsum dolor sit amet.</p>
 
   <p class="ok">Lorem ipsum dolor sit amet.</p>
   <p class="warning">Lorem ipsum dolor sit amet.</p>

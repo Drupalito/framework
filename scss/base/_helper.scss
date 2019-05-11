@@ -25,8 +25,8 @@ Deux moyens pour l'utiliser
 
 ```html
   <div class="clearfix">
-    <p class="pull-left mvn">Paragraphe gauche</p>
-    <p class="pull-right mvn">Paragraphe droite</p>
+    <p class="pull-left my-0">Paragraphe gauche</p>
+    <p class="pull-right my-0">Paragraphe droite</p>
   </div>
 ```
 
@@ -189,7 +189,7 @@ Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des ex
 */
 
 // scss-lint:disable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
-.ptn, .pvn, .pan { padding-top: 0 !important; }
+.ptn, .py-0, .pvn, .pan { padding-top: 0 !important; }
 .pts, .pvs, .pas { padding-top: round($base-line-height / 4) !important; }
 .ptm, .pvm, .pam { padding-top: round($base-line-height / 2) !important; }
 .ptl, .pvl, .pal { padding-top: $base-line-height !important; }
@@ -197,7 +197,7 @@ Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des ex
 .prs, .phs, .pas { padding-right: round($grid-gutter-width / 4) !important; }
 .prm, .phm, .pam { padding-right: round($grid-gutter-width / 2) !important; }
 .prl, .phl, .pal { padding-right: $grid-gutter-width !important; }
-.pbn, .pvn, .pan { padding-bottom: 0 !important; }
+.pbn, .py-0, .pvn, .pan { padding-bottom: 0 !important; }
 .pbs, .pvs, .pas { padding-bottom: round($base-line-height / 4) !important; }
 .pbm, .pvm, .pam { padding-bottom: round($base-line-height / 2) !important; }
 .pbl, .pvl, .pal { padding-bottom: $base-line-height !important; }
@@ -205,7 +205,7 @@ Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des ex
 .pls, .phs, .pas { padding-left: round($grid-gutter-width / 4) !important; }
 .plm, .phm, .pam { padding-left: round($grid-gutter-width / 2) !important; }
 .pll, .phl, .pal { padding-left: $grid-gutter-width !important; }
-.mtn, .mvn, .man { margin-top: 0 !important; }
+.mt-0, .mtn, .my-0, .mvn, .man { margin-top: 0 !important; }
 .mts, .mvs, .mas { margin-top: round($base-line-height / 4) !important; }
 .mtm, .mvm, .mam { margin-top: round($base-line-height / 2) !important; }
 .mtl, .mvl, .mal { margin-top: $base-line-height !important; }
@@ -213,7 +213,7 @@ Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des ex
 .mrs, .mhs, .mas { margin-right: round($grid-gutter-width / 4) !important; }
 .mrm, .mhm, .mam { margin-right: round($grid-gutter-width / 2) !important; }
 .mrl, .mhl, .mal { margin-right: $grid-gutter-width !important; }
-.mbn, .mvn, .man { margin-bottom: 0 !important; }
+.mb-0, .mbn, .my-0, .mvn, .man { margin-bottom: 0 !important; }
 .mbs, .mvs, .mas { margin-bottom: round($base-line-height / 4) !important; }
 .mbm, .mvm, .mam { margin-bottom: round($base-line-height / 2) !important; }
 .mbl, .mvl, .mal { margin-bottom: $base-line-height !important; }
@@ -221,6 +221,11 @@ Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des ex
 .mls, .mhs, .mas { margin-left: round($grid-gutter-width / 4) !important; }
 .mlm, .mhm, .mam { margin-left: round($grid-gutter-width / 2) !important; }
 .mll, .mhl, .mal { margin-left: $grid-gutter-width !important; }
+
+.mt-auto, .mx-auto { margin-top: auto !important; }
+.mr-auto, .my-auto { margin-right: auto !important; }
+.mb-auto, .mx-auto { margin-bottom: auto !important; }
+.ml-auto, .my-auto { margin-left: auto !important; }
 // scss-lint:enable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
 
 //

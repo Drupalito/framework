@@ -31,8 +31,8 @@ versionning:
 
 ```html
   <div class="pagination mtl clearfix">
-    <h2 class="pagination__title h5 mvn">Page 2 sur 5</h2>
-    <ul class="pagination__list list-inline mvn">
+    <h2 class="pagination__title h5 my-0">Page 2 sur 5</h2>
+    <ul class="pagination__list list-inline my-0">
       <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Aller à la page précédente (1 sur 5)"><span aria-hidden="true" class="mrs fa fa-chevron-left"></span> Précédente</a></li>
       <li class="pagination__item"><a rel="noindex follow" class="pagination__link" href="#" title="Aller à la page 1 sur 5">1</a></li>
       <li class="pagination__item pagination--current"><strong>2</strong></li>
@@ -58,8 +58,8 @@ versionning:
 
 ```html
   <div class="pagination pagination--small mtl clearfix">
-    <h2 class="pagination__title h5 mvn">Page 2 sur 5</h2>
-    <ul class="pagination__list list-inline mvn">
+    <h2 class="pagination__title h5 my-0">Page 2 sur 5</h2>
+    <ul class="pagination__list list-inline my-0">
       <li class="pagination__item"><a class="pagination__link pagination__prev" rel="prev" href="#" title="Aller à la page précédente (1 sur 5)"><span aria-hidden="true" class="mrs fa fa-chevron-left"></span> Précédente</a></li>
       <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Aller à la page suivante (3 sur 5)">Suivante <span aria-hidden="true" class="mls fa fa-chevron-right"></span></a></li>
     </ul>
@@ -67,8 +67,8 @@ versionning:
 ```
 
   <div class="pagination pagination--small mtl clearfix">
-    <h2 class="pagination__title h5 mvn">Page 1 sur 5</h2>
-    <ul class="pagination__list list-inline mvn">
+    <h2 class="pagination__title h5 my-0">Page 1 sur 5</h2>
+    <ul class="pagination__list list-inline my-0">
       <li class="pagination__item"><a class="pagination__link pagination__next" rel="next" href="#" title="Aller à la page suivante (2 sur 5)">Suivante <span aria-hidden="true" class="mls fa fa-chevron-right"></span></a></li>
     </ul>
   </div>
