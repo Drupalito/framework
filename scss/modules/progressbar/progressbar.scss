@@ -4,13 +4,21 @@
 
 /*doc
 ---
-title: Progress bar
-category: Components - Progress bar
+title: Barre de progression
+category: Components
+keywords:
+  - Progress bar
+  - Progressbar
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Barre de progression" -->
 
 ```html
   <div class="progress" id="progress">
@@ -23,6 +31,10 @@ versionning:
     </div>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

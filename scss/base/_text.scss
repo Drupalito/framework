@@ -4,15 +4,16 @@
 
 /*doc
 ---
-title: Typography
-category: Typography
+title: Typographie
+category: Typographie
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
 
-Class CSS spécifiques pour gérer la typographie. Peut être utilisé pour le WYSIWYG.
+Class CSS spécifiques pour gérer la typographie.  
+Peut être utilisé pour le WYSIWYG.
 
 |Key | Example | Code |
 |----|---------|------|
@@ -74,7 +75,7 @@ Class CSS spécifiques pour gérer la typographie. Peut être utilisé pour le W
 /*doc
 ---
 title: Taille
-category: Typography
+category: Typographie
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -120,8 +121,8 @@ Class CSS spécifiques pour gérer rapidement une taille.
 
 /*doc
 ---
-title: Text alignment
-category: Typography
+title: Alignement du texte
+category: Typographie
 similarTo: Bootstrap4
 notes: 
   - ([RGAA - Critère 10.9 [AAA] Pour chaque page web, le texte ne doit pas être justifié.](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-10-9))
@@ -135,7 +136,7 @@ versionning:
 La justification n'est pas disponible car interdite en accessibilité pour des questions de lisibilité.  
 Ou alors, la justication doit être contrôlable par l'utilisateur.
 
-**Peut être décliné en mode responsive avec les préfixes `xs-`, `sm-`, `md-` et `lg-`.**
+**Peut être décliné en mode responsive avec les préfixes `xs-*`, `sm-*`, `md-*` et `lg-*`.**
 
 Class CSS à utiliser:
 
@@ -189,7 +190,7 @@ Class CSS à utiliser:
 /*doc
 ---
 title: Blocs flottant
-category: Typography
+category: Typographie
 similarTo: Bootstrap4
 versionning:
 - version: 1.0
@@ -215,7 +216,7 @@ versionning:
 /*doc
 ---
 title: Blocs incrustations
-category: Typography
+category: Typographie
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -270,8 +271,8 @@ Les espacements seront effectués.
 
 /*doc
 ---
-title: List reset
-category: Typography
+title: Liste neutre
+category: Typographie
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -281,6 +282,10 @@ versionning:
 * Fonctionne avec `ul` et `ol`
 * Supprime la puce et le `padding-left`
 
+<!-- examples -->
+
+<!-- exampleFor: "Liste neutre" -->
+
 ```html
   <ul class="list-none">
     <li>Item One</li>
@@ -288,6 +293,10 @@ versionning:
     <li>Item Three</li>
   </ul>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 .list-none,
@@ -297,8 +306,8 @@ versionning:
 
 /*doc
 ---
-title: List inline
-category: Typography
+title: Liste en ligne
+category: Typographie
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -308,7 +317,11 @@ versionning:
 `list-inline` ou `list-float`
 
 * Fonctionne avec `ul` et `ol`
-* Etendu à `.list-none`
+* Étendu à `.list-none`
+
+<!-- examples -->
+
+<!-- exampleFor: "Liste en ligne" -->
 
 ```html
   <ul class="list-inline">
@@ -318,6 +331,10 @@ versionning:
   </ul>
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 .list-inline {
   @include list-inline;
@@ -325,8 +342,8 @@ versionning:
 
 /*doc
 ---
-title: List separate
-category: Typography
+title: Liste séparation
+category: Typographie
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -336,6 +353,10 @@ versionning:
 * Fonctionne avec `ul` et `ol`
 * Fonctionne couplé avec la class CSS `.list-inline`
 
+<!-- examples -->
+
+<!-- exampleFor: "Liste séparation" -->
+
 ```html
   <ul class="list-inline list-separate">
     <li>Item One</li>
@@ -343,6 +364,10 @@ versionning:
     <li>Item Three</li>
   </ul>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 .list-separate {
@@ -352,7 +377,7 @@ versionning:
 /*doc
 ---
 title: Definition
-category: Typography
+category: Typographie
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -360,6 +385,10 @@ versionning:
 ---
 
 Mettre en forme une liste de mot avec une description (exemple: clé / valeur.)
+
+<!-- examples -->
+
+<!-- exampleFor: "Définition" -->
 
 ```html
   <dl>
@@ -372,19 +401,12 @@ Mettre en forme une liste de mot avec une description (exemple: clé / valeur.)
   </dl>
 ```
 
-*/
+<!-- /exampleFor -->
 
-/*doc
----
-title: Definition horizontale
-category: Typography
-versionning:
-- version: 1.0
-  update: 2017-12-23T10:00:00Z
-  owner: Axel Roche
----
+<!-- exampleFor: "Définition horizontale" -->
 
-Termes et des descriptions `<dl>` aligneés côte à côte. Se déplie horizontalement en version responsive xs.
+Termes et descriptions sont aligneés côte à côte.  
+**Se déplie horizontalement en version responsive `xs`.**
 
 ```html
   <dl class="definition-inline">
@@ -396,6 +418,10 @@ Termes et des descriptions `<dl>` aligneés côte à côte. Se déplie horizonta
     <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
   </dl>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

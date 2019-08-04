@@ -2,7 +2,7 @@
 /*doc
 ---
 title: Complementary
-category: Layout - Pre footer
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -11,11 +11,11 @@ versionning:
 
 ```html
   <div class="page-complementary complementary">
-    <footer id="complementary" role="complementary" class="container">
+    <div id="complementary" role="complementary" class="container">
       <div class="row">
-        ...
+        [REGION_COMPLEMENTARY]
       </div>
-    </footer>
+    </div>
   </div>
 ```
 

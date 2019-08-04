@@ -10,9 +10,14 @@ versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
 Default Style CSS
+
+<!-- examples -->
+
+<!-- exampleFor: "Field label inline" -->
 
 ```html
   <div class="field field--label-inline">
@@ -20,6 +25,21 @@ Default Style CSS
     <div class="field-items">In faucibus feugiat urna sit amet elementum. Integer consequat rhoncus libero, in molestie augue posuere et. Phasellus ac eleifend magna. Proin vulputate dui ac justo pharetra consequat. In vel iaculis ligula.</div>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Field label above" -->
+
+```html
+  <div class="field field--label-above">
+    <div class="field-label">Lorem Ipsum</div>
+    <div class="field-items">In faucibus feugiat urna sit amet elementum. Integer consequat rhoncus libero, in molestie augue posuere et. Phasellus ac eleifend magna. Proin vulputate dui ac justo pharetra consequat. In vel iaculis ligula.</div>
+  </div>
+```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -52,24 +72,3 @@ Default Style CSS
     margin-bottom: rhythm(.5);
   }
 }
-
-/*doc
----
-title: Field label above
-category: Module - Field
-versionning:
-- version: 1.0
-  update: 2017-12-23T10:00:00Z
-  owner: Axel Roche
----
-
-Default Style CSS
-
-```html
-  <div class="field field--label-above">
-    <div class="field-label">Lorem Ipsum</div>
-    <div class="field-items">In faucibus feugiat urna sit amet elementum. Integer consequat rhoncus libero, in molestie augue posuere et. Phasellus ac eleifend magna. Proin vulputate dui ac justo pharetra consequat. In vel iaculis ligula.</div>
-  </div>
-```
-
-*/

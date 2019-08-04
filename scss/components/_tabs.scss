@@ -1,0 +1,33 @@
+
+// @file: _tabs.scss
+// Block de recherche par défault.
+
+/*doc
+---
+title: Tabs
+category: Components
+versionning:
+- version: 1.0
+  update: 2019-12-23T10:00:00Z
+  owner: Axel Roche
+---
+
+```html
+
+```
+
+*/
+
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
+}
+.fade.show {
+  opacity: 1;
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}

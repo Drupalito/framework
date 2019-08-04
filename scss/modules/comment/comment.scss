@@ -5,21 +5,26 @@
 /*doc
 ---
 title: Comment
-category: Module - Comment
+category: Module
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
 Default Style CSS
+
+<!-- examples -->
+
+<!-- exampleFor: "Comment" -->
 
 ```html
   <div class="comment" id="comment">
     <div>
       <div class="comment__header">
         <p class="my-0">
-          <span class="mrm"><span class="user-picture"><a href="#"><img src="http://placehold.it/85" width="85" height="85" /></a></span></span>
+          <span class="mr-2"><span class="user-picture"><a href="#"><img src="http://placehold.it/85" width="85" height="85" /></a></span></span>
           <span class="inbl amiddle"><cite ><span class="bold"><a href="#" class="username">admin12</a></span></cite><br /><time class="small" datetime="2016-02-27T20:37:49+01:00">Sat, 02/27/2016 - 20:37</time></span>
         </p>
       </div>
@@ -29,6 +34,10 @@ Default Style CSS
     </div>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

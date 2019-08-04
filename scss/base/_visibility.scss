@@ -1,0 +1,57 @@
+
+// @file: _visibility.scss
+// Classe CSS pour gérer la visibilité des blocs
+
+//
+// Responsive: Visibility classes
+// => Bootstrap like
+// --------------------------------------------------
+
+// scss-lint:disable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg,
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+
+@media (max-width: $screen-xs-max) {
+  .hidden-xs { display: none !important; }
+  .visible-xs,
+  .visible-xs-block { display: block !important; }
+  .visible-xs-inline-block { display: inline-block !important; }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .hidden-sm { display: none !important; }
+  .visible-sm,
+  .visible-sm-block { display: block !important; }
+  .visible-sm-inline-block { display: inline-block !important; }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .hidden-md { display: none !important; }
+  .visible-md,
+  .visible-md-block { display: block !important; }
+  .visible-md-inline-block { display: inline-block !important; }
+}
+
+@media (min-width: $screen-lg-min) {
+  .hidden-lg { display: none !important; }
+  .visible-lg,
+  .visible-lg-block { display: block !important; }
+  .visible-lg-inline-block { display: inline-block !important; }
+}
+// scss-lint:enable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks

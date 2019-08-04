@@ -2,34 +2,37 @@
 /*doc
 ---
 title: Page
-category: Layout - Layer
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
 
+Structure de la page par défaut
+
 ```html
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
-  <titlte>TITRE_DE_LA_PAGE</title>
+  <titlte>[TITRE_DE_LA_PAGE]</title>
 </head>
 <body>
-  ...
+  [SKIPLINKS]
   <div id="page" class="page">
-    ... header
-    ... navigation
+    [REGION_BANNER]
+    [REGION_NAVIGATION]
     <div id="container" class="container clearfix">
-      ... aside left
+      [REGION_ASIDE_LEFT]
       <div id="content" class="content">
         <main id="main" class="main" role="main">
-          ...
+          [REGION_MAIN_CONTENT]
         </main>
       </div>
-      ... aside right
+      [REGION_ASIDE_RIGHT]
     </div>
-    ... footer
+    [REGION_COMPLEMENTARY]
+    [REGION_CONTENTINFO]
   </div>
 </body>
 </html>
@@ -56,12 +59,16 @@ versionning:
 /*doc
 ---
 title: Main header
-category: Layout - Layer
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Main header avec menu" -->
 
 ```html
   <main id="main" class="main" role="main">
@@ -73,8 +80,52 @@ versionning:
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
+    <div class="main__content">
+      [CONTENT]
+    </div>
   </main>
 ```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Main header avec description" -->
+
+```html
+  <main id="main" class="main" role="main">
+    <div class="main__header">
+      <h1 class="main__title">Lorem ipsum dolor sit</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+    </div>
+    <div class="main__content">
+      [CONTENT]
+    </div>
+  </main>
+```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Main header avec description et menu" -->
+
+```html
+  <main id="main" class="main" role="main">
+    <div class="main__header">
+      <h1 class="main__title">Lorem ipsum dolor sit</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+      <ul class="primary">
+        <li class="active"><a href="#">View<span class="a11y">(active tab)</span></a></li>
+        <li><a href="#">Profil</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="main__content">
+      [CONTENT]
+    </div>
+  </main>
+```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -85,6 +136,7 @@ versionning:
 
     + * {
       margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -93,6 +145,6 @@ versionning:
     padding-bottom: rhythm(0.5);
     border-bottom: 1px solid $color-grey-lighter;
   }
-}
 
-.main__description{ margin-top:.25em; }
+  &__description{ margin-top:.25em; }
+}

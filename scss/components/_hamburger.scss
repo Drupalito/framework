@@ -15,34 +15,56 @@ versionning:
 Le code du `button` hamburger provient de [Jonathan Suh](https://jonsuh.com/hamburgers/){:rel="external"}  
 Le code implanté ici peut être étendu.
 
+<!-- examples -->
+
+<!-- exampleFor: "Hamburger" -->
+
 ```html
-  <!-- .hamburger--collapse -->
   <button class="hamburger hamburger--collapse" type="button" tabindex="0"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
   </button>
+```
 
-  <!-- .hamburger--collapse -->
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Hamburger + Texte" -->
+
+```html
   <button class="hamburger hamburger--collapse" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
     <span class="hamburger-label">Menu</span>
   </button>
+```
 
-  <!-- .hamburger--arrowalt -->
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Hamburger Arrow" -->
+
+```html
   <button class="hamburger hamburger--arrowalt" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
     <span class="hamburger-label">Menu</span>
   </button>
+```
 
-  <!-- .hamburger--arrowalt-r -->
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Hamburger Arrow Right" -->
+
+```html
   <button class="hamburger hamburger--arrowalt-r" type="button"
      aria-label="Menu" role="button" aria-controls="navigation">
     <span class="hamburger-label">Menu</span>
     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
   </button>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -74,7 +96,9 @@ Le code implanté ici peut être étendu.
   display: block;
   top: 50%;
   margin-top: -2px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     width: 40px;
     height: 4px;
     background-color: $body-color;
@@ -83,7 +107,8 @@ Le code implanté ici peut être étendu.
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     content: "";
     display: block; }
   .hamburger-inner::before {

@@ -2,7 +2,7 @@
 /*doc
 ---
 title: Contentinfo
-category: Layout - Footer
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -13,7 +13,7 @@ versionning:
   <div class="page-contentinfo contentinfo">
     <footer id="contentinfo" role="contentinfo" class="container">
       <div class="row">
-        ...
+        [REGION_CONTENTINFO]
       </div>
     </footer>
   </div>
@@ -24,13 +24,13 @@ versionning:
 .page-contentinfo {
   background: coloriz(primary, base);
   color: #fff;
-}
 
-.page-contentinfo a {
-  color: #fff;
-}
+  a {
+    color: #fff;
 
-.page-contentinfo a:hover,
-.page-contentinfo a:focus {
-  color: inherit;
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
 }

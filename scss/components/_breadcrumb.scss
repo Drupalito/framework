@@ -7,6 +7,7 @@
 title: Fil d'Ariane
 category: Components - Breadcrumb
 notes: 
+  - ([Atalan - Fil d’Ariane et accessibilité](https://blog.atalan.fr/fil-dariane-et-accessibilite-web/)
   - ([RGAA - Critère 12.8 [AAA] Dans chaque page web, un fil d'Ariane est-il présent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-8))
   - ([RGAA - Critère 12.9 [AAA] Dans chaque page web, le fil d'Ariane est-il pertinent ?](https://references.modernisation.gouv.fr/rgaa-accessibilite/criteres.html#crit-12-9))
   - ([OPQUAST - SEO - N°66 - Le site propose un fil d'Ariane.](https://checklists.opquast.com/seo/criteria/le-site-propose-un-fil-dariane))
@@ -14,9 +15,16 @@ versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
-Aide à la navigation, permet à l'utilisateur de connaitre de l'emplacement de la pages en cours.
+Aide à la navigation, toujours situé au même endroit, il indique la position courante de l'utilisateur, dans l’arborescence du site par rapport à la page d’accueil.
+
+<!-- examples -->
+
+<!-- exampleFor: "Fil d'Ariane" -->
+
+Aide à la navigation, toujours situé au même endroit, il indique la position courante de l'utilisateur, dans l’arborescence du site par rapport à la page d’accueil.
 
 ```html
   <div class="breadcrumb clearfix" id="breadcrumb">
@@ -28,6 +36,10 @@ Aide à la navigation, permet à l'utilisateur de connaitre de l'emplacement de 
     </p>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -48,9 +60,14 @@ versionning:
   owner: Axel Roche
 ---
 
-Les liens d'évitement facilitent la navigation au clavier, ils sont visibles lorsque la touche <kbd>tab</kbd> est utilisée. **Ils sont obligatoire.**
+Les liens d'évitement facilitent la navigation au clavier, ils sont visibles lorsque la touche <kbd>tab</kbd> est utilisée.  
+**Ils sont obligatoire.**
 
 Le code HTML doit être inséré juste après le `<body>` pour être efficace.
+
+<!-- examples -->
+
+<!-- exampleFor: "Liens d'évitement" -->
 
 ```html
   <p class="skiplinks" id="skiplinks">
@@ -58,6 +75,10 @@ Le code HTML doit être inséré juste après le `<body>` pour être efficace.
     <a href="#main">Contenu principal</a>
   </p>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

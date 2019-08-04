@@ -5,12 +5,16 @@
 /*doc
 ---
 title: Menu base
-category: Components - Menu base
+category: Components
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Menu base" -->
 
 ```html
   <ul>
@@ -36,6 +40,10 @@ versionning:
     </li>
   </ul>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -84,12 +92,16 @@ li.active-trail > a {
 /*doc
 ---
 title: Menu primaire
-category: Components - Menu primaire
+category: Components
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Menu primaire" -->
 
 ```html
   <ul class="primary">
@@ -115,6 +127,10 @@ versionning:
     </li>
   </ul>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -217,12 +233,16 @@ ul.primary ul li a:focus {
 /*doc
 ---
 title: Menu secondaire
-category: Components - Menu secondaire
+category: Components
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Menu secondaire" -->
 
 ```html
   <ul class="secondary">
@@ -248,6 +268,10 @@ versionning:
     </li>
   </ul>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

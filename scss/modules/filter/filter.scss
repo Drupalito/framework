@@ -5,14 +5,19 @@
 /*doc
 ---
 title: Filter
-category: Module - Filter
+category: Module
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
 Default Style CSS Drupal
+
+<!-- examples -->
+
+<!-- exampleFor: "Filter" -->
 
 ```html
   <fieldset class="filter-wrapper form-wrapper">
@@ -42,6 +47,10 @@ Default Style CSS Drupal
     </div>
   </fieldset>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

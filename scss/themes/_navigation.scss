@@ -2,7 +2,7 @@
 /*doc
 ---
 title: Navigation
-category: Layout - Layer
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -12,7 +12,7 @@ versionning:
 ```html
   <div class="navigation">
     <nav id="navigation" role="navigation" class="container clearfix">
-      ...
+      [CODE_MENU]
     </nav>
   </div>
 ```
@@ -21,13 +21,17 @@ versionning:
 
 /*doc
 ---
-title: Primary menu
-category: Layout - Menu
+title: Menu principal
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Menu principal" -->
 
 ```html
   <div od="block-system-main-menu">
@@ -38,6 +42,10 @@ versionning:
     </ul>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

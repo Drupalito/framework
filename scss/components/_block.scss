@@ -60,13 +60,17 @@ versionning:
 
 /*doc
 ---
-title: Block texte
+title: Block
 category: Component
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Block texte" -->
 
 ```html
   <div class="block block--views">
@@ -83,17 +87,9 @@ versionning:
   </div>
 ```
 
-*/
+<!-- /exampleFor -->
 
-/*doc
----
-title: Block menu
-category: Component
-versionning:
-- version: 1.0
-  update: 2017-12-23T10:00:00Z
-  owner: Axel Roche
----
+<!-- exampleFor: "Block menu" -->
 
 ```html
   <div class="block block--views block--menu">
@@ -129,69 +125,75 @@ versionning:
   </div>
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 
-.block__content ul.primary {
-  display: block;
-  position: relative;
-}
-.block__content ul.primary li {
-  display: block;
-  padding: 0;
-  border-bottom: 1px solid $color-grey-lighter;
-}
-.block__content ul.primary li:last-child {
-  border-bottom: 0;
-}
-.block__content ul.primary a,
-.block__content ul.primary li > span {
-  color: $body-color;
-  display: block;
-  line-height: 1.2em;
-  padding: 12px 25px 12px 15px;
-  position: relative;
-  border-bottom: 0;
-}
-.block__content ul.primary > li.expanded > a,
-.block__content ul.primary > li.expanded > span,
-.block__content ul.primary > li.collapsed > a,
-.block__content ul.primary > li.collapsed > span {
-  font-weight: bold;
-  font-style: normal;
-  text-transform: uppercase;
-}
-.block__content ul.primary li.collapsed>a:before,
-.block__content ul.primary li.expanded>a:before {
-  right: 1em;
-}
-.block__content ul.primary a:hover,
-.block__content ul.primary a:focus,
-.block__content ul.primary a.active {
-  border-left: 1px solid transparent;
-  background: coloriz(default, lighter);
-}
-.block__content ul.primary a:hover,
-.block__content ul.primary a:focus,
-.block__content ul.primary a:active {
-  border-left-color: coloriz(default, base);
-  outline: 1px dotted coloriz(default, base);
-}
-.block__content ul.primary a.active,
-.block__content ul.primary a.active:hover {
-  border-left-width: 2px;
-  border-left-color: coloriz(default, base);
-  color: $body-color;
-}
+.block__content {
+  ul.primary {
+    display: block;
+    position: relative;
+  }
+  ul.primary li {
+    display: block;
+    padding: 0;
+    border-bottom: 1px solid $color-grey-lighter;
+  }
+  ul.primary li:last-child {
+    border-bottom: 0;
+  }
+  ul.primary a,
+  ul.primary li > span {
+    color: $body-color;
+    display: block;
+    line-height: 1.2em;
+    padding: 12px 25px 12px 15px;
+    position: relative;
+    border-bottom: 0;
+  }
+  ul.primary > li.expanded > a,
+  ul.primary > li.expanded > span,
+  ul.primary > li.collapsed > a,
+  ul.primary > li.collapsed > span {
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  ul.primary li.collapsed>a:before,
+  ul.primary li.expanded>a:before {
+    right: 1em;
+  }
+  ul.primary a:hover,
+  ul.primary a:focus,
+  ul.primary a.active {
+    border-left: 1px solid transparent;
+    background: coloriz(default, lighter);
+  }
+  ul.primary a:hover,
+  ul.primary a:focus,
+  ul.primary a:active {
+    border-left-color: coloriz(default, base);
+    outline: 1px dotted coloriz(default, base);
+  }
+  ul.primary a.active,
+  ul.primary a.active:hover {
+    border-left-width: 2px;
+    border-left-color: coloriz(default, base);
+    color: $body-color;
+  }
 
-.block__content ul.primary ul {
-  display: block;
-  position: relative;
-  left: 0;
-}
-.block__content ul.primary a,
-.block__content ul.primary li>span {
-  background: #fff;
-}
-.block__content ul.primary ul {
-  width: auto;
+  ul.primary ul {
+    display: block;
+    position: relative;
+    left: 0;
+  }
+  ul.primary a,
+  ul.primary li>span {
+    background: #fff;
+  }
+  ul.primary ul {
+    width: auto;
+  }
 }

@@ -13,10 +13,11 @@
 
 // Base
 @import "base/reset";
-@import "base/color";
-@import "base/text";
-@import "base/media";
-@import "base/grid";
 @import "base/helper";
-@import "base/table";
+@import "base/media";
+@import "base/text";
 @import "base/form";
+@import "base/table";
+@import "base/grid";
+@import "base/spacings";
+@import "base/visibility";

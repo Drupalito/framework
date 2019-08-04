@@ -11,9 +11,14 @@ versionning:
 - version: 1.0
   update: 2018-10-12T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
 Default Style CSS
+
+<!-- examples -->
+
+<!-- exampleFor: "EU Cookie compilance" -->
 
 ```html
 
@@ -25,12 +30,15 @@ Default Style CSS
       </div>
       <div id="popup-buttons">
         <button type="button" class="btn btn--primary agree-button">J'accepte</button>
-        <button type="button" class="btn find-more-button">En savoir plus</button>
       </div>
     </div>
   </div>
 
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -43,6 +51,7 @@ Default Style CSS
   width: 100%;
   z-index: 99999;
   background: coloriz(default, base);
+  bottom: 0;
 }
 .sliding-popup-bottom {
   position: fixed;

@@ -4,15 +4,22 @@
 
 /*doc
 ---
-title: Poll
-category: Module - Poll
+title: Sondage
+category: Module
+keywords:
+  - poll
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
 Default Style CSS
+
+<!-- examples -->
+
+<!-- exampleFor: "Sondage" -->
 
 ```html
   <div class="poll-results">
@@ -34,11 +41,15 @@ Default Style CSS
         <div style="width: 70%;" class="foreground"></div>
       </div>
     </div>
-    <div class="poll-results__total mtm">
+    <div class="poll-results__total mt-3">
       <p class="bold">Total votes&nbsp;: 2</p>
     </div>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

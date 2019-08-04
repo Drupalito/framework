@@ -2,7 +2,7 @@
 /*doc
 ---
 title: Aside
-category: Layout - Layer
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -14,7 +14,7 @@ Combine `.aside` with the modifier `.aside--right`
 ```html
   <div class="complementary aside">
     <aside id="complementary" role="complementary">
-      ...
+      [REGION_ASIDE]
     </aside>
   </div>
 ```

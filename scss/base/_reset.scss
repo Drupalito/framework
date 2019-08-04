@@ -134,6 +134,7 @@ ol:first-child,
 dl:first-child,
 pre:first-child,
 blockquote:first-child,
+figure:first-child,
 table:first-child,
 h1:first-child,
 h2:first-child,
@@ -150,6 +151,7 @@ ol:last-child,
 dl:last-child,
 pre:last-child,
 blockquote:last-child,
+figure:last-child,
 table:last-child {
   margin-bottom: 0;
 }
@@ -208,6 +210,7 @@ abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
+  text-decoration-skip-ink: none;
 }
 
 dfn[title] {
@@ -220,15 +223,21 @@ dfn[title] {
 code,
 kbd,
 samp {
-  padding: 2px 4px;
+  padding: .125rem .25rem;
   line-height: normal;
   color: #a00c31;
 }
 
 kbd {
-  border: 1px dotted;
-  background: $body-color;
-  color: #fff;
+  font-family: Consolas, "Lucida Console", monospace;
+  display: inline-block;
+  border-radius: .25rem;
+  padding: 0 .25rem;
+  box-shadow: 1px 1px 1px $body-color;
+  background: #eee;
+  font-variant: small-caps;
+  user-select: none;
+  color: $body-color;
 }
 
 code {
@@ -257,8 +266,8 @@ dd {
 
 /*doc
 ---
-title: Ordered list and Unordered list
-category: Base - Base
+title: Listes ordonnées & non ordonnées
+category: Base
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -267,18 +276,34 @@ versionning:
 
 Style par défault des listes ordonnées (`<ol>`) et non ordonnées (`<ul>`).
 
+<!-- examples -->
+
+<!-- exampleFor: "Liste ordonnée" -->
+
 ```html
-  <ul>
-    <li>Unordered list test</li>
-    <li>Another list element. Lorem ipsum dolor sit amet, consectetur elit.</li>
-    <li>Yet another element in the list</li>
-    <li>Some long text. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-  </ul>
   <ol>
-    <li>Ordered list test</li>
-    <li>Another list element</li>
-    <li>Yet another element in the list</li>
+    <li>Ordered list</li>
+    <li>Another list element
+      <ol>
+        <li>Nested Unordered list</li>
+        <li>Nested ordered list</li>
+      </ol>
+    </li>
+    <li>Ordered List item</li>
+    <li>Nested Ordered list
+      <ol>
+        <li>Some point</li>
+        <li>Nested Unordered list</li>
+      </ol>
+    </li>
   </ol>
+```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Liste non ordonnée" -->
+
+```html
   <ul>
     <li>Ordered list</li>
     <li>Another list element
@@ -296,6 +321,10 @@ Style par défault des listes ordonnées (`<ol>`) et non ordonnées (`<ul>`).
     </li>
   </ul>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -323,7 +352,7 @@ ol {
 /*doc
 ---
 title: Address
-category: Base - Base
+category: Base
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -332,17 +361,28 @@ versionning:
 
 Mise en forme d'une adresse postale.
 
+<!-- examples -->
+
+<!-- exampleFor: "Adresse complète" -->
+
 ```html
   <address>
     <p>
       <strong>{{ site.OWNER_CONTACT }}</strong>, <a href="mailto:{{ site.OWNER_EMAIL }}">{{ site.OWNER_EMAIL }}</a><br/>
       {{ site.OWNER_ADDRESS }},<br/>
-      {{ site.OWNER_ADDRESS_CODE_POSTAL }} {{ site.OWNER_ADDRESS_LOCALITY (France)<br/>
+      {{ site.OWNER_ADDRESS_CODE_POSTAL }} {{ site.OWNER_ADDRESS_LOCALITY }} (France)<br/>
       <abbr title="Téléphone">Tél.</abbr> : {{ site.OWNER_PHONE }}<br/>
       <a href="{{ site.OWNER_URL }}">{{ site.OWNER_URL }}</a>
     </p>
   </address>
-  <address class="mtl">
+```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Adresse courte" -->
+
+```html
+  <address class="mt-4">
     <p>
       <strong>{{ site.OWNER_CONTACT }}</strong><br/>
       <a href="mailto:{{ site.OWNER_EMAIL }}">{{ site.OWNER_EMAIL }}</a><br/>
@@ -350,6 +390,10 @@ Mise en forme d'une adresse postale.
     </p>
   </address>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -368,7 +412,7 @@ hr {
 /*doc
 ---
 title: Blockquote
-category: Base - Base
+category: Base
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -377,11 +421,29 @@ versionning:
 
 Mise en forme par défault d'un bloc de citation.
 
+<!-- examples -->
+
+<!-- exampleFor: "Bloc de citation" -->
+
 ```html
   <blockquote>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</p>
   </blockquote>
 ```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Bloc de citation avec référence" -->
+
+Mise en forme par défault d'un bloc de citation avec auteur.
+
+```html
+  <blockquote>Those people who think they know everything are a great annoyance to those of us who do.<cite>Isaac Asimov</cite></blockquote>
+```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -391,24 +453,6 @@ blockquote {
   border-left: 1.5em solid; /* LTR */
   clear: both;
 }
-
-/*doc
----
-title: Blockquote cite
-category: Base - Base
-versionning:
-- version: 1.0
-  update: 2017-12-23T10:00:00Z
-  owner: Axel Roche
----
-
-Mise en forme par défault d'un bloc de citation avec auteur.
-
-```html
-  <blockquote>Those people who think they know everything are a great annoyance to those of us who do.<cite>Isaac Asimov</cite></blockquote>
-```
-
-*/
 
 blockquote {
   @include italic;
@@ -450,7 +494,7 @@ samp {
 /*doc
 ---
 title: Quotes
-category: Base - Base
+category: Base
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -459,6 +503,10 @@ versionning:
 
 Mise en forme par défault d'une citation en ligne suivant la langue définie.
 
+<!-- examples -->
+
+<!-- exampleFor: "Citations en ligne" -->
+
 ```html
   <p lang="en"><q>EN: Eius, natus vitae similique impedit quod dolor</q></p>
   <p lang="de"><q>DE: Eius, natus vitae similique impedit quod dolor</q></p>
@@ -466,6 +514,10 @@ Mise en forme par défault d'une citation en ligne suivant la langue définie.
   <p lang="es"><q>ES: Eius, natus vitae similique impedit quod dolor</q></p>
   <p lang="it"><q>IT: Eius, natus vitae similique impedit quod dolor</q></p>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -513,3 +565,14 @@ q { quotes: "\201C" "\201D" "\2018" "\2019"; }
 // // scss-lint:enable VendorPrefix
 
 // scss-lint:enable QualifyingElement
+
+// Correct element displays
+output {
+  display: inline-block;
+}
+
+// 1. Add the correct display in all browsers
+summary {
+  display: list-item; // 1
+  cursor: pointer;
+}

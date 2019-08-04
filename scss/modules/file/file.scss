@@ -5,12 +5,17 @@
 /*doc
 ---
 title: File Manager
-category: Module - File Manager
+category: Module
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "File Manager" -->
 
 ```html
   <div class="form-item form-type--managed-file">
@@ -23,6 +28,10 @@ versionning:
     <small class="description show">Les fichiers doivent peser moins de <strong>2 Mo</strong>.<br/>Extensions autorisées : <strong>png gif jpg jpeg</strong>.</small>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

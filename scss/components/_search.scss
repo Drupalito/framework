@@ -4,13 +4,17 @@
 
 /*doc
 ---
-title: Search
+title: Recherche simple box
 category: Module - Search
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Recherche simple box" -->
 
 ```html
   <div id="search" class="search">
@@ -20,17 +24,25 @@ versionning:
   </div>
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 
 /*doc
 ---
-title: Search Advanced
+title: Recherche avancée
 category: Module - Search
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Recherche avancée" -->
 
 ```html
   <div id="search" class="search search--advanced">
@@ -40,14 +52,20 @@ versionning:
   </div>
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 
 .search--advanced {
   .btn {
+    padding-left: 0!important;
+    padding-right: 0!important;
     height: 4rem !important;
     width: 9rem;
     line-height: 1;
-    font-size: 120%;
+    font-size: 150%;
 
     &:before {
       content: "";

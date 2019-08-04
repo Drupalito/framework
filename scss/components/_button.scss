@@ -10,6 +10,43 @@ versionning:
 - version: 1.0
   update: 2019-05-01T10:00:00Z
   owner: Axel Roche
+components:
+  block: btn
+  modifiers:
+    - id: Colors
+      items:
+      - title: Message d'information
+        class: btn--default
+      - title: Message d'information
+        class: btn--primary
+      - title: Message d'information
+        class: btn--secondary
+      - title: Message d'information
+        class: btn--outline-light
+      - title: Message d'information
+        class: btn--outline-default
+      - title: Message d'information
+        class: btn--outline-primary
+      - title: Message d'information
+        class: btn--outline-secondary
+    - id: Sizes
+      items:
+      - title: Message d'information
+        class: btn--size-xs
+      - title: Message d'information
+        class: btn--size-sm
+      - title: Message d'information
+        class: btn--size-md
+      - title: Message d'information
+        class: btn--size-lg
+    - id: States
+      items:
+      - title: Message d'information
+        class: btn--active
+      - title: Message d'information
+        class: btn--disabled
+      - title: Message d'information
+        class: btn--block
 ---
 
 * Base button style.
@@ -200,16 +237,34 @@ Couleurs disponibles.
   @include btn-outline(#fff, 'light');
 }
 
-
 /*doc
 ---
-title: Button actif
+title: Button states
 category: Components
 versionning:
 - version: 1.0
   update: 2019-05-01T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Bouton block" -->
+
+* `.btn--block` - Bouton block
+
+```html
+  <button class="btn btn--block">btn</button>
+
+  <button class="btn btn--default btn--block">btn--default</button>
+
+  <button class="btn btn--primary btn--block">btn--primary</button>
+
+  <button class="btn btn--secondary btn--block">btn--secondary</button>
+```
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Bouton actif" -->
 
 * `.btn--active` - Bouton état actif
 
@@ -238,17 +293,9 @@ versionning:
   <input name="submit" class="btn btn--secondary active" type="submit" value="btn--secondary" />
 ```
 
-*/
+<!-- /exampleFor -->
 
-/*doc
----
-title: Button désactivé
-category: Components
-versionning:
-- version: 1.0
-  update: 2019-05-01T10:00:00Z
-  owner: Axel Roche
----
+<!-- exampleFor: "Bouton désactivé" -->
 
 * `.btn--disabled` - Bouton désactivé
 
@@ -277,6 +324,10 @@ versionning:
   <input name="submit" class="btn btn--secondary btn--disabled" type="submit" value="btn--secondary" />
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 
 .btn[disabled],
@@ -290,29 +341,6 @@ versionning:
   white-space: normal;
 }
 
-/*doc
----
-title: Button bloc
-category: Components
-versionning:
-- version: 1.0
-  update: 2019-05-01T10:00:00Z
-  owner: Axel Roche
----
-
-* `.btn--block` - Bouton block
-
-```html
-  <button class="btn btn--block">btn</button>
-
-  <button class="btn btn--default btn--block">btn--default</button>
-
-  <button class="btn btn--primary btn--block">btn--primary</button>
-
-  <button class="btn btn--secondary btn--block">btn--secondary</button>
-```
-
-*/
 .btn--block {
   display: block;
   width: 100%;

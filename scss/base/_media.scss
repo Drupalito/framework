@@ -12,16 +12,36 @@ versionning:
   owner: Axel Roche
 ---
 
-La classe `.img-responsive` permet de rendre une image pour s'adapter aux devices.
+La classe `.img-responsive` permet de rendre une image pour s'adapter aux devices.  
 `.img-full` permet de rendre une image sur 100% de sa largeur.
 
+<!-- examples -->
+
+<!-- exampleFor: "Class .img-responsive" -->
+
 ```html
-  <img alt="" class="img-responsive" src="http://lorempixel.com//825/400/animals/1" />
-
-  <img alt="" class="img-full" src="http://lorempixel.com//825/400/animals/1" />
-
-  <img alt="" class="img-responsive img-full" src="http://lorempixel.com//825/400/animals/1" />
+  <img alt="" class="img-responsive" src="http://lorempixel.com//200/200/animals/1" />
 ```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Class .img-full" -->
+
+```html
+  <img alt="" class="img-full" src="http://lorempixel.com//200/200/animals/1" />
+```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Class .img-responsive.img-full" -->
+
+```html
+  <img alt="" class="img-responsive img-full" src="http://lorempixel.com//200/200/animals/1" />
+```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -33,6 +53,12 @@ video {
   vertical-align: middle; // Supprime l'espace indésirable appraissant sous les images
   height: auto; // to keep aspect ratio
   width: auto; // bugfix IE8
+}
+
+// Workaround for the SVG overflow bug in IE 11 is still required.
+// See https://github.com/twbs/bootstrap/issues/26878
+svg {
+  overflow: hidden;
 }
 
 a img,
@@ -60,17 +86,31 @@ versionning:
   owner: Axel Roche
 ---
 
+<!-- examples -->
+
+<!-- exampleFor: "Légende html5 classique" -->
+
 ```html
   <figure>
     <img src="http://lorempixel.com//825/400/animals/2" alt="Some animals image" />
     <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
   </figure>
+```
 
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Légende classique" -->
+
+```html
   <div>
     <img src="http://lorempixel.com//825/400/animals/2" alt="Some animals image" />
     <div class="legende">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
@@ -89,6 +129,10 @@ versionning:
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
 ---
+
+<!-- examples -->
+
+<!-- exampleFor: "Thumbnails" -->
 
 ```html
   <div class="row">
@@ -115,12 +159,24 @@ versionning:
   </div>
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 
 /*doc
 ---
-title: Embed Responsive
+title: Wrapper Responsive
 category: Base
+keywords:
+  - wrapper
+  - responsive
+  - video
+  - iframe
+  - object
+  - embed
+  - wysiwyg
 versionning:
 - version: 1.0
   update: 2018-01-27T10:00:00Z
@@ -132,9 +188,49 @@ Il faudra ajouter une `div` wrapper autour du composant à rendre responsive.
 
 ```html
   <div class="media-wrapper">
+    ...
+  </div>
+```
+
+La classe `.wrapper-media` peut être ajouté à l'éditeur de texte (WYSIWYG) pour faciliter l'intégration du wrapper.
+
+<!-- examples -->
+
+<!-- exampleFor: "Iframe responsive" -->
+
+```html
+  <div class="media-wrapper">
     <iframe title="Title de la vidéo" width="1170" height="570" src="http://www.youtube.com/embed/2S79ZNV00HE" frameborder="0" allowfullscreen=""></iframe>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Object responsive" -->
+
+```html
+  <div class="media-wrapper">
+    <object title="Title de la vidéo" data="http://www.youtube.com/embed/2S79ZNV00HE" width="560" height="315"></object>
+  </div>
+```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Embed responsive" -->
+
+Deprecated
+
+```html
+  <div class="media-wrapper">
+    <embed title="Title de la vidéo" src="http://www.youtube.com/embed/2S79ZNV00HE" width="560" height="315">
+  </div>
+```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

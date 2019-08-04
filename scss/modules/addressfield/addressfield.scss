@@ -5,14 +5,19 @@
 /*doc
 ---
 title: Addressfield
-category: Module - Addressfield
+category: Module
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
 Default Style CSS
+
+<!-- examples -->
+
+<!-- exampleFor: "Addressfield" -->
 
 ```html
   <div id="addressfield-wrapper">
@@ -43,6 +48,10 @@ Default Style CSS
     </fieldset>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 

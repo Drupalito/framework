@@ -2,7 +2,7 @@
 /*doc
 ---
 title: Header
-category: Layout - Layer
+category: Layout
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -14,11 +14,12 @@ versionning:
     <header id="banner" role="banner" class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-4">
-          ...logo
+          [COMPONENT_LOGO]
+          [COMPONENT_BURGER]
         </div>
         <div class="col-xs-12 col-sm-8">
           <div class="branding">
-            ...menu principal
+            [COMPONENT_NAVIGATION]
           </div>
         </div>
       </div>

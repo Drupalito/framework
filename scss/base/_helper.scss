@@ -4,6 +4,42 @@
 
 /*doc
 ---
+show: false
+title: Couleurs
+category: Helpers
+versionning:
+- version: 1.0
+  update: 2017-12-23T10:00:00Z
+  owner: Axel Roche
+---
+
+Class CSS spécifiques pour gérer les couleurs.
+
+*/
+
+@each $name, $color in $colors {
+  .#{$name}-color { color: coloriz($name, base); }
+  .#{$name}-border { border-color: coloriz($name, base); }
+  .#{$name}-background {
+    background-color: coloriz($name, base);
+    color: #fff;
+  }
+  .#{$name}-background--lighter {
+    background-color: coloriz($name, lighter);
+    color: #fff;
+  }
+  .#{$name}-background--light {
+    background-color: coloriz($name, light);
+    color: #fff;
+  }
+  .#{$name}-background--dark {
+    background-color: coloriz($name, dark);
+    color: #fff;
+  }
+}
+
+/*doc
+---
 title: Clearfix
 category: Helpers
 versionning:
@@ -14,13 +50,12 @@ versionning:
 
 Micro Clearfix to clear floats. [http://nicolasgallagher.com/micro-clearfix-hack/](http://nicolasgallagher.com/micro-clearfix-hack/){:rel="external"}
 
-Les divs interieurs contient sont des float.  
+Pour être efficace, les divs interieurs doivent être des blocs floattant (float).  
 Deux moyens pour l'utiliser
 
 | Exemple    | CSS          |
 | ---------- | ------------ |
 | HTML       | <div class="clearfix"></div> |
-| HTML Emmet | div.clearfix |
 | SCSS       |.custom {<br/>&nbsp;&nbsp;@extend %clearfix;<br/> } |
 
 ```html
@@ -55,6 +90,12 @@ title: A11Y
 category: Helpers
 notes:
   - ([RGAA - Critère 10.13 [A] Pour chaque page web, les textes cachés sont-ils correctement affichés pour être restitués par les technologies d'assistance ?](https://references.modernisation.gouv.fr/critere-1013-pour-chaque-page-web-les-textes-caches-sont-ils-correctement-affiches-pour-etre-0))
+keywords:
+  - a11y
+  - hide
+  - accessibilité
+  - rgaa
+  - cacher
 versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
@@ -62,13 +103,13 @@ versionning:
 ---
 
 La classe CSS `.a11y` ou `.element-invisible` permet de cacher un texte de manière accessible.  
-Le contenu reste visible pour les robots et assistants.
+Le contenu reste visible par les robots et assistants.
 
 **Conforme avec le référentiel d'accessibilité RGAA.**
 
 ```html
   <div class="a11y">
-    <p>Texte caché</p>
+    <p>Texte caché, visible par les robots et assistants</p>
   </div>
 ````
 
@@ -135,149 +176,8 @@ versionning:
 .hidden,
 .none { display: none !important; }
 
-.show { display: block !important; }
+// .show { display: block !important; }
 .invisible { visibility: hidden; }
 .overhidden { overflow: hidden; }
 .overvisible { overflow: visible; }
 // scss-lint:enable ImportantRule
-
-/*doc
----
-title: Espacements
-category: Helpers
-versionning:
-- version: 1.0
-  update: 2017-12-23T10:00:00Z
-  owner: Axel Roche
----
-
-Doit être utilisé pour modifier l'espacement par défaut entre les objets (pas entre les noeuds du même objet).
-
-Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des exceptions!
-
-`<type><location><size>`
-
-### Type
-
-* `<p>` : padding
-* `<m>` : margin
-
-### Location
-
-* `<a>` : all
-* `<t>` : top
-* `<r>` : right
-* `<b>` : bottom
-* `<l>` : left
-* `<h>` : horizontal
-* `<v>` : vertical
-
-### Size
-
-* `<s> small` : **5px**
-* `<m> medium` : **10px**
-* `<l> large` : **15px**
-* `<n> none` : **0px**
-
-### Exemple
-
-* `.mts` : margin top small
-* `.mlm` : margin left medium
-* `.pal` : padding all large
-* `.pbs` : padding bottom small
-
-*/
-
-// scss-lint:disable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
-.ptn, .py-0, .pvn, .pan { padding-top: 0 !important; }
-.pts, .pvs, .pas { padding-top: round($base-line-height / 4) !important; }
-.ptm, .pvm, .pam { padding-top: round($base-line-height / 2) !important; }
-.ptl, .pvl, .pal { padding-top: $base-line-height !important; }
-.prn, .phn, .pan { padding-right: 0 !important; }
-.prs, .phs, .pas { padding-right: round($grid-gutter-width / 4) !important; }
-.prm, .phm, .pam { padding-right: round($grid-gutter-width / 2) !important; }
-.prl, .phl, .pal { padding-right: $grid-gutter-width !important; }
-.pbn, .py-0, .pvn, .pan { padding-bottom: 0 !important; }
-.pbs, .pvs, .pas { padding-bottom: round($base-line-height / 4) !important; }
-.pbm, .pvm, .pam { padding-bottom: round($base-line-height / 2) !important; }
-.pbl, .pvl, .pal { padding-bottom: $base-line-height !important; }
-.pln, .phn, .pan { padding-left: 0 !important; }
-.pls, .phs, .pas { padding-left: round($grid-gutter-width / 4) !important; }
-.plm, .phm, .pam { padding-left: round($grid-gutter-width / 2) !important; }
-.pll, .phl, .pal { padding-left: $grid-gutter-width !important; }
-.mt-0, .mtn, .my-0, .mvn, .man { margin-top: 0 !important; }
-.mts, .mvs, .mas { margin-top: round($base-line-height / 4) !important; }
-.mtm, .mvm, .mam { margin-top: round($base-line-height / 2) !important; }
-.mtl, .mvl, .mal { margin-top: $base-line-height !important; }
-.mrn, .mhn, .man { margin-right: 0 !important; }
-.mrs, .mhs, .mas { margin-right: round($grid-gutter-width / 4) !important; }
-.mrm, .mhm, .mam { margin-right: round($grid-gutter-width / 2) !important; }
-.mrl, .mhl, .mal { margin-right: $grid-gutter-width !important; }
-.mb-0, .mbn, .my-0, .mvn, .man { margin-bottom: 0 !important; }
-.mbs, .mvs, .mas { margin-bottom: round($base-line-height / 4) !important; }
-.mbm, .mvm, .mam { margin-bottom: round($base-line-height / 2) !important; }
-.mbl, .mvl, .mal { margin-bottom: $base-line-height !important; }
-.mln, .mhn, .man { margin-left: 0 !important; }
-.mls, .mhs, .mas { margin-left: round($grid-gutter-width / 4) !important; }
-.mlm, .mhm, .mam { margin-left: round($grid-gutter-width / 2) !important; }
-.mll, .mhl, .mal { margin-left: $grid-gutter-width !important; }
-
-.mt-auto, .mx-auto { margin-top: auto !important; }
-.mr-auto, .my-auto { margin-right: auto !important; }
-.mb-auto, .mx-auto { margin-bottom: auto !important; }
-.ml-auto, .my-auto { margin-left: auto !important; }
-// scss-lint:enable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
-
-//
-// Responsive: Visibility classes
-// => Bootstrap like
-// --------------------------------------------------
-
-.visible-xs,
-.visible-sm,
-.visible-md,
-.visible-lg,
-.visible-xs-block,
-.visible-xs-inline,
-.visible-xs-inline-block,
-.visible-sm-block,
-.visible-sm-inline,
-.visible-sm-inline-block,
-.visible-md-block,
-.visible-md-inline,
-.visible-md-inline-block,
-.visible-lg-block,
-.visible-lg-inline,
-.visible-lg-inline-block {
-  display: none !important;
-}
-
-@media (max-width: $screen-xs-max) {
-  .hidden-xs { display: none !important; }
-  .visible-xs,
-  .visible-xs-block { display: block !important; }
-  .visible-xs-inline-block { display: inline-block !important; }
-}
-
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-  .hidden-sm { display: none !important; }
-  .visible-sm,
-  .visible-sm-block { display: block !important; }
-  .visible-sm-inline-block { display: inline-block !important; }
-}
-
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-  .hidden-md { display: none !important; }
-  .visible-md,
-  .visible-md-block { display: block !important; }
-  .visible-md-inline-block { display: inline-block !important; }
-}
-
-@media (min-width: $screen-lg-min) {
-  .hidden-lg { display: none !important; }
-  .visible-lg,
-  .visible-lg-block { display: block !important; }
-  .visible-lg-inline-block { display: inline-block !important; }
-}
-
-// scss-lint:enable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks

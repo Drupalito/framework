@@ -22,7 +22,7 @@ versionning:
 
 **Un tableau peut être contenu dans un élément portant le rôle "table".**
 
-```
+```html
   <div role="table">
     <table></table>
   </div>
@@ -47,6 +47,10 @@ versionning:
 ---
 
 Mise en forme par défault d'une tableau de données.
+
+<!-- examples -->
+
+<!-- exampleFor: "Table" -->
 
 ```html
   <table>
@@ -90,6 +94,10 @@ Mise en forme par défault d'une tableau de données.
   </table>
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 
 /*doc
@@ -105,7 +113,7 @@ versionning:
 Faire une table responsive, ajouter un wrapper autour de l'élément `<table>`.
 
 ```html
-  <div class="table-responsive">
+  <div class="table-responsive" role="table">
     <table>
       ...
     </table>
@@ -125,6 +133,10 @@ versionning:
 ---
 
 Mise en forme d'un tableau avec la class `.table`.
+
+<!-- examples -->
+
+<!-- exampleFor: "Table striped" -->
 
 ```html
   <table class="table">
@@ -186,6 +198,10 @@ Mise en forme d'un tableau avec la class `.table`.
   </table>
 ```
 
+<!-- /exampleFor -->
+
+<!-- /examples -->
+
 */
 
 table {
@@ -197,7 +213,7 @@ table {
     max-width: 100%;
     display: table;
     table-layout: auto;
-    border-collapse: collapse; // fusion des bordures
+    border-collapse: collapse; // Prevent double borders
     vertical-align: top;
   }
 }

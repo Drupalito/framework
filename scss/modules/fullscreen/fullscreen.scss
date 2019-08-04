@@ -10,9 +10,14 @@ versionning:
 - version: 1.0
   update: 2017-12-23T10:00:00Z
   owner: Axel Roche
+  drupal: 7
 ---
 
 Default Style CSS
+
+<!-- examples -->
+
+<!-- exampleFor: "Comment" -->
 
 ```html
   <div id="fullscreen" class="page-fullscreen fullscreen">
@@ -36,6 +41,10 @@ Default Style CSS
     </div>
   </div>
 ```
+
+<!-- /exampleFor -->
+
+<!-- /examples -->
 
 */
 
