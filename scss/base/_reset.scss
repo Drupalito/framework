@@ -274,36 +274,21 @@ versionning:
   owner: Axel Roche
 ---
 
-Style par défault des listes ordonnées (`<ol>`) et non ordonnées (`<ul>`).
+Les listes permettent d’ordonner du contenu en l’affichant sous forme de liste.
 
 <!-- examples -->
 
-<!-- exampleFor: "Liste ordonnée" -->
-
-```html
-  <ol>
-    <li>Ordered list</li>
-    <li>Another list element
-      <ol>
-        <li>Nested Unordered list</li>
-        <li>Nested ordered list</li>
-      </ol>
-    </li>
-    <li>Ordered List item</li>
-    <li>Nested Ordered list
-      <ol>
-        <li>Some point</li>
-        <li>Nested Unordered list</li>
-      </ol>
-    </li>
-  </ol>
-```
-
-<!-- /exampleFor -->
-
 <!-- exampleFor: "Liste non ordonnée" -->
 
+Elles seront utilisées pour lister des éléments sans hiérarchie ni ordre logique.
+
 ```html
+  <ul>
+    <li>Unordered list</li>
+    <li>Another list element</li>
+    <li>Another list element 2</li>
+  </ul>
+
   <ul>
     <li>Ordered list</li>
     <li>Another list element
@@ -320,6 +305,37 @@ Style par défault des listes ordonnées (`<ol>`) et non ordonnées (`<ul>`).
       </ul>
     </li>
   </ul>
+```
+
+<!-- /exampleFor -->
+
+<!-- exampleFor: "Liste ordonnée" -->
+
+Elles sont utilisées quand il y a une notion d’ordre ou de progression logique entre les éléments de la liste.
+
+```html
+  <ol>
+    <li>Ordered list</li>
+    <li>Another list element</li>
+    <li>Another list element 2</li>
+  </ol>
+
+  <ol>
+    <li>Ordered list</li>
+    <li>Another list element
+      <ol>
+        <li>Nested Unordered list</li>
+        <li>Nested ordered list</li>
+      </ol>
+    </li>
+    <li>Ordered List item</li>
+    <li>Nested Ordered list
+      <ol>
+        <li>Some point</li>
+        <li>Nested Unordered list</li>
+      </ol>
+    </li>
+  </ol>
 ```
 
 <!-- /exampleFor -->
