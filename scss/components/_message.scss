@@ -466,10 +466,10 @@ versionning:
 <!-- exampleFor: "Label mark" -->
 
 ```html
-  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--new">New</mark></p>
-  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--error">Updated</mark></p>
-  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--updated">Updated</mark></p>
-  <p class="mvs">Lorem ipsum dolor sit amet. <mark class="mark mark--unpublished">Unpublished</mark></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <span class="mark mark--new">New</span></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <span class="mark mark--error">Updated</span></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <span class="mark mark--updated">Updated</span></p>
+  <p class="mvs">Lorem ipsum dolor sit amet. <span class="mark mark--unpublished">Unpublished</span></p>
 ```
 
 <!-- /exampleFor -->
