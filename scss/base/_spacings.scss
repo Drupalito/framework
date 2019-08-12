@@ -16,615 +16,124 @@ Doit être utilisé pour modifier l'espacement par défaut entre les objets (pas
 
 Vous voulez utiliser les valeurs par défaut la plupart du temps, ce sont des exceptions!
 
-`<type><location><size>`
+```md
+  <type>: p | m
+  <location>: t | r | b | l | y | x
+  <size>: 0 | 1 | 2 | 3 | 4 | 5 | auto
 
-### Type
+  <type><location>-<size>
+```
 
-* `<p>` : padding
-* `<m>` : margin
+### Examples
 
-### Location
+|  Name   | Top       | Right     |  Bottom    |  Left    |
+| ------- | --------- | --------- | ---------- | -------- |
+| None    | <span class="primary-background inbl pt-0"><span class="default-background inbl px-2">.pt-0</span></span> | <span class="primary-background inbl pr-0"><span class="default-background inbl px-2">.pr-0</span></span> | <span class="primary-background inbl pb-0"><span class="default-background inbl px-2">.pb-0</span></span> | <span class="primary-background inbl pl-0"><span class="default-background inbl px-2">.pl-0</span></span> |
+| Extra small | <span class="primary-background inbl pt-1"><span class="default-background inbl px-2">.pt-1</span></span> | <span class="primary-background inbl pr-1"><span class="default-background inbl px-2">.pr-1</span></span> | <span class="primary-background inbl pb-1"><span class="default-background inbl px-2">.pb-1</span></span> | <span class="primary-background inbl pl-1"><span class="default-background inbl px-2">.pl-1</span></span> |
+| Small   | <span class="primary-background inbl pt-2"><span class="default-background inbl px-2">.pt-2</span></span> |  <span class="primary-background inbl pr-2"><span class="default-background inbl px-2">.pr-2</span></span> | <span class="primary-background inbl pb-2"><span class="default-background inbl px-2">.pb-2</span></span> | <span class="primary-background inbl pl-2"><span class="default-background inbl px-2">.pl-2</span></span> |
+| Medium  | <span class="primary-background inbl pt-3"><span class="default-background inbl px-2">.pt-3</span></span> |  <span class="primary-background inbl pr-3"><span class="default-background inbl px-2">.pr-3</span></span> | <span class="primary-background inbl pb-3"><span class="default-background inbl px-2">.pb-3</span></span> | <span class="primary-background inbl pl-3"><span class="default-background inbl px-2">.pl-3</span></span> |
+| Large   | <span class="primary-background inbl pt-4"><span class="default-background inbl px-2">.pt-4</span></span> |  <span class="primary-background inbl pr-4"><span class="default-background inbl px-2">.pr-4</span></span> | <span class="primary-background inbl pb-4"><span class="default-background inbl px-2">.pb-4</span></span> | <span class="primary-background inbl pl-4"><span class="default-background inbl px-2">.pl-4</span></span> |
+| Extra large | <span class="primary-background inbl pt-5"><span class="default-background inbl px-2">.pt-5</span></span> |  <span class="primary-background inbl pr-5"><span class="default-background inbl px-2">.pr-5</span></span> | <span class="primary-background inbl pb-5"><span class="default-background inbl px-2">.pb-5</span></span> | <span class="primary-background inbl pl-5"><span class="default-background inbl px-2">.pl-5</span></span> |
 
-* `<a>` : all
-* `<t>` : top
-* `<r>` : right
-* `<b>` : bottom
-* `<l>` : left
-* `<h>` : horizontal
-* `<v>` : vertical
+|  Name | None | Extra small | Small | Medium | Large | Extra large |
+| ----- | ---- | ----------- | ----- | ------ | ----- | ----------- |
+| Horizontal (x) | <span class="primary-background inbl px-0"><span class="default-background inbl">.px-0</span></span> |  <span class="primary-background inbl"><span class="default-background inbl">.px-1</span></span> | <span class="primary-background inbl px-2"><span class="default-background inbl">.px-2</span></span> | <span class="primary-background inbl px-3"><span class="default-background inbl">.px-3</span></span> | <span class="primary-background inbl px-4"><span class="default-background inbl">.px-4</span></span> | <span class="primary-background inbl px-5"><span class="default-background inbl">.px-5</span></span> |
+| Vertical (y) | <span class="primary-background inbl py-0"><span class="default-background inbl px-1">.py-0</span></span> |  <span class="primary-background inbl py-1"><span class="default-background inbl px-1">.py-1</span></span> | <span class="primary-background inbl py-2"><span class="default-background inbl px-1">.py-2</span></span> | <span class="primary-background inbl py-3"><span class="default-background inbl px-1">.py-3</span></span> | <span class="primary-background inbl py-4"><span class="default-background inbl px-1">.py-4</span></span> | <span class="primary-background inbl py-5"><span class="default-background inbl px-1">.py-5</span></span> |
 
-### Size
-
-| Key |  Name    | Class | Render     |
-| --- | ------- | ----- | ---------- |
-| n   | None    | `.mr-0`  |  <span class="primary-background inbl" style="height:1.5em; width: 0px"></span> |
-| xs  | Extra small | `.mr-1` | <span class="primary-background inbl" style="height:1.5em; width: 5px"></span> |
-| s   | Small   | `.mr-2` | <span class="primary-background inbl" style="height:1.5em; width: 10px"></span> |
-| m   | Medium  | `.mr-3` | <span class="primary-background inbl" style="height:1.5em; width: 15px"></span> |
-| l   | Large   | `.mr-4` | <span class="primary-background inbl" style="height:1.5em; width: 20px"></span> |
-| xl  | Extra large | `.mr-5`  | <span class="primary-background inbl" style="height:1.5em; width: 40px"></span> |
-| d   | Default (1.5em) | | <span class="primary-background inbl" style="height:1.5em; width: 1.5em"></span> |
-| auto | Auto<br/><small>S'adapte longueur du texte,<br/>Gére des alignements avec flexbox</small> | `.mr-auto` | <span class="primary-background inbl" style="color:#222;height:1.5em; width: auto">Lorem Ipsum</span> |
+| Auto<br/><small>S'adapte longueur du texte,<br/>Gére des alignements avec flexbox</small> |
 
 */
 
 // scss-lint:disable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
-// .ptn, .py-0, .pvn, .pan { padding-top: 0 !important; }
-// .pts, .pvs, .pas { padding-top: round($base-line-height / 4) !important; }
-// .ptm, .pvm, .pam { padding-top: round($base-line-height / 2) !important; }
-// .ptl, .pvl, .pal { padding-top: $base-line-height !important; }
-// .prn, .phn, .pan { padding-right: 0 !important; }
-// .prs, .phs, .pas { padding-right: round($grid-gutter-width / 4) !important; }
-// .prm, .phm, .pam { padding-right: round($grid-gutter-width / 2) !important; }
-// .prl, .phl, .pal { padding-right: $grid-gutter-width !important; }
-// .pbn, .py-0, .pvn, .pan { padding-bottom: 0 !important; }
-// .pbs, .pvs, .pas { padding-bottom: round($base-line-height / 4) !important; }
-// .pbm, .pvm, .pam { padding-bottom: round($base-line-height / 2) !important; }
-// .pbl, .pvl, .pal { padding-bottom: $base-line-height !important; }
-// .pln, .phn, .pan { padding-left: 0 !important; }
-// .pls, .phs, .pas { padding-left: round($grid-gutter-width / 4) !important; }
-// .plm, .phm, .pam { padding-left: round($grid-gutter-width / 2) !important; }
-// .pll, .phl, .pal { padding-left: $grid-gutter-width !important; }
-// .mt-0, .mtn, .my-0, .mvn, .man { margin-top: 0 !important; }
-// .mts, .mvs, .mas { margin-top: round($base-line-height / 4) !important; }
-// .mtm, .mvm, .mam { margin-top: round($base-line-height / 2) !important; }
-// .mtl, .mvl, .mal { margin-top: $base-line-height !important; }
-// .mrn, .mhn, .man { margin-right: 0 !important; }
-// .mrs, .mhs, .mas { margin-right: round($grid-gutter-width / 4) !important; }
-// .mrm, .mhm, .mam { margin-right: round($grid-gutter-width / 2) !important; }
-// .mrl, .mhl, .mal { margin-right: $grid-gutter-width !important; }
-// .mb-0, .mbn, .my-0, .mvn, .man { margin-bottom: 0 !important; }
-// .mbs, .mvs, .mas { margin-bottom: round($base-line-height / 4) !important; }
-// .mbm, .mvm, .mam { margin-bottom: round($base-line-height / 2) !important; }
-// .mbl, .mvl, .mal { margin-bottom: $base-line-height !important; }
-// .mln, .mhn, .man { margin-left: 0 !important; }
-// .mls, .mhs, .mas { margin-left: round($grid-gutter-width / 4) !important; }
-// .mlm, .mhm, .mam { margin-left: round($grid-gutter-width / 2) !important; }
-// .mll, .mhl, .mal { margin-left: $grid-gutter-width !important; }
-
-// .mt-auto, .mx-auto { margin-top: auto !important; }
-// .mr-auto, .my-auto { margin-right: auto !important; }
-// .mb-auto, .mx-auto { margin-bottom: auto !important; }
-// .ml-auto, .my-auto { margin-left: auto !important; }
+.m-0 { margin: 0 !important; }
+.m-1 { margin: round($base-line-height / 4) !important; }
+.m-2 { margin: round($base-line-height / 2) !important; }
+.m-3 { margin: round($base-line-height / 1) !important; }
+.m-4 { margin: round($base-line-height * 1.5) !important; }
+.m-5 { margin: round($base-line-height * 2) !important; }
+.m-auto { margin: auto !important; }
+.mx-0 { margin-right: 0 !important; margin-left: 0 !important; }
+.mx-1 { margin-right: round($base-line-height / 4) !important; margin-left: round($base-line-height / 4) !important; }
+.mx-2 { margin-right: round($base-line-height / 2) !important; margin-left: round($base-line-height / 2) !important; }
+.mx-3 { margin-right: round($base-line-height / 1) !important; margin-left: round($base-line-height / 1) !important; }
+.mx-4 { margin-right: round($base-line-height * 1.5) !important; margin-left: round($base-line-height * 1.5) !important; }
+.mx-5 { margin-right: round($base-line-height * 2) !important; margin-left: round($base-line-height * 2) !important; }
+.mx-auto { margin-right: auto !important; margin-left: auto !important; }
+.my-0 { margin-top: 0 !important; margin-bottom: 0 !important; }
+.my-1 { margin-top: round($base-line-height / 4) !important; margin-bottom: round($base-line-height / 4) !important; }
+.my-2 { margin-top: round($base-line-height / 2) !important; margin-bottom: round($base-line-height / 2) !important; }
+.my-3 { margin-top: round($base-line-height / 1) !important; margin-bottom: round($base-line-height / 1) !important; }
+.my-4 { margin-top: round($base-line-height * 1.5) !important; margin-bottom: round($base-line-height * 1.5) !important; }
+.my-5 { margin-top: round($base-line-height * 2) !important; margin-bottom: round($base-line-height * 2) !important; }
+.my-auto { margin-top: auto !important; margin-bottom: auto !important; }
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: round($base-line-height / 4) !important; }
+.mt-2 { margin-top: round($base-line-height / 2) !important; }
+.mt-3 { margin-top: round($base-line-height / 1) !important; }
+.mt-4 { margin-top: round($base-line-height * 1.5) !important; }
+.mt-5 { margin-top: round($base-line-height * 2) !important; }
+.mt-auto { margin-top: auto !important; }
+.mr-0 { margin-right: 0 !important; }
+.mr-1 { margin-right: round($base-line-height / 4) !important; }
+.mr-2 { margin-right: round($base-line-height / 2) !important; }
+.mr-3 { margin-right: round($base-line-height / 1) !important; }
+.mr-4 { margin-right: round($base-line-height * 1.5) !important; }
+.mr-5 { margin-right: round($base-line-height * 2) !important; }
+.mr-auto { margin-right: auto !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: round($base-line-height / 4) !important; }
+.mb-2 { margin-bottom: round($base-line-height / 2) !important; }
+.mb-3 { margin-bottom: round($base-line-height / 1) !important; }
+.mb-4 { margin-bottom: round($base-line-height * 1.5) !important; }
+.mb-5 { margin-bottom: round($base-line-height * 2) !important; }
+.mb-auto { margin-bottom: auto !important; }
+.ml-0 { margin-left: 0 !important; }
+.ml-1 { margin-left: round($base-line-height / 4) !important; }
+.ml-2 { margin-left: round($base-line-height / 2) !important; }
+.ml-3 { margin-left: round($base-line-height / 1) !important; }
+.ml-4 { margin-left: round($base-line-height * 1.5) !important; }
+.ml-5 { margin-left: round($base-line-height * 2) !important; }
+.ml-auto { margin-left: auto !important; }
+.p-0 { padding: 0 !important; }
+.p-1 { padding: round($base-line-height / 4) !important; }
+.p-2 { padding: round($base-line-height / 2) !important; }
+.p-3 { padding: round($base-line-height / 1) !important; }
+.p-4 { padding: round($base-line-height * 1.5) !important; }
+.p-5 { padding: round($base-line-height * 2) !important; }
+.px-0 { padding-right: 0 !important; padding-left: 0 !important; }
+.px-1 { padding-right: round($base-line-height / 4) !important; padding-left: round($base-line-height / 4) !important; }
+.px-2 { padding-right: round($base-line-height / 2) !important; padding-left: round($base-line-height / 2) !important; }
+.px-3 { padding-right: round($base-line-height / 1) !important; padding-left: round($base-line-height / 1) !important; }
+.px-4 { padding-right: round($base-line-height * 1.5) !important; padding-left: round($base-line-height * 1.5) !important; }
+.px-5 { padding-right: round($base-line-height * 2) !important; padding-left: round($base-line-height * 2) !important; }
+.py-0 { padding-top: 0 !important; padding-bottom: 0 !important; }
+.py-1 { padding-top: round($base-line-height / 4) !important; padding-bottom: round($base-line-height / 4) !important; }
+.py-2 { padding-top: round($base-line-height / 2) !important; padding-bottom: round($base-line-height / 2) !important; }
+.py-3 { padding-top: round($base-line-height / 1) !important; padding-bottom: round($base-line-height / 1) !important; }
+.py-4 { padding-top: round($base-line-height * 1.5) !important; padding-bottom: round($base-line-height * 1.5) !important; }
+.py-5 { padding-top: round($base-line-height * 2) !important; padding-bottom: round($base-line-height * 2) !important; }
+.pt-0 { padding-top: 0 !important; }
+.pt-1 { padding-top: round($base-line-height / 4) !important; }
+.pt-2 { padding-top: round($base-line-height / 2) !important; }
+.pt-3 { padding-top: round($base-line-height / 1) !important; }
+.pt-4 { padding-top: round($base-line-height * 1.5) !important; }
+.pt-5 { padding-top: round($base-line-height * 2) !important; }
+.pr-0 { padding-right: 0 !important; }
+.pr-1 { padding-right: round($base-line-height / 4) !important; }
+.pr-2 { padding-right: round($base-line-height / 2) !important; }
+.pr-3 { padding-right: round($base-line-height / 1) !important; }
+.pr-4 { padding-right: round($base-line-height * 1.5) !important; }
+.pr-5 { padding-right: round($base-line-height * 2) !important; }
+.pb-0 { padding-bottom: 0 !important; }
+.pb-1 { padding-bottom: round($base-line-height / 4) !important; }
+.pb-2 { padding-bottom: round($base-line-height / 2) !important; }
+.pb-3 { padding-bottom: round($base-line-height / 1) !important; }
+.pb-4 { padding-bottom: round($base-line-height * 1.5) !important; }
+.pb-5 { padding-bottom: round($base-line-height * 2) !important; }
+.pl-0 { padding-left: 0 !important; }
+.pl-1 { padding-left: round($base-line-height / 4) !important; }
+.pl-2 { padding-left: round($base-line-height / 2) !important; }
+.pl-3 { padding-left: round($base-line-height / 1) !important; }
+.pl-4 { padding-left: round($base-line-height * 1.5) !important; }
+.pl-5 { padding-left: round($base-line-height * 2) !important; }
 // scss-lint:enable SingleLinePerSelector ImportantRule EmptyLineBetweenBlocks
-
-
-.m-0 {
-    margin: 0 !important;
-  }
-  
-  .m-1 {
-    margin: round($grid-gutter-width / 5) !important;
-  }
-  
-  .m-2 {
-    margin: round($grid-gutter-width / 4) !important;
-  }
-  
-  .m-3 {
-    margin: round($grid-gutter-width / 3) !important;
-  }
-  
-  .m-4 {
-    margin: round($grid-gutter-width / 2) !important;
-  }
-  
-  .m-5 {
-    margin: round($grid-gutter-width) !important;
-  }
-  
-  .m-auto {
-    margin: auto !important;
-  }
-  
-  .mx-0 {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-  }
-  
-  .mx-1 {
-    margin-right: round($grid-gutter-width / 5) !important;
-    margin-left: round($grid-gutter-width / 5) !important;
-  }
-  
-  .mx-2 {
-    margin-right: round($grid-gutter-width / 4) !important;
-    margin-left: round($grid-gutter-width / 4) !important;
-  }
-  
-  .mx-3 {
-    margin-right: round($grid-gutter-width / 3) !important;
-    margin-left: round($grid-gutter-width / 3) !important;
-  }
-  
-  .mx-4 {
-    margin-right: round($grid-gutter-width / 2) !important;
-    margin-left: round($grid-gutter-width / 2) !important;
-  }
-  
-  .mx-5 {
-    margin-right: round($grid-gutter-width) !important;
-    margin-left: round($grid-gutter-width) !important;
-  }
-  
-  .mx-auto {
-    margin-right: auto !important;
-    margin-left: auto !important;
-  }
-  
-  .my-0 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  
-  .my-1 {
-    margin-top: round($grid-gutter-width / 5) !important;
-    margin-bottom: round($grid-gutter-width / 5) !important;
-  }
-  
-  .my-2 {
-    margin-top: round($grid-gutter-width / 4) !important;
-    margin-bottom: round($grid-gutter-width / 4) !important;
-  }
-  
-  .my-3 {
-    margin-top: round($grid-gutter-width / 3) !important;
-    margin-bottom: round($grid-gutter-width / 3) !important;
-  }
-  
-  .my-4 {
-    margin-top: round($grid-gutter-width / 2) !important;
-    margin-bottom: round($grid-gutter-width / 2) !important;
-  }
-  
-  .my-5 {
-    margin-top: round($grid-gutter-width) !important;
-    margin-bottom: round($grid-gutter-width) !important;
-  }
-  
-  .my-auto {
-    margin-top: auto !important;
-    margin-bottom: auto !important;
-  }
-  
-  .mt-0 {
-    margin-top: 0 !important;
-  }
-  
-  .mt-1 {
-    margin-top: round($grid-gutter-width / 5) !important;
-  }
-  
-  .mt-2 {
-    margin-top: round($grid-gutter-width / 4) !important;
-  }
-  
-  .mt-3 {
-    margin-top: round($grid-gutter-width / 3) !important;
-  }
-  
-  .mt-4 {
-    margin-top: round($grid-gutter-width / 2) !important;
-  }
-  
-  .mt-5 {
-    margin-top: round($grid-gutter-width) !important;
-  }
-  
-  .mt-auto {
-    margin-top: auto !important;
-  }
-  
-  .mr-0 {
-    margin-right: 0 !important;
-  }
-  
-  .mr-1 {
-    margin-right: round($grid-gutter-width / 5) !important;
-  }
-  
-  .mr-2 {
-    margin-right: round($grid-gutter-width / 4) !important;
-  }
-  
-  .mr-3 {
-    margin-right: round($grid-gutter-width / 3) !important;
-  }
-  
-  .mr-4 {
-    margin-right: round($grid-gutter-width / 2) !important;
-  }
-  
-  .mr-5 {
-    margin-right: round($grid-gutter-width) !important;
-  }
-  
-  .mr-auto {
-    margin-right: auto !important;
-  }
-  
-  .mb-0 {
-    margin-bottom: 0 !important;
-  }
-  
-  .mb-1 {
-    margin-bottom: round($grid-gutter-width / 5) !important;
-  }
-  
-  .mb-2 {
-    margin-bottom: round($grid-gutter-width / 4) !important;
-  }
-  
-  .mb-3 {
-    margin-bottom: round($grid-gutter-width / 3) !important;
-  }
-  
-  .mb-4 {
-    margin-bottom: round($grid-gutter-width / 2) !important;
-  }
-  
-  .mb-5 {
-    margin-bottom: round($grid-gutter-width) !important;
-  }
-  
-  .mb-auto {
-    margin-bottom: auto !important;
-  }
-  
-  .ml-0 {
-    margin-left: 0 !important;
-  }
-  
-  .ml-1 {
-    margin-left: round($grid-gutter-width / 5) !important;
-  }
-  
-  .ml-2 {
-    margin-left: round($grid-gutter-width / 4) !important;
-  }
-  
-  .ml-3 {
-    margin-left: round($grid-gutter-width / 3) !important;
-  }
-  
-  .ml-4 {
-    margin-left: round($grid-gutter-width / 2) !important;
-  }
-  
-  .ml-5 {
-    margin-left: round($grid-gutter-width) !important;
-  }
-  
-  .ml-auto {
-    margin-left: auto !important;
-  }
-  
-  .m-n1 {
-    margin: -round($grid-gutter-width / 5) !important;
-  }
-  
-  .m-n2 {
-    margin: -round($grid-gutter-width / 4) !important;
-  }
-  
-  .m-n3 {
-    margin: -round($grid-gutter-width / 3) !important;
-  }
-  
-  .m-n4 {
-    margin: -round($grid-gutter-width / 2) !important;
-  }
-  
-  .m-n5 {
-    margin: -round($grid-gutter-width) !important;
-  }
-  
-  .mx-n1 {
-    margin-right: -round($grid-gutter-width / 5) !important;
-    margin-left: -round($grid-gutter-width / 5) !important;
-  }
-  
-  .mx-n2 {
-    margin-right: -round($grid-gutter-width / 4) !important;
-    margin-left: -round($grid-gutter-width / 4) !important;
-  }
-  
-  .mx-n3 {
-    margin-right: -round($grid-gutter-width / 3) !important;
-    margin-left: -round($grid-gutter-width / 3) !important;
-  }
-  
-  .mx-n4 {
-    margin-right: -round($grid-gutter-width / 2) !important;
-    margin-left: -round($grid-gutter-width / 2) !important;
-  }
-  
-  .mx-n5 {
-    margin-right: -round($grid-gutter-width) !important;
-    margin-left: -round($grid-gutter-width) !important;
-  }
-  
-  .my-n1 {
-    margin-top: -round($grid-gutter-width / 5) !important;
-    margin-bottom: -round($grid-gutter-width / 5) !important;
-  }
-  
-  .my-n2 {
-    margin-top: -round($grid-gutter-width / 4) !important;
-    margin-bottom: -round($grid-gutter-width / 4) !important;
-  }
-  
-  .my-n3 {
-    margin-top: -round($grid-gutter-width / 3) !important;
-    margin-bottom: -round($grid-gutter-width / 3) !important;
-  }
-  
-  .my-n4 {
-    margin-top: -round($grid-gutter-width / 2) !important;
-    margin-bottom: -round($grid-gutter-width / 2) !important;
-  }
-  
-  .my-n5 {
-    margin-top: -round($grid-gutter-width) !important;
-    margin-bottom: -round($grid-gutter-width) !important;
-  }
-  
-  .mt-n1 {
-    margin-top: -round($grid-gutter-width / 5) !important;
-  }
-  
-  .mt-n2 {
-    margin-top: -round($grid-gutter-width / 4) !important;
-  }
-  
-  .mt-n3 {
-    margin-top: -round($grid-gutter-width / 3) !important;
-  }
-  
-  .mt-n4 {
-    margin-top: -round($grid-gutter-width / 2) !important;
-  }
-  
-  .mt-n5 {
-    margin-top: -round($grid-gutter-width) !important;
-  }
-  
-  .mr-n1 {
-    margin-right: -round($grid-gutter-width / 5) !important;
-  }
-  
-  .mr-n2 {
-    margin-right: -round($grid-gutter-width / 4) !important;
-  }
-  
-  .mr-n3 {
-    margin-right: -round($grid-gutter-width / 3) !important;
-  }
-  
-  .mr-n4 {
-    margin-right: -round($grid-gutter-width / 2) !important;
-  }
-  
-  .mr-n5 {
-    margin-right: -round($grid-gutter-width) !important;
-  }
-  
-  .mb-n1 {
-    margin-bottom: -round($grid-gutter-width / 5) !important;
-  }
-  
-  .mb-n2 {
-    margin-bottom: -round($grid-gutter-width / 4) !important;
-  }
-  
-  .mb-n3 {
-    margin-bottom: -round($grid-gutter-width / 3) !important;
-  }
-  
-  .mb-n4 {
-    margin-bottom: -round($grid-gutter-width / 2) !important;
-  }
-  
-  .mb-n5 {
-    margin-bottom: -round($grid-gutter-width) !important;
-  }
-  
-  .ml-n1 {
-    margin-left: -round($grid-gutter-width / 5) !important;
-  }
-  
-  .ml-n2 {
-    margin-left: -round($grid-gutter-width / 4) !important;
-  }
-  
-  .ml-n3 {
-    margin-left: -round($grid-gutter-width / 3) !important;
-  }
-  
-  .ml-n4 {
-    margin-left: -round($grid-gutter-width / 2) !important;
-  }
-  
-  .ml-n5 {
-    margin-left: -round($grid-gutter-width) !important;
-  }
-  
-  .p-0 {
-    padding: 0 !important;
-  }
-  
-  .p-1 {
-    padding: round($grid-gutter-width / 5) !important;
-  }
-  
-  .p-2 {
-    padding: round($grid-gutter-width / 4) !important;
-  }
-  
-  .p-3 {
-    padding: round($grid-gutter-width / 3) !important;
-  }
-  
-  .p-4 {
-    padding: round($grid-gutter-width / 2) !important;
-  }
-  
-  .p-5 {
-    padding: round($grid-gutter-width) !important;
-  }
-  
-  .px-0 {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-  
-  .px-1 {
-    padding-right: round($grid-gutter-width / 5) !important;
-    padding-left: round($grid-gutter-width / 5) !important;
-  }
-  
-  .px-2 {
-    padding-right: round($grid-gutter-width / 4) !important;
-    padding-left: round($grid-gutter-width / 4) !important;
-  }
-  
-  .px-3 {
-    padding-right: round($grid-gutter-width / 3) !important;
-    padding-left: round($grid-gutter-width / 3) !important;
-  }
-  
-  .px-4 {
-    padding-right: round($grid-gutter-width / 2) !important;
-    padding-left: round($grid-gutter-width / 2) !important;
-  }
-  
-  .px-5 {
-    padding-right: round($grid-gutter-width) !important;
-    padding-left: round($grid-gutter-width) !important;
-  }
-  
-  .py-0 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  .py-1 {
-    padding-top: round($grid-gutter-width / 5) !important;
-    padding-bottom: round($grid-gutter-width / 5) !important;
-  }
-  
-  .py-2 {
-    padding-top: round($grid-gutter-width / 4) !important;
-    padding-bottom: round($grid-gutter-width / 4) !important;
-  }
-  
-  .py-3 {
-    padding-top: round($grid-gutter-width / 3) !important;
-    padding-bottom: round($grid-gutter-width / 3) !important;
-  }
-  
-  .py-4 {
-    padding-top: round($grid-gutter-width / 2) !important;
-    padding-bottom: round($grid-gutter-width / 2) !important;
-  }
-  
-  .py-5 {
-    padding-top: round($grid-gutter-width) !important;
-    padding-bottom: round($grid-gutter-width) !important;
-  }
-  
-  .pt-0 {
-    padding-top: 0 !important;
-  }
-  
-  .pt-1 {
-    padding-top: round($grid-gutter-width / 5) !important;
-  }
-  
-  .pt-2 {
-    padding-top: round($grid-gutter-width / 4) !important;
-  }
-  
-  .pt-3 {
-    padding-top: round($grid-gutter-width / 3) !important;
-  }
-  
-  .pt-4 {
-    padding-top: round($grid-gutter-width / 2) !important;
-  }
-  
-  .pt-5 {
-    padding-top: round($grid-gutter-width) !important;
-  }
-  
-  .pr-0 {
-    padding-right: 0 !important;
-  }
-  
-  .pr-1 {
-    padding-right: round($grid-gutter-width / 5) !important;
-  }
-  
-  .pr-2 {
-    padding-right: round($grid-gutter-width / 4) !important;
-  }
-  
-  .pr-3 {
-    padding-right: round($grid-gutter-width / 3) !important;
-  }
-  
-  .pr-4 {
-    padding-right: round($grid-gutter-width / 2) !important;
-  }
-  
-  .pr-5 {
-    padding-right: round($grid-gutter-width) !important;
-  }
-  
-  .pb-0 {
-    padding-bottom: 0 !important;
-  }
-  
-  .pb-1 {
-    padding-bottom: round($grid-gutter-width / 5) !important;
-  }
-  
-  .pb-2 {
-    padding-bottom: round($grid-gutter-width / 4) !important;
-  }
-  
-  .pb-3 {
-    padding-bottom: round($grid-gutter-width / 3) !important;
-  }
-  
-  .pb-4 {
-    padding-bottom: round($grid-gutter-width / 2) !important;
-  }
-  
-  .pb-5 {
-    padding-bottom: round($grid-gutter-width) !important;
-  }
-  
-  .pl-0 {
-    padding-left: 0 !important;
-  }
-  
-  .pl-1 {
-    padding-left: round($grid-gutter-width / 5) !important;
-  }
-  
-  .pl-2 {
-    padding-left: round($grid-gutter-width / 4) !important;
-  }
-  
-  .pl-3 {
-    padding-left: round($grid-gutter-width / 3) !important;
-  }
-  
-  .pl-4 {
-    padding-left: round($grid-gutter-width / 2) !important;
-  }
-  
-  .pl-5 {
-    padding-left: round($grid-gutter-width) !important;
-  }
