@@ -78,6 +78,11 @@ figure {
   margin: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 // Scripts
 body {
   background: $body-background;
