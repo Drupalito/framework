@@ -26,7 +26,7 @@ versionning:
   //   width: $container-md;
   // }
 
-  @media (min-width: $screen-lg-min) {
+  @media (min-width: 1441px) {
     width: $container-lg;
   }
 }
