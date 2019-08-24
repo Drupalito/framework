@@ -22,11 +22,11 @@ Default Style CSS
 ```html
   <div id="fullscreen" class="page-fullscreen fullscreen">
     <img class="fullscreen__image" src="http://via.placeholder.com/1280x768" alt="" />
-    <div id="fullscreen-block" class="fullscreen__table">
+    <div id="fullscreen-block" class="fullscreen__table container">
       <div class="fullscreen__inner">
         <div>
           <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-push-1">
+            <div class="col-xs-12">
               <div class="fullscreen__content text-center">
                 <p class="fullscreen__title">Lorem ipsum</p>
                 <p class="fullscreen__description">Blanditiis aperiam laborum eum</p>
@@ -54,6 +54,8 @@ Default Style CSS
   min-height: 100%;
   height: 100%;
   width: 100%;
+  background: coloriz(primary, base);
+  color: #fff;
 
   &__table {
     display: table;
@@ -63,7 +65,7 @@ Default Style CSS
   }
 
   &__inner {
-    padding: 2em 0;
+    padding: 4em 0;
     position: relative;
     display: table-cell;
     vertical-align: middle;
@@ -88,7 +90,6 @@ Default Style CSS
   &__image {
     top: 0;
     left: 0;
-    animation: kenburn 60s infinite;
   }
 
   &__video {
@@ -104,14 +105,14 @@ Default Style CSS
   &__title {
     margin-top: 0;
     margin-bottom: 0;
+    line-height: 1.25;
     text-transform: uppercase;
     font-size: 500%;
   }
 
   &__description {
-    font-weight: 700;
-    font-style: normal;
-    line-height: 1.2;
+    margin-top: 0;
+    line-height: 1.25;
     font-size: 150%;
   }
 }
